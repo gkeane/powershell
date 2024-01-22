@@ -1,0 +1,1 @@
+Get-Partition | Where-Object { $_.Type -eq 'Recovery' } | ForEach-Object { $_.Size / 1MB }

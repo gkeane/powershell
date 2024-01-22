@@ -9,7 +9,7 @@ if (-not (Get-Module -Name PowerShellGet -ListAvailable)) {
 
         Write-Host "PowerShellGet module has been installed successfully."
     } catch {
-        Write-Host "Failed to install PowerShellGet module. Error: $_.Exception.Message"
+        Write-Error "Failed to install PowerShellGet module. Error: $_.Exception.Message"
     }
 } else {
     Write-Host "PowerShellGet module is already installed."
@@ -25,7 +25,7 @@ if (-not (Get-PackageProvider -Name NuGet -ErrorAction SilentlyContinue)) {
 
         Write-Host "NuGet provider has been installed successfully."
     } catch {
-        Write-Host "Failed to install NuGet provider. Error: $_.Exception.Message"
+        Write-Error "Failed to install NuGet provider. Error: $_.Exception.Message"
     }
 } else {
     Write-Host "NuGet provider is already installed."
@@ -40,7 +40,7 @@ if(-not (Get-Module PSWindowsUpdate -ListAvailable)){
 
         Write-Host "pswinupdate has been installed successfully."
     } catch {
-        Write-Host "Failed to install pswindupdate. Error: $_.Exception.Message"
+        Write-Error "Failed to install pswindupdate. Error: $_.Exception.Message"
     }
 
 }
