@@ -3,6 +3,7 @@ Write-Host "[CVE-2022-41099] Create mount directory: $MountDir"
 $null = New-Item -Path $MountDir -ItemType Directory
 Write-Host "[CVE-2022-41099] Mount RE..."
 reagentc.exe /mountre /path $MountDir
+$comp = "unknown"
 if ($LASTEXITCODE -eq 0) {
     $TargetFile = Join-Path -Path $MountDir -ChildPath "\Windows\System32\bootmenuux.dll"
     Write-Host "[CVE-2022-41099] File to check: $TargetFile"
@@ -20,23 +21,31 @@ if ($LASTEXITCODE -eq 0) {
             "19041" { Write-Host "[CVE-2022-41099] Windows 10, version 2004, file revision should be >= 2247."; $ExpectedRevision = 2247 }
             "22000" { Write-Host "[CVE-2022-41099] Windows 11, version 21H2, file revision should be >= 1215."; $ExpectedRevision = 1215 }
             "22621" { Write-Host "[CVE-2022-41099] Windows 11, version 22H2, file revision should be >= 815."; $ExpectedRevision = 815 }
+            "22631" { Write-Host "[CVE-2022-41099] Windows 11, version 23H2, file revision should be >= 815."; $ExpectedRevision = 815 }
             default { Write-Host "[CVE-2022-41099] Unsupported OS." }
         }
         if ($ExpectedRevision -ne 0) {
-            if ($FileRevision -lt $ExpectedRevision) { Write-Host "[CVE-2022-41099] WinRE is vulnerable." -ForegroundColor Red }
-            else { Write-Host "[CVE-2022-41099] WinRE is not vulnerable." -ForegroundColor Green }
+            if ($FileRevision -lt $ExpectedRevision) { Write-Host "[CVE-2022-41099] WinRE is vulnerable." -ForegroundColor Red; $comp="vulnerable" }
+            else { Write-Host "[CVE-2022-41099] WinRE is not vulnerable." -ForegroundColor Green; $comp="not vulnerable" }
         }
     }
     else { Write-Host "[CVE-2022-41099] Unsupported version: $VersionString" }
     Write-Host "[CVE-2022-41099] Unmount RE..."
+    $FileRevision = "unsupported version"
+    $comp = "unsupported version"
     dism.exe /unmount-image /mountDir:$MountDir /discard
 }
-else { Write-Host "[CVE-2022-41099] Failed to mount WinRE." }
+else {
+    Write-Host "[CVE-2022-41099] Failed to mount WinRE."
+    $FileRevision = "unable to mount"
+    $comp = "unable to mount" 
+}
 Write-Host "[CVE-2022-41099] Remove mount directory."
 Remove-Item -Path $MountDir
 
 try {
     $FileRevision | Out-File -FilePath c:\Programdata\Quest\KACE\user\winre_bootver.txt
+    $comp | Out-File -FilePath c:\Programdata\Quest\KACE\user\winre_boot_comp.txt
     Write-Host "wrote out file"
     }
     catch {
