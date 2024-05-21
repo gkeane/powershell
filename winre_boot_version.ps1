@@ -1,6 +1,7 @@
 $MountDir = Join-Path -Path ([System.IO.Path]::GetTempPath()) -ChildPath "$([Guid]::NewGuid().Guid)_winre"
 Write-Host "[CVE-2022-41099] Create mount directory: $MountDir"
 $null = New-Item -Path $MountDir -ItemType Directory
+$RealNtVersion = "starting"
 Write-Host "[CVE-2022-41099] Mount RE..."
 reagentc.exe /mountre /path $MountDir
 $comp = "unknown"
@@ -29,22 +30,25 @@ if ($LASTEXITCODE -eq 0) {
             else { Write-Host "[CVE-2022-41099] WinRE is not vulnerable." -ForegroundColor Green; $comp="not vulnerable" }
         }
     }
-    else { Write-Host "[CVE-2022-41099] Unsupported version: $VersionString" }
+    else {
+        Write-Host "[CVE-2022-41099] Unsupported version: $VersionString" 
+        $RealNtVersion= "unsupported version"
+        $comp = "unsupported version"
+    }
     Write-Host "[CVE-2022-41099] Unmount RE..."
-    $FileRevision = "unsupported version"
-    $comp = "unsupported version"
+
     dism.exe /unmount-image /mountDir:$MountDir /discard
 }
 else {
     Write-Host "[CVE-2022-41099] Failed to mount WinRE."
-    $FileRevision = "unable to mount"
+    $RealNtVersion = "unable to mount"
     $comp = "unable to mount" 
 }
 Write-Host "[CVE-2022-41099] Remove mount directory."
 Remove-Item -Path $MountDir
 
 try {
-    $FileRevision | Out-File -FilePath c:\Programdata\Quest\KACE\user\winre_bootver.txt
+    $RealNtVersion | Out-File -FilePath c:\Programdata\Quest\KACE\user\winre_bootver.txt
     $comp | Out-File -FilePath c:\Programdata\Quest\KACE\user\winre_boot_comp.txt
     Write-Host "wrote out file"
     }
