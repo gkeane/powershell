@@ -1,11 +1,8 @@
 ﻿# Get the current WinRE .wim location
-$winreInfo = reagentc /info | Out-String
-$winrePath = ($winreInfo -match 'Windows RE location:\s*(\S+)') -replace 'Windows RE location:\s*', ''
 
-# Mount the WinRE .wim file
 $mountDir = "C:\WinREMount"
 mkdir $mountDir -Force
-dism /mount-wim /WimFile:"$winrePath\winre.wim" /index:1 /MountDir:$mountDir
+reagentc /mountre /path $mountdir
 
 # Get version info of bootmenuux.dll
 $bootmenuuxPath = "$mountDir\Windows\System32\bootmenuux.dll"
