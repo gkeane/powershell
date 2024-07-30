@@ -10,6 +10,7 @@ function Write-Log {
     $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
     $logEntry = "$timestamp - $message"
     $logEntry | Out-File -FilePath $logFile -Append
+    Write-Output $logEntry
 }
 
 # Function to stop a service, disable it, and kill the process if it doesn't stop
@@ -19,17 +20,37 @@ function Stop-ServiceAndKill {
     )
 
     Write-Log "Stopping and disabling service $serviceName..."
-    Stop-Service -Name $serviceName -Force -ErrorAction SilentlyContinue
-    Set-Service -Name $serviceName -StartupType Disabled -ErrorAction SilentlyContinue
-    Start-Sleep -Seconds 30
+    # Disable the service and capture the output
+    try {
+        Set-Service -Name $serviceName -StartupType Disabled -ErrorAction Stop
+        $serviceDisabled = $true
+        Write-Host "$serviceName service has been disabled."
+    } catch {
+        $serviceDisabled = $false
+        Write-Host "Failed to disable $serviceName service: $_"
+    }
+    Write-Log $log
+    $log = Stop-Service -Name $serviceName -Force -ErrorAction SilentlyContinue
+    Write-Log $log
+    if ($serviceName -eq "wuauserv") {
+        Start-Sleep -Seconds 120
+    } else {
+        Start-Sleep -Seconds 30
+    }
 
     $service = Get-Service -Name $serviceName -ErrorAction SilentlyContinue
     if ($service.Status -ne 'Stopped') {
         Write-Log "Service $serviceName did not stop. Killing the process..."
-        $processes = Get-Process | Where-Object { $_.Name -like "$serviceName*" }
-        foreach ($process in $processes) {
-            Stop-Process -Id $process.Id -Force -ErrorAction SilentlyContinue
-        }
+    # Get the PID of the Windows Update service
+    $sProcess = Get-WmiObject win32_service | Where-Object { $_.Name -eq $serviceName } | Select-Object -ExpandProperty ProcessId
+
+    if ($sProcess) {
+        # Kill the process using Stop-Process
+        Stop-Process -Id $sProcess -Force
+        Write-Host "Windows Update service process (PID: $sProcess) has been forcefully stopped."
+    } else {
+        Write-Host "Unable to retrieve the PID of the Windows Update service."
+    }
     }
 }
 
@@ -93,3 +114,15 @@ Write-Log "Resetting Windows Update components using the Windows Update Agent...
 wuauclt.exe /resetauthorization /detectnow
 
 Write-Log "Windows Update components reset completed."
+# Scan for updates using PSWindowsUpdate module
+# Install PSWindowsUpdate module
+Write-Log "Installing PSWindowsUpdate module..."
+Install-Module -Name PSWindowsUpdate -Force -ErrorAction SilentlyContinue
+
+# Import PSWindowsUpdate module
+Write-Log "Importing PSWindowsUpdate module..."
+Import-Module -Name PSWindowsUpdate -ErrorAction SilentlyContinue
+Write-Log "Scanning for updates..."
+$updates = Get-WUInstall -MicrosoftUpdate -AcceptAll -AutoReboot
+Write-Log "$updates"
+Write-Log "Update scan completed."
