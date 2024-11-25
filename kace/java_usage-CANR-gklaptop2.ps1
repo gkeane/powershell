@@ -78,14 +78,14 @@ ForEach ($JRE in $JREs) {
             IF ($LoggingEnable -eq $true) {Log-ScriptEvent -Value "$($JRE.JavaHome)\lib\management\usagetracker.properties exists" -Severity 1}
         }
     }
-    $JREPath = test-path "$($JRE.JavaHome)\conf"
+    $JREPath = test-path "$($JRE.JavaHome)\conf\management"
     if ($JREPath) {
-        $UTProps = test-path "$($JRE.JavaHome)\conf\usagetracker.properties"
+        $UTProps = test-path "$($JRE.JavaHome)\conf\management\usagetracker.properties"
         if (-Not $UTProps) {
-            IF ($LoggingEnable -eq $true) {Log-ScriptEvent -Value "Creating $($JRE.JavaHome)\conf\usagetracker.properties" -Severity 1}
-            Create-UsageTrackingProps -UTPath "$($JRE.JavaHome)\conf\usagetracker.properties"
+            IF ($LoggingEnable -eq $true) {Log-ScriptEvent -Value "Creating $($JRE.JavaHome)\conf\management\usagetracker.properties" -Severity 1}
+            Create-UsageTrackingProps -UTPath "$($JRE.JavaHome)\conf\management\usagetracker.properties"
         } Else {
-            IF ($LoggingEnable -eq $true) {Log-ScriptEvent -Value "$($JRE.JavaHome)\conf\usagetracker.properties exists" -Severity 1}
+            IF ($LoggingEnable -eq $true) {Log-ScriptEvent -Value "$($JRE.JavaHome)\conf\management\usagetracker.properties exists" -Severity 1}
         }
     }
 }
