@@ -1,0 +1,1 @@
+ShellCommandTextReturn(c:\windows\sysnative\WindowsPowerShell\v1.0\powershell.exe "invoke-command -ScriptBlock {(Get-Content -Path 'C:\programdata\quest\kace\user\odrive2.txt') | ForEach-Object { if($_ -match '^> TotalQuota\s+\d+\s+=\s+(.*)$') { $matches[1] } }} -ErrorAction SilentlyContinue" 2> nul)

@@ -32,3 +32,51 @@ if ($ODStatusArray)
         $ODStatusIndex++
     }
 }
+
+# Get OneDrive status and check for path match
+try {
+    $ODStatusArray = & "C:\programdata\quest\kace\user\ODSyncUtil.exe" | ConvertFrom-Json
+    $pathMatch = $false
+    
+    if ($ODStatusArray) {
+        foreach ($ODStatus in $ODStatusArray) {
+            if ($env:OneDrive -eq $ODStatus.FolderPath) {
+                $pathMatch = $true
+                break
+            }
+        }
+    }
+    
+    # Output just true or false to the file
+    $pathMatch.ToString().ToLower() | Out-File -FilePath "C:\ProgramData\Quest\KACE\user\odrive_match.txt" -NoNewline
+}
+catch {
+    "false" | Out-File -FilePath "C:\ProgramData\Quest\KACE\user\odrive_match.txt" -NoNewline
+}
+
+# Get last sync date from odrive3.txt
+try {
+    $file = Get-Content -Path "C:\ProgramData\Quest\KACE\user\odrive3.txt"
+    $latestDate = $null
+
+    foreach ($line in $file) {
+        if ($line -match "^(\d{2}/\d{2}/\d{4} \d{2}:\d{2}:\d{2}): Synced$") {
+            $date = [datetime]::ParseExact($Matches[1], "MM/dd/yyyy HH:mm:ss", $null)
+            if ($latestDate -eq $null -or $date -gt $latestDate) {
+                $latestDate = $date
+            }
+        }
+    }
+
+    # If no sync date found, use Unix epoch
+    if ($latestDate -eq $null) {
+        $latestDate = [datetime]::ParseExact("01/01/1970 00:00:00", "MM/dd/yyyy HH:mm:ss", $null)
+    }
+
+    # Write last sync date to file
+    $latestDate.ToString("MM/dd/yyyy HH:mm:ss") | Out-File -FilePath "C:\ProgramData\Quest\KACE\user\odrive_lastsync.txt" -NoNewline
+}
+catch {
+    # If any error occurs, write Unix epoch as fallback
+    "01/01/1970 00:00:00" | Out-File -FilePath "C:\ProgramData\Quest\KACE\user\odrive_lastsync.txt" -NoNewline
+}
