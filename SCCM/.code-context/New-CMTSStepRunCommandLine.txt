@@ -1,0 +1,227 @@
+
+NAME
+    New-CMTSStepRunCommandLine
+    
+SYNTAX
+    New-CMTSStepRunCommandLine -CommandLine <string> -Name <string> [-DisableWow64Redirection] [-PackageId <string>] [-RunAsUser] [-SuccessCode <int[]>] [-Timeout <int>] [-UserName <string>] [-UserPassword <securestring>] [-WorkingDirectory <string>] [-Condition <IResultObject#SMS_TaskSequence_ConditionOperand[]>] [-ContinueOnError] [-Description <string>] [-Disable] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMTSStepRunCommandLine -CommandLine <string> [-DisableWow64Redirection] [-OutputVariableName <string>] [-PackageId <string>] [-RunAsUser] [-SuccessCode <int[]>] [-Timeout <int>] [-UserName <string>] [-UserPassword <securestring>] [-WorkingDirectory <string>] [-Condition <IResultObject#SMS_TaskSequence_ConditionOperand[]>] [-ContinueOnError] [-Description <string>] [-Disable] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMTSStepRunCommandLine -CommandLine <string> [-DisableWow64Redirection] [-OutputVariableName <string>] [-PackageId <string>] [-RunAsUser] [-SuccessCode <int[]>] [-Timeout <int>] [-UserName <string>] [-UserPassword <securestring>] [-WorkingDirectory <string>] [-Condition <IResultObject#SMS_TaskSequence_ConditionOperand[]>] [-ContinueOnError] [-Description <string>] [-Disable] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -CommandLine <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Condition <IResultObject#SMS_TaskSequence_ConditionOperand[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      Conditions
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ContinueOnError
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Disable
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DisableThisStep
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWow64Redirection
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DisableRedirectionFor64BitFileSystem
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName
+        Aliases                      StepName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OutputVariableName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RunScriptFromSource, RunScriptFromPackage
+        Aliases                      Output, OutputVariable
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PackageId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RunAsUser
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SuccessCode <int[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SuccessCodes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Timeout <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      TimeoutInMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserPassword <securestring>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WorkingDirectory <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      StartIn
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject#SMS_TaskSequence_RunCommandLineAction
+    
+    
+ALIASES
+    New-CMTaskSequenceStepRunCommandLine
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

@@ -1,0 +1,154 @@
+
+NAME
+    Deny-CMUserDeviceAffinityRequest
+    
+SYNTAX
+    Deny-CMUserDeviceAffinityRequest -CollectionName <string> [-DeviceId <string>] [-DeviceName <string>] [-UserDeviceAffinityRequest <IResultObject#SMS_UserMachineRelationship>] [-UserDeviceAffinityRequestId <string>] [-UserId <string>] [-UserName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Deny-CMUserDeviceAffinityRequest -CollectionId <string> [-DeviceId <string>] [-DeviceName <string>] [-UserDeviceAffinityRequest <IResultObject#SMS_UserMachineRelationship>] [-UserDeviceAffinityRequestId <string>] [-UserId <string>] [-UserName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -CollectionId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeviceId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory, SearchByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeviceName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory, SearchByNameMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserDeviceAffinityRequest <IResultObject#SMS_UserMachineRelationship>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SearchByNameMandatory, SearchByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserDeviceAffinityRequestId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory, SearchByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory, SearchByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory, SearchByNameMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

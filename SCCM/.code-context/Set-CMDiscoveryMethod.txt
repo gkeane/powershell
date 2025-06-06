@@ -1,0 +1,423 @@
+
+NAME
+    Set-CMDiscoveryMethod
+    
+SYNTAX
+    Set-CMDiscoveryMethod -ActiveDirectoryForestDiscovery [-EnableActiveDirectorySiteBoundaryCreation <bool>] [-Enabled <bool>] [-EnableSubnetBoundaryCreation <bool>] [-PassThru] [-PollingSchedule <IResultObject#SMS_ScheduleToken>] [-SiteCode <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMDiscoveryMethod -ActiveDirectorySystemDiscovery [-ActiveDirectoryContainer <string[]>] [-AddActiveDirectoryContainer <string[]>] [-AddAdditionalAttribute <string[]>] [-ClearActiveDirectoryContainer] [-DeltaDiscoveryMins <int>] [-Enabled <bool>] [-EnableDeltaDiscovery <bool>] [-EnableFilteringExpiredLogon <bool>] [-EnableFilteringExpiredPassword <bool>] [-EnableIncludeGroup <bool>] [-EnableRecursive <bool>] [-IncludeGroup] [-PassThru] [-PollingSchedule <IResultObject#SMS_ScheduleToken>] [-Recursive] [-RemoveActiveDirectoryContainer <string[]>] [-RemoveAdditionalAttribute <string[]>] [-SiteCode <string>] [-TimeSinceLastLogonDays <int>] [-TimeSinceLastPasswordUpdateDays <int>] [-UserName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMDiscoveryMethod -ActiveDirectoryUserDiscovery [-ActiveDirectoryContainer <string[]>] [-AddActiveDirectoryContainer <string[]>] [-AddAdditionalAttribute <string[]>] [-ClearActiveDirectoryContainer] [-DeltaDiscoveryMins <int>] [-Enabled <bool>] [-EnableDeltaDiscovery <bool>] [-EnableIncludeGroup <bool>] [-EnableRecursive <bool>] [-IncludeGroup] [-PassThru] [-PollingSchedule <IResultObject#SMS_ScheduleToken>] [-Recursive] [-RemoveActiveDirectoryContainer <string[]>] [-RemoveAdditionalAttribute <string[]>] [-SiteCode <string>] [-UserName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMDiscoveryMethod -ActiveDirectoryGroupDiscovery [-AddGroupDiscoveryScope <ADGroupDiscoveryScope[]>] [-ClearActiveDirectoryContainer] [-DeltaDiscoveryMins <int>] [-DiscoverDistributionGroupMembership <bool>] [-Enabled <bool>] [-EnableDeltaDiscovery <bool>] [-EnableFilteringExpiredLogon <bool>] [-EnableFilteringExpiredPassword <bool>] [-PassThru] [-PollingSchedule <IResultObject#SMS_ScheduleToken>] [-RemoveGroupDiscoveryScope <string[]>] [-SiteCode <string>] [-TimeSinceLastLogonDays <int>] [-TimeSinceLastPasswordUpdateDays <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMDiscoveryMethod -NetworkDiscovery [-Enabled <bool>] [-NetworkDiscoveryType {Topology | TopologyAndClient | ToplogyAndClient | TopologyClientAndClientOperatingSystem | ToplogyClientAndClientOperatingSystem}] [-PassThru] [-SiteCode <string>] [-SlowNetworkSpeed <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMDiscoveryMethod -Heartbeat [-Enabled <bool>] [-PassThru] [-PollingSchedule <IResultObject#SMS_ScheduleToken>] [-SiteCode <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -ActiveDirectoryContainer <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ActiveDirectoryForestDiscovery
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectoryForestDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ActiveDirectoryGroupDiscovery
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectoryGroupDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ActiveDirectorySystemDiscovery
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ActiveDirectoryUserDiscovery
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectoryUserDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddActiveDirectoryContainer <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
+        Aliases                      AddActiveDirectoryContainers
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddAdditionalAttribute <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddGroupDiscoveryScope <ADGroupDiscoveryScope[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectoryGroupDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearActiveDirectoryContainer
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery, SearchByActiveDirectoryGroupDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeltaDiscoveryMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery, SearchByActiveDirectoryGroupDiscovery
+        Aliases                      DeltaDiscoveryIntervalMinutes, DeltaDiscoveryIntervalMins
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DiscoverDistributionGroupMembership <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectoryGroupDiscovery
+        Aliases                      DiscoverDistributionGroupsMembership
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableActiveDirectorySiteBoundaryCreation <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectoryForestDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableDeltaDiscovery <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery, SearchByActiveDirectoryGroupDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableFilteringExpiredLogon <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryGroupDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableFilteringExpiredPassword <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryGroupDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableIncludeGroup <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
+        Aliases                      EnableIncludeGroups
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableRecursive <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableSubnetBoundaryCreation <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectoryForestDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Enabled <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNetworkDiscovery, SearchByHeartbeat, SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery, SearchByActiveDirectoryGroupDiscovery, SearchByActiveDirectoryForestDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Heartbeat
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByHeartbeat
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IncludeGroup
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
+        Aliases                      IncludeGroups
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NetworkDiscovery
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNetworkDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NetworkDiscoveryType <NetworkDiscoveryType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNetworkDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PollingSchedule <IResultObject#SMS_ScheduleToken>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByHeartbeat, SearchByActiveDirectoryForestDiscovery, SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery, SearchByActiveDirectoryGroupDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Recursive
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveActiveDirectoryContainer <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
+        Aliases                      RemoveActiveDirectoryContainers
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveAdditionalAttribute <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveGroupDiscoveryScope <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectoryGroupDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SlowNetworkSpeed <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNetworkDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TimeSinceLastLogonDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryGroupDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TimeSinceLastPasswordUpdateDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryGroupDiscovery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
+        Aliases                      DiscoveryAccountUserName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

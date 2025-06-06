@@ -1,0 +1,323 @@
+
+NAME
+    Get-CMSoftwareUpdate
+    
+SYNTAX
+    Get-CMSoftwareUpdate [-ArticleId <string>] [-BulletinId <string>] [-Category <IResultObject#SMS_UpdateCategoryInstance[]>] [-CategoryName <string[]>] [-DatePostedMax <datetime>] [-DatePostedMin <datetime>] [-DateRevisedMax <datetime>] [-DateRevisedMin <datetime>] [-EulaExist <bool>] [-Fast] [-IncludeUpgrade] [-IsContentProvisioned <bool>] [-IsDeployed <bool>] [-IsExpired <bool>] [-IsLatest <bool>] [-IsOfflineServiceable <bool>] [-IsSuperseded <bool>] [-IsUserDefined <bool>] [-Name <string>] [-OnlyExpired] [-Severity {None | Low | Moderate | Important | Critical}] [-Vendor <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    Get-CMSoftwareUpdate -Id <int> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    Get-CMSoftwareUpdate -UpdateGroup <IResultObject#SMS_AuthorizationList> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    Get-CMSoftwareUpdate -UpdateGroupId <string[]> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    Get-CMSoftwareUpdate -UpdateGroupName <string[]> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -ArticleId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  true
+        
+    -BulletinId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  true
+        
+    -Category <IResultObject#SMS_UpdateCategoryInstance[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CategoryName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      CategoryNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DatePostedMax <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DatePostedMin <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DateRevisedMax <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DateRevisedMin <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EulaExist <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      EulaExists
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Fast
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <int>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchById
+        Aliases                      CIId, CI_ID
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IncludeUpgrade
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      IncludeUpgrades
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsContentProvisioned <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsDeployed <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsExpired <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsLatest <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsOfflineServiceable <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsSuperseded <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsUserDefined <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      LocalizedDisplayName
+        Dynamic?                     false
+        Accept wildcard characters?  true
+        
+    -OnlyExpired
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Severity <CustomSeverityType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UpdateGroup <IResultObject#SMS_AuthorizationList>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SearchByUpdateGroup
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UpdateGroupId <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByUpdateGroupIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UpdateGroupName <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByUpdateGroupNameMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Vendor <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    IResultObject[]#SMS_SoftwareUpdate
+    IResultObject#SMS_SoftwareUpdate
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

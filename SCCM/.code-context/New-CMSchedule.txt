@@ -1,0 +1,248 @@
+
+NAME
+    New-CMSchedule
+    
+SYNTAX
+    New-CMSchedule -Nonrecurring [-IsUtc] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -DayOfMonth <int> [-IsUtc] [-RecurCount <int>] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -DayOfMonth <int> -DurationCount <int> -DurationInterval {Minutes | Hours | Days} [-IsUtc] [-RecurCount <int>] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -DayOfMonth <int> -End <datetime> [-IsUtc] [-RecurCount <int>] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -DayOfWeek {Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday} [-IsUtc] [-RecurCount <int>] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -DayOfWeek {Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday} -DurationCount <int> -DurationInterval {Minutes | Hours | Days} [-IsUtc] [-RecurCount <int>] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -DayOfWeek {Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday} -End <datetime> [-IsUtc] [-RecurCount <int>] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -DayOfWeek {Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday} -WeekOrder {Last | First | Second | Third | Fourth} [-IsUtc] [-OffsetDay <int>] [-RecurCount <int>] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -DayOfWeek {Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday} -DurationCount <int> -DurationInterval {Minutes | Hours | Days} -WeekOrder {Last | First | Second | Third | Fourth} [-IsUtc] [-OffsetDay <int>] [-RecurCount <int>] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -DayOfWeek {Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday} -End <datetime> -WeekOrder {Last | First | Second | Third | Fourth} [-IsUtc] [-OffsetDay <int>] [-RecurCount <int>] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -DurationCount <int> -DurationInterval {Minutes | Hours | Days} -Nonrecurring [-IsUtc] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -DurationCount <int> -DurationInterval {Minutes | Hours | Days} -LastDayOfMonth [-IsUtc] [-RecurCount <int>] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -DurationCount <int> -DurationInterval {Minutes | Hours | Days} -RecurCount <int> -RecurInterval {Minutes | Hours | Days} [-IsUtc] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -End <datetime> -Nonrecurring [-IsUtc] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -End <datetime> -LastDayOfMonth [-IsUtc] [-RecurCount <int>] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -End <datetime> -RecurCount <int> -RecurInterval {Minutes | Hours | Days} [-IsUtc] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -LastDayOfMonth [-IsUtc] [-RecurCount <int>] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSchedule -RecurCount <int> -RecurInterval {Minutes | Hours | Days} [-IsUtc] [-ScheduleString] [-Start <datetime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DayOfMonth <int>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RecurrenceMonthlyByDate, RecurrenceMonthlyByDateWithDuration, RecurrenceMonthlyByDateWithEnd
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DayOfWeek <DayOfWeek>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RecurrenceWeekly, RecurrenceWeeklyWithDuration, RecurrenceWeeklyWithEnd, RecurMonthlyByWeekday, RecurMonthlyByWeekdayWithDuration, RecurMonthlyByWeekdayWithEnd
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DurationCount <int>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RecurrenceNoneWithDuration, RecurrenceWeeklyWithDuration, RecurrenceMonthlyByDateWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceIntervalWithDuration
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DurationInterval <ScheduleInterval>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RecurrenceNoneWithDuration, RecurrenceWeeklyWithDuration, RecurrenceMonthlyByDateWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceIntervalWithDuration
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -End <datetime>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RecurrenceNoneWithEnd, RecurrenceWeeklyWithEnd, RecurrenceMonthlyByDateWithEnd, RecurMonthlyLastDayOfMonthWithEnd, RecurMonthlyByWeekdayWithEnd, RecurrenceIntervalWithEnd
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsUtc
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LastDayOfMonth
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RecurMonthlyLastDayOfMonth, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyLastDayOfMonthWithEnd
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Nonrecurring
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RecurrenceNone, RecurrenceNoneWithDuration, RecurrenceNoneWithEnd
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OffsetDay <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RecurMonthlyByWeekday, RecurMonthlyByWeekdayWithDuration, RecurMonthlyByWeekdayWithEnd
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RecurCount <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RecurrenceWeekly, RecurrenceWeeklyWithDuration, RecurrenceWeeklyWithEnd, RecurrenceMonthlyByDate, RecurrenceMonthlyByDateWithDuration, RecurrenceMonthlyByDateWithEnd, RecurMonthlyLastDayOfMonth, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyLastDayOfMonthWithEnd, RecurMonthlyByWeekday, RecurMonthlyByWeekdayWithDuration, RecurMonthlyByWeekdayWithEnd, RecurrenceInterval, RecurrenceIntervalWithDuration, RecurrenceIntervalWithEnd
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RecurInterval <ScheduleInterval>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RecurrenceInterval, RecurrenceIntervalWithDuration, RecurrenceIntervalWithEnd
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScheduleString
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Start <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WeekOrder <ScheduleWeekOrder>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RecurMonthlyByWeekday, RecurMonthlyByWeekdayWithDuration, RecurMonthlyByWeekdayWithEnd
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject#SMS_ScheduleToken
+    System.String
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

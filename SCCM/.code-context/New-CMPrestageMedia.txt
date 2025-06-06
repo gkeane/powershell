@@ -1,0 +1,382 @@
+
+NAME
+    New-CMPrestageMedia
+    
+SYNTAX
+    New-CMPrestageMedia -OperatingSystemImage <IResultObject#SMS_ImagePackage> -TaskSequence <IResultObject#SMS_TaskSequencePackage> -BootImage <IResultObject#SMS_BootImagePackage> -DistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point[]> -ManagementPoint <IResultObject[]> -MediaMode {Dynamic | SiteBased} -Path <string> [-Application <IResultObject[]>] [-Comment <string>] [-CreatedBy <string>] [-DriverPackage <IResultObject#SMS_DriverPackage[]>] [-IncludeApplicationDependency] [-OperatingSystemImageIndex <int>] [-Package <IResultObject#SMS_Package[]>] [-Version <string>] [-AllowUacPrompt] [-AllowUnattended] [-AllowUnknownMachine] [-CertificateExpireTime <datetime>] [-CertificatePassword <securestring>] [-CertificatePath <string>] [-CertificateStartTime <datetime>] [-Force] [-SiteCode <string>] [-MediaPassword <securestring>] [-NoAutoRun] [-PrestartCommand <string>] [-PrestartPackage <IResultObject#SMS_Package>] [-TemporaryFolder <string>] [-UserDeviceAffinity {DoNotAllow | AdministratorApproval | AutoApproval}] [-Variable <hashtable>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AllowUacPrompt
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowUnattended
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowUnknownMachine
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Application <IResultObject[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      Applications
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BootImage <IResultObject#SMS_BootImagePackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      BootImagePackage
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CertificateExpireTime <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CertificatePassword <securestring>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CertificatePath <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CertificateStartTime <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Comment <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CreatedBy <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DistributionPoints
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriverPackage <IResultObject#SMS_DriverPackage[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DriverPackages, PackageDriver, PackageDrivers
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IncludeApplicationDependency
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      IncludeApplicationDependencies
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ManagementPoint <IResultObject[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ManagementPoints
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MediaMode <MediaMode>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MediaPassword <securestring>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoAutoRun
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemImage <IResultObject#SMS_ImagePackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      OperatingSystemImagePackage
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemImageIndex <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Package <IResultObject#SMS_Package[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      Packages
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Path <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      MediaPath, OutputPath, DriveName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PrestartCommand <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PreExecCommandLine
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PrestartPackage <IResultObject#SMS_Package>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TaskSequence <IResultObject#SMS_TaskSequencePackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TemporaryFolder <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      TemporaryDirectory, StagingArea
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserDeviceAffinity <UserDeviceAffinityType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Variable <hashtable>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      TaskSequenceVariables, Variables
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Version <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    New-CMPrestagedMedia
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

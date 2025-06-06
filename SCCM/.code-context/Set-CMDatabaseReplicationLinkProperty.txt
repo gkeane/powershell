@@ -1,0 +1,214 @@
+
+NAME
+    Set-CMDatabaseReplicationLinkProperty
+    
+SYNTAX
+    Set-CMDatabaseReplicationLinkProperty -ChildSiteCode <string> -ParentSiteCode <string> [-DegradedLinkStatusRetryCount <int>] [-EnableDistributedViewForHardwareInventory <bool>] [-EnableDistributedViewForSoftwareInventory <bool>] [-EnableDistributedViewForStatusMessage <bool>] [-FailedLinkStatusRetryCount <int>] [-GenerateReplicationDownAlert <bool>] [-ReplicationDataTrafficSummarizationMins <int>] [-ReplicationDownAlertMins <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMDatabaseReplicationLinkProperty -AvailabilityLevel {Closed | HINV | SINV | HINVSINV | StatMSG | HINVStatMSG | SINVStatMSG | HINVSINVStatMSG} -ChildSiteCode <string> -DaysOfWeek {Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday} -ParentSiteCode <string> -ReplicationEndHr <int> -ReplicationStartHr <int> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AvailabilityLevel <InvAvailabilityLevel>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetScheduleBySiteCodeMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ChildSiteCode <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBySiteCodeMandatory, SetScheduleBySiteCodeMandatory
+        Aliases                      Site2
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DaysOfWeek <DaysOfWeek[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetScheduleBySiteCodeMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DegradedLinkStatusRetryCount <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBySiteCodeMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableDistributedViewForHardwareInventory <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBySiteCodeMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableDistributedViewForSoftwareInventory <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBySiteCodeMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableDistributedViewForStatusMessage <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBySiteCodeMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FailedLinkStatusRetryCount <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBySiteCodeMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -GenerateReplicationDownAlert <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBySiteCodeMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ParentSiteCode <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBySiteCodeMandatory, SetScheduleBySiteCodeMandatory
+        Aliases                      Site1
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ReplicationDataTrafficSummarizationMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBySiteCodeMandatory
+        Aliases                      ReplicationDataTrafficSummarizationIntervalMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ReplicationDownAlertMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBySiteCodeMandatory
+        Aliases                      ReplicationDownAlertThresholdMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ReplicationEndHr <int>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetScheduleBySiteCodeMandatory
+        Aliases                      TimePeriodEnd, ReplicationEndHour
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ReplicationStartHr <int>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetScheduleBySiteCodeMandatory
+        Aliases                      TimePeriodStart, ReplicationStartHour
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

@@ -1,0 +1,221 @@
+
+NAME
+    New-CMPackage
+    
+SYNTAX
+    New-CMPackage -Name <string> [-Description <string>] [-IconLocationFile <string>] [-Language <string>] [-Manufacturer <string>] [-Path <string>] [-Version <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMPackage -FromDefinition -PackageDefinitionName <string> -PackageNoSourceFile [-IconLocationFile <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMPackage -FromDefinition -PackageNoSourceFile -PackagePath <string> [-IconLocationFile <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMPackage -FromDefinition -PackageDefinitionName <string> -SourceFileType {AlwaysObtainSourceFile | CreateCompressedVersionOfSourceFile} -SourceFolderPath <string> -SourceFolderPathType {UncNetworkPath | LocalFolderOnSiteServer} [-IconLocationFile <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMPackage -FromDefinition -PackagePath <string> -SourceFileType {AlwaysObtainSourceFile | CreateCompressedVersionOfSourceFile} -SourceFolderPath <string> -SourceFolderPathType {UncNetworkPath | LocalFolderOnSiteServer} [-IconLocationFile <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           New
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FromDefinition
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPackageByDefinitionNoSourceFileWithExisted, NewPackageByDefinitionNoSourceFileWithNew, NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IconLocationFile <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Language <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           New
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Manufacturer <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           New
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           New
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PackageDefinitionName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPackageByDefinitionNoSourceFileWithExisted, NewPackageByDefinitionSourceFileWithExisted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PackageNoSourceFile
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPackageByDefinitionNoSourceFileWithExisted, NewPackageByDefinitionNoSourceFileWithNew
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PackagePath <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPackageByDefinitionSourceFileWithNew, NewPackageByDefinitionNoSourceFileWithNew
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Path <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           New
+        Aliases                      PackageSourcePath
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SourceFileType <SourceFileType>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SourceFolderPath <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SourceFolderPathType <SourceFolderPathType>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Version <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           New
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject#SMS_Package
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

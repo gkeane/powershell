@@ -1,0 +1,176 @@
+
+NAME
+    Set-CMAlertSubscription
+    
+SYNTAX
+    Set-CMAlertSubscription -InputObject <IResultObject#SMS_Subscription> [-AddEmailAddress <string[]>] [-AlertId <int[]>] [-EmailAddress <string[]>] [-LocaleId <int>] [-NewName <string>] [-PassThru] [-RemoveEmailAddress <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMAlertSubscription -Id <string> [-AddEmailAddress <string[]>] [-AlertId <int[]>] [-EmailAddress <string[]>] [-LocaleId <int>] [-NewName <string>] [-PassThru] [-RemoveEmailAddress <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMAlertSubscription -Name <string> [-AddEmailAddress <string[]>] [-AlertId <int[]>] [-EmailAddress <string[]>] [-LocaleId <int>] [-NewName <string>] [-PassThru] [-RemoveEmailAddress <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddEmailAddress <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddEmailAddresses
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AlertId <int[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AlertIds
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EmailAddress <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EmailAddresses
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_Subscription>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LocaleId <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NewName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveEmailAddress <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveEmailAddresses
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

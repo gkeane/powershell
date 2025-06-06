@@ -1,0 +1,396 @@
+
+NAME
+    Set-CMBootImage
+    
+SYNTAX
+    Set-CMBootImage -InputObject <IResultObject#SMS_BootImagePackage> [-AddOptionalComponent <IResultObject#SMS_WinPEOptionalComponentInfo[]>] [-BackgroundBitmapPath <string>] [-CopyToPackageShareOnDistributionPoint <bool>] [-CustomPackageShareName <string>] [-DeployFromPxeDistributionPoint <bool>] [-Description <string>] [-DisconnectUserFromDistributionPoint <bool>] [-DisconnectUserFromDistributionPointMins <uint>] [-DisconnectUserFromDistributionPointRetryCount <uint>] [-DistributionPointUpdateSchedule <IResultObject#SMS_ScheduleToken>] [-EnableBinaryDeltaReplication <bool>] [-EnableCommandSupport <bool>] [-EnablePrestartCommand <bool>] [-Force] [-IncludeFilesForPrestart <bool>] [-InputLocale <string>] [-NewName <string>] [-PassThru] [-Path <string>] [-PersistContentInCache <bool>] [-PrestageBehavior {ManualCopy | DownloadDelta | OnDemand}] [-PrestartCommandLine <string>] [-PrestartIncludeFilesDirectory <string>] [-Priority {High | Medium | Low}] [-Reload] [-RemoveOptionalComponent <IResultObject#SMS_WinPEOptionalComponentInfo[]>] [-ScratchSpace {32 | 64 | 128 | 256 | 512}] [-SendToPreferredDistributionPoint <bool>] [-Version <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMBootImage -Id <string> [-AddOptionalComponent <IResultObject#SMS_WinPEOptionalComponentInfo[]>] [-BackgroundBitmapPath <string>] [-CopyToPackageShareOnDistributionPoint <bool>] [-CustomPackageShareName <string>] [-DeployFromPxeDistributionPoint <bool>] [-Description <string>] [-DisconnectUserFromDistributionPoint <bool>] [-DisconnectUserFromDistributionPointMins <uint>] [-DisconnectUserFromDistributionPointRetryCount <uint>] [-DistributionPointUpdateSchedule <IResultObject#SMS_ScheduleToken>] [-EnableBinaryDeltaReplication <bool>] [-EnableCommandSupport <bool>] [-EnablePrestartCommand <bool>] [-Force] [-IncludeFilesForPrestart <bool>] [-InputLocale <string>] [-NewName <string>] [-PassThru] [-Path <string>] [-PersistContentInCache <bool>] [-PrestageBehavior {ManualCopy | DownloadDelta | OnDemand}] [-PrestartCommandLine <string>] [-PrestartIncludeFilesDirectory <string>] [-Priority {High | Medium | Low}] [-Reload] [-RemoveOptionalComponent <IResultObject#SMS_WinPEOptionalComponentInfo[]>] [-ScratchSpace {32 | 64 | 128 | 256 | 512}] [-SendToPreferredDistributionPoint <bool>] [-Version <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMBootImage -Name <string> [-AddOptionalComponent <IResultObject#SMS_WinPEOptionalComponentInfo[]>] [-BackgroundBitmapPath <string>] [-CopyToPackageShareOnDistributionPoint <bool>] [-CustomPackageShareName <string>] [-DeployFromPxeDistributionPoint <bool>] [-Description <string>] [-DisconnectUserFromDistributionPoint <bool>] [-DisconnectUserFromDistributionPointMins <uint>] [-DisconnectUserFromDistributionPointRetryCount <uint>] [-DistributionPointUpdateSchedule <IResultObject#SMS_ScheduleToken>] [-EnableBinaryDeltaReplication <bool>] [-EnableCommandSupport <bool>] [-EnablePrestartCommand <bool>] [-Force] [-IncludeFilesForPrestart <bool>] [-InputLocale <string>] [-NewName <string>] [-PassThru] [-Path <string>] [-PersistContentInCache <bool>] [-PrestageBehavior {ManualCopy | DownloadDelta | OnDemand}] [-PrestartCommandLine <string>] [-PrestartIncludeFilesDirectory <string>] [-Priority {High | Medium | Low}] [-Reload] [-RemoveOptionalComponent <IResultObject#SMS_WinPEOptionalComponentInfo[]>] [-ScratchSpace {32 | 64 | 128 | 256 | 512}] [-SendToPreferredDistributionPoint <bool>] [-Version <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddOptionalComponent <IResultObject#SMS_WinPEOptionalComponentInfo[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddOptionalComponents
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BackgroundBitmapPath <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CopyToPackageShareOnDistributionPoint <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      CopyToPackageShareOnDistributionPoints
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CustomPackageShareName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeployFromPxeDistributionPoint <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisconnectUserFromDistributionPoint <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DisconnectUsersFromDistributionPoints
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisconnectUserFromDistributionPointMins <uint>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DisconnectUsersFromDistributionPointsMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisconnectUserFromDistributionPointRetryCount <uint>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DisconnectUsersFromDistributionPointsRetries
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistributionPointUpdateSchedule <IResultObject#SMS_ScheduleToken>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableBinaryDeltaReplication <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableCommandSupport <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnablePrestartCommand <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById
+        Aliases                      PackageId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IncludeFilesForPrestart <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputLocale <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_BootImagePackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NewName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Path <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ImagePath
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PersistContentInCache <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PrestageBehavior <PrestageBehavior>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PrestartCommandLine <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      CommandLine
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PrestartIncludeFilesDirectory <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Priority <Priority>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Reload
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ReloadImage
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveOptionalComponent <IResultObject#SMS_WinPEOptionalComponentInfo[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveOptionalComponents
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScratchSpace <uint>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SendToPreferredDistributionPoint <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SendToPreferredDistributionPoints
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Version <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

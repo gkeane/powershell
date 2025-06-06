@@ -1,0 +1,285 @@
+
+NAME
+    New-CMExchangeServer
+    
+SYNTAX
+    New-CMExchangeServer -ServerAddress <string> [-AccessLevel {Allow | Block | Quarantine}] [-ActiveDirectoryContainer <string[]>] [-AllowExternalDeviceManagement <bool>] [-ApplicationSetting <ExchangeConnectorApplicationSetting>] [-DeltaSyncMins <int>] [-EmailAddress <string[]>] [-EmailManagementSetting <ExchangeConnectorEmailManagementSetting>] [-EnableAccessRule <bool>] [-ExchangeClientAccessServer <Dictionary[string,string][]>] [-FullSyncSchedule <IResultObject#SMS_ScheduleToken>] [-GeneralSetting <ExchangeConnectorGeneralSetting>] [-IsHosted <bool>] [-MaximumInactiveDay <int>] [-NotificationUserName <string>] [-OnPrem] [-PasswordSetting <ExchangeConnectorPasswordSetting>] [-SecuritySetting <ExchangeConnectorSecuritySetting>] [-SiteCode <string>] [-UserName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMExchangeServer -ServerAddress <string> -UserName <string> [-AccessLevel {Allow | Block | Quarantine}] [-ActiveDirectoryContainer <string[]>] [-AllowExternalDeviceManagement <bool>] [-ApplicationSetting <ExchangeConnectorApplicationSetting>] [-DeltaSyncMins <int>] [-EmailAddress <string[]>] [-EmailManagementSetting <ExchangeConnectorEmailManagementSetting>] [-EnableAccessRule <bool>] [-FullSyncSchedule <IResultObject#SMS_ScheduleToken>] [-GeneralSetting <ExchangeConnectorGeneralSetting>] [-Hosted] [-IsHosted <bool>] [-MaximumInactiveDay <int>] [-NotificationUserName <string>] [-PasswordSetting <ExchangeConnectorPasswordSetting>] [-SecuritySetting <ExchangeConnectorSecuritySetting>] [-SiteCode <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AccessLevel <AccessLevelType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ActiveDirectoryContainer <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowExternalDeviceManagement <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplicationSetting <ExchangeConnectorApplicationSetting>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeltaSyncMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      DeltaSyncInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EmailAddress <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EmailAddresses
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EmailManagementSetting <ExchangeConnectorEmailManagementSetting>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableAccessRule <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ExchangeClientAccessServer <Dictionary[string,string][]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FullSyncSchedule <IResultObject#SMS_ScheduleToken>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -GeneralSetting <ExchangeConnectorGeneralSetting>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Hosted
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsHosted <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaximumInactiveDay <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NotificationUserName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OnPrem
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PasswordSetting <ExchangeConnectorPasswordSetting>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SecuritySetting <ExchangeConnectorSecuritySetting>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ServerAddress <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOnPrem, NewHosted
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject#SMS_SCI_SCPropertyList
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

@@ -1,0 +1,106 @@
+
+NAME
+    Get-CMResultantSettings
+    
+SYNTAX
+    Get-CMResultantSettings -Name <string> -SettingsType {Device | User} [-Setting {BackgroundIntelligentTransfer | Cloud | ClientCache | ClientPolicy | ComplianceSettings | ComputerAgent | ComputerRestart | DeliveryOptimization | EndpointProtection | HardwareInventory | MeteredNetwork | MobileDevice | NetworkAccessProtection | PowerManagement | RemoteTools | SoftwareCenter | SoftwareDeployment | SoftwareInventory | SoftwareMetering | SoftwareUpdates | StateMessaging | UserAndDeviceAffinity | WindowsAnalytics}] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    Get-CMResultantSettings -Id <string> -SettingsType {Device | User} [-Setting {BackgroundIntelligentTransfer | Cloud | ClientCache | ClientPolicy | ComplianceSettings | ComputerAgent | ComputerRestart | DeliveryOptimization | EndpointProtection | HardwareInventory | MeteredNetwork | MobileDevice | NetworkAccessProtection | PowerManagement | RemoteTools | SoftwareCenter | SoftwareDeployment | SoftwareInventory | SoftwareMetering | SoftwareUpdates | StateMessaging | UserAndDeviceAffinity | WindowsAnalytics}] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    Get-CMResultantSettings -InputObject <IResultObject> -SettingsType {Device | User} [-Setting {BackgroundIntelligentTransfer | Cloud | ClientCache | ClientPolicy | ComplianceSettings | ComputerAgent | ComputerRestart | DeliveryOptimization | EndpointProtection | HardwareInventory | MeteredNetwork | MobileDevice | NetworkAccessProtection | PowerManagement | RemoteTools | SoftwareCenter | SoftwareDeployment | SoftwareInventory | SoftwareMetering | SoftwareUpdates | StateMessaging | UserAndDeviceAffinity | WindowsAnalytics}] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById
+        Aliases                      ResourceId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           ByValue
+        Aliases                      Device, User
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName
+        Aliases                      DeviceName, UserName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Setting <SettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SettingsType <ResultantSettingsType>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

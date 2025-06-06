@@ -1,0 +1,96 @@
+
+NAME
+    Get-CMFileReplicationRoute
+    
+SYNTAX
+    Get-CMFileReplicationRoute [-DestinationSiteCode <string>] [-SourceSiteCode <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    Get-CMFileReplicationRoute [-DestinationSiteName <string>] [-SourceSiteName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -DestinationSiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCode
+        Aliases                      DesSiteCode
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DestinationSiteName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteName
+        Aliases                      DesSiteName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SourceSiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCode
+        Aliases                      SiteCode
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SourceSiteName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteName
+        Aliases                      SiteName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject[]#SMS_SCI_Address
+    IResultObject#SMS_SCI_Address
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

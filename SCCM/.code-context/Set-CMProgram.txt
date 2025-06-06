@@ -1,0 +1,426 @@
+
+NAME
+    Set-CMProgram
+    
+SYNTAX
+    Set-CMProgram -InputObject <IResultObject> -StandardProgram [-AddSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-AfterRunningType {NoActionRequired | ConfigurationManagerRestartsComputer | ProgramControlsRestart | ConfigurationManagerLogsUserOff}] [-Category <string>] [-CommandLine <string>] [-Comment <string>] [-DisableMomAlertOnRun <bool>] [-DisableProgram <bool>] [-DiskSpaceRequirement <string>] [-DiskSpaceUnit {KB | MB | GB}] [-DriveLetter <string>] [-DriveMode {RunWithUnc | RequiresDriveLetter | RequiresSpecificDriveLetter}] [-Duration <int>] [-EnableTaskSequence <bool>] [-GenerateMomAlertOnFail <bool>] [-PassThru] [-ProgramAssignedType {RunOnceForTheComputer | RunOnceForEveryUserWhoLogsOn}] [-ProgramRunType {OnlyWhenUserIsLoggedOn | WhetherOrNotUserIsLoggedOn | OnlyWhenNoUserIsLoggedOn}] [-Reconnect <bool>] [-RemoveSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-Requirement <string>] [-RunMode {RunWithUserRights | RunWithAdministrativeRights}] [-RunOnAnyPlatform] [-RunType {Normal | Minimized | Maximized | Hidden}] [-SuppressProgramNotification <bool>] [-UserInteraction <bool>] [-WorkingDirectory <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMProgram -PackageName <string> -ProgramName <string> -StandardProgram [-AddSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-AfterRunningType {NoActionRequired | ConfigurationManagerRestartsComputer | ProgramControlsRestart | ConfigurationManagerLogsUserOff}] [-Category <string>] [-CommandLine <string>] [-Comment <string>] [-DisableMomAlertOnRun <bool>] [-DisableProgram <bool>] [-DiskSpaceRequirement <string>] [-DiskSpaceUnit {KB | MB | GB}] [-DriveLetter <string>] [-DriveMode {RunWithUnc | RequiresDriveLetter | RequiresSpecificDriveLetter}] [-Duration <int>] [-EnableTaskSequence <bool>] [-GenerateMomAlertOnFail <bool>] [-PassThru] [-ProgramAssignedType {RunOnceForTheComputer | RunOnceForEveryUserWhoLogsOn}] [-ProgramRunType {OnlyWhenUserIsLoggedOn | WhetherOrNotUserIsLoggedOn | OnlyWhenNoUserIsLoggedOn}] [-Reconnect <bool>] [-RemoveSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-Requirement <string>] [-RunMode {RunWithUserRights | RunWithAdministrativeRights}] [-RunOnAnyPlatform] [-RunType {Normal | Minimized | Maximized | Hidden}] [-SuppressProgramNotification <bool>] [-UserInteraction <bool>] [-WorkingDirectory <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMProgram -PackageId <string> -ProgramName <string> -StandardProgram [-AddSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-AfterRunningType {NoActionRequired | ConfigurationManagerRestartsComputer | ProgramControlsRestart | ConfigurationManagerLogsUserOff}] [-Category <string>] [-CommandLine <string>] [-Comment <string>] [-DisableMomAlertOnRun <bool>] [-DisableProgram <bool>] [-DiskSpaceRequirement <string>] [-DiskSpaceUnit {KB | MB | GB}] [-DriveLetter <string>] [-DriveMode {RunWithUnc | RequiresDriveLetter | RequiresSpecificDriveLetter}] [-Duration <int>] [-EnableTaskSequence <bool>] [-GenerateMomAlertOnFail <bool>] [-PassThru] [-ProgramAssignedType {RunOnceForTheComputer | RunOnceForEveryUserWhoLogsOn}] [-ProgramRunType {OnlyWhenUserIsLoggedOn | WhetherOrNotUserIsLoggedOn | OnlyWhenNoUserIsLoggedOn}] [-Reconnect <bool>] [-RemoveSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-Requirement <string>] [-RunMode {RunWithUserRights | RunWithAdministrativeRights}] [-RunOnAnyPlatform] [-RunType {Normal | Minimized | Maximized | Hidden}] [-SuppressProgramNotification <bool>] [-UserInteraction <bool>] [-WorkingDirectory <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMProgram -InputObject <IResultObject> -ProgramName <string> -StandardProgram [-AddSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-AfterRunningType {NoActionRequired | ConfigurationManagerRestartsComputer | ProgramControlsRestart | ConfigurationManagerLogsUserOff}] [-Category <string>] [-CommandLine <string>] [-Comment <string>] [-DisableMomAlertOnRun <bool>] [-DisableProgram <bool>] [-DiskSpaceRequirement <string>] [-DiskSpaceUnit {KB | MB | GB}] [-DriveLetter <string>] [-DriveMode {RunWithUnc | RequiresDriveLetter | RequiresSpecificDriveLetter}] [-Duration <int>] [-EnableTaskSequence <bool>] [-GenerateMomAlertOnFail <bool>] [-PassThru] [-ProgramAssignedType {RunOnceForTheComputer | RunOnceForEveryUserWhoLogsOn}] [-ProgramRunType {OnlyWhenUserIsLoggedOn | WhetherOrNotUserIsLoggedOn | OnlyWhenNoUserIsLoggedOn}] [-Reconnect <bool>] [-RemoveSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-Requirement <string>] [-RunMode {RunWithUserRights | RunWithAdministrativeRights}] [-RunOnAnyPlatform] [-RunType {Normal | Minimized | Maximized | Hidden}] [-SuppressProgramNotification <bool>] [-UserInteraction <bool>] [-WorkingDirectory <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMProgram -DeviceProgram -PackageName <string> -ProgramName <string> [-CommandLine <string>] [-CommandLineFolder <string>] [-Comment <string>] [-DiskSpaceRequirement <string>] [-DiskSpaceUnit {KB | MB | GB}] [-DownloadProgramType {AsSoonAsPossible | OnlyOverFastNetwork | OnlyWhenTheDeviceIsDocked}] [-PassThru] [-Requirement <string>] [-WorkingDirectory <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMProgram -DeviceProgram -PackageId <string> -ProgramName <string> [-CommandLine <string>] [-CommandLineFolder <string>] [-Comment <string>] [-DiskSpaceRequirement <string>] [-DiskSpaceUnit {KB | MB | GB}] [-DownloadProgramType {AsSoonAsPossible | OnlyOverFastNetwork | OnlyWhenTheDeviceIsDocked}] [-PassThru] [-Requirement <string>] [-WorkingDirectory <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMProgram -DeviceProgram -InputObject <IResultObject> -ProgramName <string> [-CommandLine <string>] [-CommandLineFolder <string>] [-Comment <string>] [-DiskSpaceRequirement <string>] [-DiskSpaceUnit {KB | MB | GB}] [-DownloadProgramType {AsSoonAsPossible | OnlyOverFastNetwork | OnlyWhenTheDeviceIsDocked}] [-PassThru] [-Requirement <string>] [-WorkingDirectory <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMProgram -DeviceProgram -InputObject <IResultObject> [-CommandLine <string>] [-CommandLineFolder <string>] [-Comment <string>] [-DiskSpaceRequirement <string>] [-DiskSpaceUnit {KB | MB | GB}] [-DownloadProgramType {AsSoonAsPossible | OnlyOverFastNetwork | OnlyWhenTheDeviceIsDocked}] [-PassThru] [-Requirement <string>] [-WorkingDirectory <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      AddSupportedOperatingSystemPlatforms
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AfterRunningType <AfterRunningType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Category <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CommandLine <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CommandLineFolder <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDeviceProgramByName, SetDeviceProgramById, SetDeviceProgramByValue, SetDeviceProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Comment <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeviceProgram
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDeviceProgramByName, SetDeviceProgramById, SetDeviceProgramByValue, SetDeviceProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableMomAlertOnRun <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableProgram <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DiskSpaceRequirement <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DiskSpaceUnit <DiskSpaceUnitType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DownloadProgramType <DownloadProgramType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDeviceProgramByName, SetDeviceProgramById, SetDeviceProgramByValue, SetDeviceProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriveLetter <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriveMode <DriveModeType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Duration <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableTaskSequence <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -GenerateMomAlertOnFail <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetStandardProgramByValue, SetStandardProgramByProgramValue, SetDeviceProgramByValue, SetDeviceProgramByProgramValue
+        Aliases                      ProgramPackage, Package, Program
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PackageId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramById, SetDeviceProgramById
+        Aliases                      Id
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PackageName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetDeviceProgramByName
+        Aliases                      Name
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ProgramAssignedType <ProgramAssignedType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ProgramName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetDeviceProgramByName, SetDeviceProgramById, SetDeviceProgramByValue
+        Aliases                      StandardProgramName, DeviceProgramName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ProgramRunType <ProgramRunType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Reconnect <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      RemoveSupportedOperatingSystemPlatforms
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Requirement <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RunMode <RunModeType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RunOnAnyPlatform
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      ClearSupportedOperatingSystemPlatforms
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RunType <RunType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StandardProgram
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SuppressProgramNotification <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserInteraction <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetStandardProgramByProgramValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WorkingDirectory <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

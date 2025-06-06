@@ -1,0 +1,116 @@
+
+NAME
+    Get-CMThirdPartyUpdateCatalog
+    
+SYNTAX
+    Get-CMThirdPartyUpdateCatalog [[-Name] <string>] [-IsCustomCatalog <bool>] [-IsSyncEnabled <bool>] [-PublisherName <string>] [-SiteCode <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    Get-CMThirdPartyUpdateCatalog [-Id] <string> [-IsCustomCatalog <bool>] [-IsSyncEnabled <bool>] [-PublisherName <string>] [-SiteCode <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <string>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory
+        Aliases                      CatalogId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsCustomCatalog <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsSyncEnabled <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    false
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      CatalogName
+        Dynamic?                     false
+        Accept wildcard characters?  true
+        
+    -PublisherName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  true
+        
+    -SiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject[]#SMS_ISVCatalogs
+    IResultObject#SMS_ISVCatalogs
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

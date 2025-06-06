@@ -1,0 +1,166 @@
+
+NAME
+    Set-CMClientSettingWindowsAnalytics
+    
+SYNTAX
+    Set-CMClientSettingWindowsAnalytics -Name <string> [-CommercialIdKey <string>] [-Enable <bool>] [-EnableEarlierTelemetry <bool>] [-IEDataCollectionOption {Disable | LocalIntranetAndTrustedSitesAndMachineLocal | InternetAndRestrictedSites | AllZones}] [-Win10Telemetry {Basic | EnhancedLimited | Enhanced | Full}] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSettingWindowsAnalytics -DefaultSetting [-CommercialIdKey <string>] [-Enable <bool>] [-EnableEarlierTelemetry <bool>] [-IEDataCollectionOption {Disable | LocalIntranetAndTrustedSitesAndMachineLocal | InternetAndRestrictedSites | AllZones}] [-Win10Telemetry {Basic | EnhancedLimited | Enhanced | Full}] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSettingWindowsAnalytics -InputObject <IResultObject#SMS_ClientSettings> [-CommercialIdKey <string>] [-Enable <bool>] [-EnableEarlierTelemetry <bool>] [-IEDataCollectionOption {Disable | LocalIntranetAndTrustedSitesAndMachineLocal | InternetAndRestrictedSites | AllZones}] [-Win10Telemetry {Basic | EnhancedLimited | Enhanced | Full}] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -CommercialIdKey <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DefaultSetting
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDefaultSetting
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Enable <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EnableWindowsAnalyticsManagement
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableEarlierTelemetry <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EnableWindows81AndEarlierTelemetry
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IEDataCollectionOption <InternetExplorerTelemetryLevelType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EnableWindows81AndEarlierInternetExplorerDataCollectionFor
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_ClientSettings>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetCustomSettingByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetCustomSettingByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Win10Telemetry <Win10TelemetryLevelType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      Windows10Telemetry
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

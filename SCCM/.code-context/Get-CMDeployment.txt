@@ -1,0 +1,106 @@
+
+NAME
+    Get-CMDeployment
+    
+SYNTAX
+    Get-CMDeployment [-CollectionName <string>] [-FeatureType {Application | Package | SoftwareUpdate | ConfigurationItem | TaskSequence | FirewallSetting | ApplicationGroup}] [-ProgramName <string>] [-SoftwareName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    Get-CMDeployment -DeploymentId <string> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -CollectionName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  true
+        
+    -DeploymentId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FeatureType <DeploymentFeature>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ProgramName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  true
+        
+    -SoftwareName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  true
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject[]#SMS_DeploymentSummary
+    IResultObject#SMS_DeploymentSummary
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

@@ -1,0 +1,159 @@
+
+NAME
+    Add-CMCollectionToDistributionPointGroup
+    
+SYNTAX
+    Add-CMCollectionToDistributionPointGroup -CollectionId <string> -DistributionPointGroup <IResultObject#SMS_DistributionPointGroup> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToDistributionPointGroup -Collection <IResultObject#SMS_Collection> -DistributionPointGroupId <string> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToDistributionPointGroup -Collection <IResultObject#SMS_Collection> -DistributionPointGroupName <string> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToDistributionPointGroup -Collection <IResultObject#SMS_Collection> -DistributionPointGroup <IResultObject#SMS_DistributionPointGroup> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToDistributionPointGroup -CollectionId <string> -DistributionPointGroupId <string> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToDistributionPointGroup -CollectionId <string> -DistributionPointGroupName <string> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToDistributionPointGroup -CollectionName <string> -DistributionPointGroupId <string> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToDistributionPointGroup -CollectionName <string> -DistributionPointGroupName <string> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToDistributionPointGroup -CollectionName <string> -DistributionPointGroup <IResultObject#SMS_DistributionPointGroup> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -Collection <IResultObject#SMS_Collection>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           AddByObject_Id, AddByObject_Name, AddByObject_Object
+        Aliases                      DeviceCollection, UserCollection
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddById_Id, AddById_Name, AddById_Object
+        Aliases                      DeviceCollectionId, UserCollectionId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddByName_Id, AddByName_Name, AddByName_Object
+        Aliases                      DeviceCollectionName, UserCollectionName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistributionPointGroup <IResultObject#SMS_DistributionPointGroup>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           AddById_Object, AddByName_Object, AddByObject_Object
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistributionPointGroupId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddById_Id, AddByName_Id, AddByObject_Id
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistributionPointGroupName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddById_Name, AddByName_Name, AddByObject_Name
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    Add-CMDeviceCollectionToDistributionPointGroup
+    Add-CMUserCollectionToDistributionPointGroup
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

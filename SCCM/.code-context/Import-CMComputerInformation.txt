@@ -1,0 +1,214 @@
+
+NAME
+    Import-CMComputerInformation
+    
+SYNTAX
+    Import-CMComputerInformation -ComputerName <string> [-CollectionId <string[]>] [-CollectionName <string[]>] [-InputObject <IResultObject#SMS_Collection[]>] [-MacAddress <string>] [-MergeIfExist] [-SMBiosGuid <string>] [-SourceComputerName <string>] [-UserAccountMigrationBehavior {CaptureAllUserAccountsAndRestoreSpecifiedAccounts | CaptureAndRestoreSpecifiedUserAccounts}] [-UserName <string[]>] [-WindowsToGoUniqueKey <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Import-CMComputerInformation -FileName <string> [-CollectionId <string[]>] [-CollectionName <string[]>] [-EnableColumnHeading <bool>] [-InputObject <IResultObject#SMS_Collection[]>] [-VariableName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -CollectionId <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ImportSingleComputer, ImportComputerByUsingFile
+        Aliases                      CollectionIds
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ImportSingleComputer, ImportComputerByUsingFile
+        Aliases                      CollectionNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ComputerName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ImportSingleComputer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableColumnHeading <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ImportComputerByUsingFile
+        Aliases                      EnableColumnHeadings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FileName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ImportComputerByUsingFile
+        Aliases                      FilePath, ImportFilePath, Path
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_Collection[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           ImportSingleComputer, ImportComputerByUsingFile
+        Aliases                      Collection, Collections
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MacAddress <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ImportSingleComputer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MergeIfExist
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ImportSingleComputer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SMBiosGuid <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ImportSingleComputer
+        Aliases                      SMBIOSID
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SourceComputerName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ImportSingleComputer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserAccountMigrationBehavior <MigrationBehavior>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ImportSingleComputer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ImportSingleComputer
+        Aliases                      UserNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -VariableName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ImportComputerByUsingFile
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WindowsToGoUniqueKey <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ImportSingleComputer
+        Aliases                      WtgUniqueKey
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

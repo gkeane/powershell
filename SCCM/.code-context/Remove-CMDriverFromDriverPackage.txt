@@ -1,0 +1,168 @@
+
+NAME
+    Remove-CMDriverFromDriverPackage
+    
+SYNTAX
+    Remove-CMDriverFromDriverPackage -DriverId <int> -DriverPackageId <string> [-Force] [-UpdateDistributionPoints <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDriverFromDriverPackage -Driver <IResultObject#SMS_Driver> -DriverPackageId <string> [-Force] [-UpdateDistributionPoints <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDriverFromDriverPackage -Driver <IResultObject#SMS_Driver> -DriverPackageName <string> [-Force] [-UpdateDistributionPoints <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDriverFromDriverPackage -Driver <IResultObject#SMS_Driver> -DriverPackage <IResultObject#SMS_DriverPackage> [-Force] [-UpdateDistributionPoints <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDriverFromDriverPackage -DriverId <int> -DriverPackageName <string> [-Force] [-UpdateDistributionPoints <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDriverFromDriverPackage -DriverId <int> -DriverPackage <IResultObject#SMS_DriverPackage> [-Force] [-UpdateDistributionPoints <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDriverFromDriverPackage -DriverName <string> -DriverPackageId <string> [-Force] [-UpdateDistributionPoints <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDriverFromDriverPackage -DriverName <string> -DriverPackageName <string> [-Force] [-UpdateDistributionPoints <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDriverFromDriverPackage -DriverName <string> -DriverPackage <IResultObject#SMS_DriverPackage> [-Force] [-UpdateDistributionPoints <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Driver <IResultObject#SMS_Driver>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           RemoveDriverFromDriverPackageByObject_Id, RemoveDriverFromDriverPackageByObject_Name, RemoveDriverFromDriverPackageByObject_Object
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriverId <int>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveDriverFromDriverPackageById_Id, RemoveDriverFromDriverPackageById_Name, RemoveDriverFromDriverPackageById_Object
+        Aliases                      CIId, Id, CI_ID
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriverName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveDriverFromDriverPackageByName_Id, RemoveDriverFromDriverPackageByName_Name, RemoveDriverFromDriverPackageByName_Object
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriverPackage <IResultObject#SMS_DriverPackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           RemoveDriverFromDriverPackageById_Object, RemoveDriverFromDriverPackageByName_Object, RemoveDriverFromDriverPackageByObject_Object
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriverPackageId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveDriverFromDriverPackageById_Id, RemoveDriverFromDriverPackageByName_Id, RemoveDriverFromDriverPackageByObject_Id
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriverPackageName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveDriverFromDriverPackageById_Name, RemoveDriverFromDriverPackageByName_Name, RemoveDriverFromDriverPackageByObject_Name
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UpdateDistributionPoints <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      UpdateDistributionPoint, UpdateDistributionPointForDriverPackage, UpdateDistributionPointsForDriverPackage
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

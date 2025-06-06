@@ -1,0 +1,235 @@
+
+NAME
+    Set-CMSoftwareUpdatePoint
+    
+SYNTAX
+    Set-CMSoftwareUpdatePoint -InputObject <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Software Update Point> [-AnonymousWsusAccess] [-ClientConnectionType {Intranet | Internet | InternetAndIntranet}] [-EnableCloudGateway <bool>] [-EnableSsl <bool>] [-HttpPort <int>] [-HttpsPort <int>] [-NlbVirtualIP <string>] [-PassThru] [-PublicVirtualIP <string>] [-UseProxy <bool>] [-UseProxyForAutoDeploymentRule <bool>] [-WsusAccessAccount <string>] [-Wledbat <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMSoftwareUpdatePoint [-SiteSystemServerName] <string> [-AnonymousWsusAccess] [-ClientConnectionType {Intranet | Internet | InternetAndIntranet}] [-EnableCloudGateway <bool>] [-EnableSsl <bool>] [-HttpPort <int>] [-HttpsPort <int>] [-NlbVirtualIP <string>] [-PassThru] [-PublicVirtualIP <string>] [-SiteCode <string>] [-UseProxy <bool>] [-UseProxyForAutoDeploymentRule <bool>] [-WsusAccessAccount <string>] [-Wledbat <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AnonymousWsusAccess
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientConnectionType <ClientConnectionTypes>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableCloudGateway <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableSsl <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName, ByValue
+        Aliases                      SslWsus, WsusSsl
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HttpPort <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByValue, ByName
+        Aliases                      WsusIisPort
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HttpsPort <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByValue, ByName
+        Aliases                      WsusIisSslPort
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Software Update Point>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           ByValue
+        Aliases                      SoftwareUpdatePoint
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NlbVirtualIP <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PublicVirtualIP <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteSystemServerName <string>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           ByName
+        Aliases                      Name, ServerName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseProxy <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseProxyForAutoDeploymentRule <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Wledbat <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WsusAccessAccount <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    IResultObject#SMS_SCI_SysResUse
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

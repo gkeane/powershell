@@ -1,0 +1,324 @@
+
+NAME
+    New-CMSoftwareUpdateAutoPhasedDeployment
+    
+SYNTAX
+    New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateGroup] <IResultObject#SMS_AuthorizationList> -Name <string> [-AddPhases <Phase[]>] [-BeginCondition {AfterPeriod | Manually}] [-CriteriaOption {Compliance | Number}] [-CriteriaValue <int>] [-DaysAfterPreviousPhaseSuccess <int>] [-DeadlineUnit {Hours | Days | Weeks | Months}] [-DeadlineValue <int>] [-FirstCollection <IResultObject#SMS_Collection>] [-FirstCollectionId <string>] [-FirstCollectionName <string>] [-InsertAtOrder <int>] [-InstallationChoice {AsSoonAsPossible | AfterPeriod}] [-SecondCollection <IResultObject#SMS_Collection>] [-SecondCollectionId <string>] [-SecondCollectionName <string>] [-ThrottlingDays <int>] [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateGroupId] <string> -Name <string> [-AddPhases <Phase[]>] [-BeginCondition {AfterPeriod | Manually}] [-CriteriaOption {Compliance | Number}] [-CriteriaValue <int>] [-DaysAfterPreviousPhaseSuccess <int>] [-DeadlineUnit {Hours | Days | Weeks | Months}] [-DeadlineValue <int>] [-FirstCollection <IResultObject#SMS_Collection>] [-FirstCollectionId <string>] [-FirstCollectionName <string>] [-InsertAtOrder <int>] [-InstallationChoice {AsSoonAsPossible | AfterPeriod}] [-SecondCollection <IResultObject#SMS_Collection>] [-SecondCollectionId <string>] [-SecondCollectionName <string>] [-ThrottlingDays <int>] [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateGroupName] <string> -Name <string> [-AddPhases <Phase[]>] [-BeginCondition {AfterPeriod | Manually}] [-CriteriaOption {Compliance | Number}] [-CriteriaValue <int>] [-DaysAfterPreviousPhaseSuccess <int>] [-DeadlineUnit {Hours | Days | Weeks | Months}] [-DeadlineValue <int>] [-FirstCollection <IResultObject#SMS_Collection>] [-FirstCollectionId <string>] [-FirstCollectionName <string>] [-InsertAtOrder <int>] [-InstallationChoice {AsSoonAsPossible | AfterPeriod}] [-SecondCollection <IResultObject#SMS_Collection>] [-SecondCollectionId <string>] [-SecondCollectionName <string>] [-ThrottlingDays <int>] [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateIds] <string[]> -Name <string> [-AddPhases <Phase[]>] [-BeginCondition {AfterPeriod | Manually}] [-CriteriaOption {Compliance | Number}] [-CriteriaValue <int>] [-DaysAfterPreviousPhaseSuccess <int>] [-DeadlineUnit {Hours | Days | Weeks | Months}] [-DeadlineValue <int>] [-FirstCollection <IResultObject#SMS_Collection>] [-FirstCollectionId <string>] [-FirstCollectionName <string>] [-InsertAtOrder <int>] [-InstallationChoice {AsSoonAsPossible | AfterPeriod}] [-SecondCollection <IResultObject#SMS_Collection>] [-SecondCollectionId <string>] [-SecondCollectionName <string>] [-ThrottlingDays <int>] [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateNames] <string[]> -Name <string> [-AddPhases <Phase[]>] [-BeginCondition {AfterPeriod | Manually}] [-CriteriaOption {Compliance | Number}] [-CriteriaValue <int>] [-DaysAfterPreviousPhaseSuccess <int>] [-DeadlineUnit {Hours | Days | Weeks | Months}] [-DeadlineValue <int>] [-FirstCollection <IResultObject#SMS_Collection>] [-FirstCollectionId <string>] [-FirstCollectionName <string>] [-InsertAtOrder <int>] [-InstallationChoice {AsSoonAsPossible | AfterPeriod}] [-SecondCollection <IResultObject#SMS_Collection>] [-SecondCollectionId <string>] [-SecondCollectionName <string>] [-ThrottlingDays <int>] [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdates] <IResultObject[]> -Name <string> [-AddPhases <Phase[]>] [-BeginCondition {AfterPeriod | Manually}] [-CriteriaOption {Compliance | Number}] [-CriteriaValue <int>] [-DaysAfterPreviousPhaseSuccess <int>] [-DeadlineUnit {Hours | Days | Weeks | Months}] [-DeadlineValue <int>] [-FirstCollection <IResultObject#SMS_Collection>] [-FirstCollectionId <string>] [-FirstCollectionName <string>] [-InsertAtOrder <int>] [-InstallationChoice {AsSoonAsPossible | AfterPeriod}] [-SecondCollection <IResultObject#SMS_Collection>] [-SecondCollectionId <string>] [-SecondCollectionName <string>] [-ThrottlingDays <int>] [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddPhases <Phase[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BeginCondition <BeginConditionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CriteriaOption <CriteriaType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CriteriaValue <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DaysAfterPreviousPhaseSuccess <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeadlineUnit <TimeUnitType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeadlineValue <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FirstCollection <IResultObject#SMS_Collection>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FirstCollectionId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FirstCollectionName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InsertAtOrder <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallationChoice <InstallationChoiceType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SecondCollection <IResultObject#SMS_Collection>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SecondCollectionId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SecondCollectionName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdateGroup <IResultObject#SMS_AuthorizationList>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SearchByGroupMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdateGroupId <string>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           SearchByGroupIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdateGroupName <string>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           SearchByGroupNameMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdateIds <string[]>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdateNames <string[]>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdates <IResultObject[]>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ThrottlingDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
+    
+    
+OUTPUTS
+    IResultObject#SMS_PhasedDeployment
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

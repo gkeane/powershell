@@ -1,0 +1,529 @@
+
+NAME
+    Set-CMApplication
+    
+SYNTAX
+    Set-CMApplication [-InputObject] <IResultObject> [-AddAppCatalog <AppDisplayInfo[]>] [-AddAppCategory <IResultObject[]>] [-AddOwner <string[]>] [-AddSupportContact <string[]>] [-AddUserCategory <IResultObject[]>] [-AppCategory <string[]>] [-ApplyToLanguageById <int>] [-AutoInstall <bool>] [-CleanAppCategory] [-CleanUserCategory] [-ClearAppCatalog] [-ClearOwner] [-ClearSupportContact] [-DefaultLanguageId <int>] [-Description <string>] [-DisplaySupersedenceInApplicationCatalog <bool>] [-DistributionPointSetting {AutoDownload | DeltaCopy | NoDownload}] [-DistributionPriority {High | Medium | Low}] [-IconLocationFile <string>] [-IsFeatured <bool>] [-Keyword <string[]>] [-LinkText <string>] [-LocalizedApplicationName <string>] [-LocalizedDescription <string>] [-NewName <string>] [-OptionalReference <string>] [-Owner <string>] [-PassThru] [-PrivacyUrl <string>] [-Publisher <string>] [-ReleaseDate <datetime>] [-RemoveAppCatalog <int[]>] [-RemoveAppCategoryName <string[]>] [-RemoveOwner <string[]>] [-RemoveSupportContact <string[]>] [-RemoveUserCategoryName <string[]>] [-SendToProtectedDistributionPoint <bool>] [-SoftwareVersion <string>] [-SupportContact <string>] [-UserCategory <string[]>] [-UserDocumentation <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMApplication [-Id] <int> [-AddAppCatalog <AppDisplayInfo[]>] [-AddAppCategory <IResultObject[]>] [-AddOwner <string[]>] [-AddSupportContact <string[]>] [-AddUserCategory <IResultObject[]>] [-AppCategory <string[]>] [-ApplyToLanguageById <int>] [-AutoInstall <bool>] [-CleanAppCategory] [-CleanUserCategory] [-ClearAppCatalog] [-ClearOwner] [-ClearSupportContact] [-DefaultLanguageId <int>] [-Description <string>] [-DisplaySupersedenceInApplicationCatalog <bool>] [-DistributionPointSetting {AutoDownload | DeltaCopy | NoDownload}] [-DistributionPriority {High | Medium | Low}] [-IconLocationFile <string>] [-IsFeatured <bool>] [-Keyword <string[]>] [-LinkText <string>] [-LocalizedApplicationName <string>] [-LocalizedDescription <string>] [-NewName <string>] [-OptionalReference <string>] [-Owner <string>] [-PassThru] [-PrivacyUrl <string>] [-Publisher <string>] [-ReleaseDate <datetime>] [-RemoveAppCatalog <int[]>] [-RemoveAppCategoryName <string[]>] [-RemoveOwner <string[]>] [-RemoveSupportContact <string[]>] [-RemoveUserCategoryName <string[]>] [-SendToProtectedDistributionPoint <bool>] [-SoftwareVersion <string>] [-SupportContact <string>] [-UserCategory <string[]>] [-UserDocumentation <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMApplication -ModelName <string> [-AddAppCatalog <AppDisplayInfo[]>] [-AddAppCategory <IResultObject[]>] [-AddOwner <string[]>] [-AddSupportContact <string[]>] [-AddUserCategory <IResultObject[]>] [-AppCategory <string[]>] [-ApplyToLanguageById <int>] [-AutoInstall <bool>] [-CleanAppCategory] [-CleanUserCategory] [-ClearAppCatalog] [-ClearOwner] [-ClearSupportContact] [-DefaultLanguageId <int>] [-Description <string>] [-DisplaySupersedenceInApplicationCatalog <bool>] [-DistributionPointSetting {AutoDownload | DeltaCopy | NoDownload}] [-DistributionPriority {High | Medium | Low}] [-IconLocationFile <string>] [-IsFeatured <bool>] [-Keyword <string[]>] [-LinkText <string>] [-LocalizedApplicationName <string>] [-LocalizedDescription <string>] [-NewName <string>] [-OptionalReference <string>] [-Owner <string>] [-PassThru] [-PrivacyUrl <string>] [-Publisher <string>] [-ReleaseDate <datetime>] [-RemoveAppCatalog <int[]>] [-RemoveAppCategoryName <string[]>] [-RemoveOwner <string[]>] [-RemoveSupportContact <string[]>] [-RemoveUserCategoryName <string[]>] [-SendToProtectedDistributionPoint <bool>] [-SoftwareVersion <string>] [-SupportContact <string>] [-UserCategory <string[]>] [-UserDocumentation <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMApplication [-Name] <string> [-AddAppCatalog <AppDisplayInfo[]>] [-AddAppCategory <IResultObject[]>] [-AddOwner <string[]>] [-AddSupportContact <string[]>] [-AddUserCategory <IResultObject[]>] [-AppCategory <string[]>] [-ApplyToLanguageById <int>] [-AutoInstall <bool>] [-CleanAppCategory] [-CleanUserCategory] [-ClearAppCatalog] [-ClearOwner] [-ClearSupportContact] [-DefaultLanguageId <int>] [-Description <string>] [-DisplaySupersedenceInApplicationCatalog <bool>] [-DistributionPointSetting {AutoDownload | DeltaCopy | NoDownload}] [-DistributionPriority {High | Medium | Low}] [-IconLocationFile <string>] [-IsFeatured <bool>] [-Keyword <string[]>] [-LinkText <string>] [-LocalizedApplicationName <string>] [-LocalizedDescription <string>] [-NewName <string>] [-OptionalReference <string>] [-Owner <string>] [-PassThru] [-PrivacyUrl <string>] [-Publisher <string>] [-ReleaseDate <datetime>] [-RemoveAppCatalog <int[]>] [-RemoveAppCategoryName <string[]>] [-RemoveOwner <string[]>] [-RemoveSupportContact <string[]>] [-RemoveUserCategoryName <string[]>] [-SendToProtectedDistributionPoint <bool>] [-SoftwareVersion <string>] [-SupportContact <string>] [-UserCategory <string[]>] [-UserDocumentation <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddAppCatalog <AppDisplayInfo[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AppCatalogs
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddAppCategory <IResultObject[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddAppCategories
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddOwner <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddOwners
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddSupportContact <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddSupportContacts
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddUserCategory <IResultObject[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddUserCategories
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AppCategory <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AppCategories
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplyToLanguageById <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ApplySettingToSpecificLanguage
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AutoInstall <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CleanAppCategory
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      CleanAppCategories
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CleanUserCategory
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      CleanUserCategories
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearAppCatalog
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ClearAppCatalogs, CleanAppCatalog, CleanAppCatalogs
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearOwner
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      CleanOwners
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearSupportContact
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      CleanSupportContacts
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DefaultLanguageId <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisplaySupersedenceInApplicationCatalog <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DisplaySupersedencesInApplicationCatalog
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistributionPointSetting <DistributionPointSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistributionPriority <DistributionPriorityType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IconLocationFile <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <int>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           SetById
+        Aliases                      CIId, CI_ID
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetByValue
+        Aliases                      Application
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsFeatured <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Keyword <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      Keywords
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LinkText <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LocalizedApplicationName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LocalizedDescription <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      LocalizedApplicationDescription
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ModelName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByModelName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           SetByName
+        Aliases                      LocalizedDisplayName, ApplicationName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NewName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OptionalReference <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Owner <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PrivacyUrl <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Publisher <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      Manufacturer
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ReleaseDate <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveAppCatalog <int[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveAppCatalogsByLanguageId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveAppCategoryName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveAppCategoryNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveOwner <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveOwners
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveSupportContact <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveSupportContacts
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveUserCategoryName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveUserCategoryNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SendToProtectedDistributionPoint <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareVersion <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SupportContact <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserCategory <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      UserCategories
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserDocumentation <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    IResultObject#SMS_Application
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

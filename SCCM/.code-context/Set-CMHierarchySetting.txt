@@ -1,0 +1,294 @@
+
+NAME
+    Set-CMHierarchySetting
+    
+SYNTAX
+    Set-CMHierarchySetting [-AllowPrestage <bool>] [-ApprovalMethod {AutomaticallyApproveComputersInTrustedDomains | ManuallyApproveEachComputer | AutomaticallyApproveAllComputers}] [-AutoResolveClientConflict <bool>] [-AutoUpgradeDays <int>] [-EnableAutoClientUpgrade <bool>] [-EnableExclusionCollection <bool>] [-EnablePreProduction <bool>] [-EnablePrereleaseFeature] [-ExcludeServer <bool>] [-ExclusionCollection <IResultObject#SMS_Collection;CollectionType=2>] [-ExclusionCollectionId <string>] [-ExclusionCollectionName <string>] [-FallbackSiteCode <string>] [-Force] [-PassThru] [-PreferBoundaryGroupManagementPoint <bool>] [-TargetCollection <IResultObject#SMS_Collection;CollectionType=2>] [-TargetCollectionId <string>] [-TargetCollectionName <string>] [-TelemetryLevel {Basic | Enhanced | Full}] [-UnlimitTargetCollectionMember] [-UseFallbackSite <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AllowPrestage <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApprovalMethod <ApprovalMethodType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AutoResolveClientConflict <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AutomaticallyResolveConfictingRecord, AutomaticallyResolveConflictingRecord
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AutoUpgradeDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AutomaticallyUpgradeDays
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableAutoClientUpgrade <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EnableProgram
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableExclusionCollection <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnablePreProduction <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnablePrereleaseFeature
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EnablePrereleaseFeatures
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ExcludeServer <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ExcludeServers
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ExclusionCollection <IResultObject#SMS_Collection;CollectionType=2>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ExclusionCollectionId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ExclusionCollectionName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FallbackSiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PreferBoundaryGroupManagementPoint <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PreferBoundaryGroupManagementPoints
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TargetCollection <IResultObject#SMS_Collection;CollectionType=2>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PreProductionCollection
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TargetCollectionId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PreProductionCollectionId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TargetCollectionName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PreProductionCollectionName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TelemetryLevel <TelemetryLevelType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DiagnosticLevel
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UnlimitTargetCollectionMember
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      UnlimitPreProductionCollectionMemberCount
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseFallbackSite <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject#SMS_SCI_SiteDefinition
+    IResultObject[]#SMS_SCI_SiteDefinition
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

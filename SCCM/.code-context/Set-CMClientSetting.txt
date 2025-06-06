@@ -1,0 +1,1142 @@
+
+NAME
+    Set-CMClientSetting
+    
+SYNTAX
+    Set-CMClientSetting -Name <string> [-Description <string>] [-NewName <string>] [-PassThru] [-Priority {Increase | Decrease}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -Name <string> -RemoteControl [-AccessLevel {NoAccess | ViewOnly | FullControl}] [-AllowClientChange <bool>] [-AllowPermittedViewer <bool>] [-AllowRemoteControlOfUnattendedComputer <bool>] [-AudibleSignal {PlayNoSound | PlaySoundAtBeginAndEnd | PlaySoundRepeatedly}] [-FirewallExceptionProfile {Disabled | Public | Private | Domain}] [-GrantRemoteControlPermissionToLocalAdministrator <bool>] [-ManageRemoteDesktopSetting <bool>] [-ManageSolicitedRemoteAssistance <bool>] [-ManageUnsolicitedRemoteAssistance <bool>] [-PassThru] [-PermittedViewer <string[]>] [-PromptUserForPermission <bool>] [-RemoteAssistanceAccessLevel {None | RemoteViewing | FullControl}] [-RequireAuthentication <bool>] [-ShowNotificationIconOnTaskbar <bool>] [-ShowSessionConnectionBar <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -ComputerAgent -Name <string> [-AddPortalToTrustedSiteList <bool>] [-AllowPortalToHaveElevatedTrust <bool>] [-ApplicationCatalogWebsitePointServerName <string>] [-BrandingTitle <string>] [-DisplayNewProgramNotification <bool>] [-EnableThirdPartyOrchestration {No | Yes}] [-FinalReminderMins <int>] [-InitialReminderHours <int>] [-InstallRestriction {AllUsers | OnlyAdministrators | OnlyAdministratorsAndPrimaryUsers | NoUsers}] [-InterimReminderHours <int>] [-PassThru] [-PortalUrl <string>] [-PowerShellExecutionPolicy {AllSigned | Bypass | Restricted}] [-SelectApplicationCatalogWebsitePoint {Fqdn | AutoDetect | NetBios}] [-SuspendBitLocker {Never | Always}] [-UseNewSoftwareCenter <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -CloudService -Name <string> [-AllowCloudDistributionPoint <bool>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -Name <string> -UserDeviceAffinity [-AllowUserAffinity <bool>] [-AutoApproveAffinity <bool>] [-LogOnThresholdMins <int>] [-PassThru] [-UsageThresholdDays <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -Name <string> -PowerManagement [-AllowUserToOptOutFromPowerPlan <bool>] [-Enable <bool>] [-EnableWakeupProxy <bool>] [-FirewallExceptionForWakeupProxy {None | Public | Private | Domain}] [-PassThru] [-WakeOnLanPort <int>] [-WakeupProxyDirectAccessPrefix <string>] [-WakeupProxyPort <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -Name <string> -SoftwareUpdate [-BatchingTimeout <int>] [-DeploymentEvaluationSchedule <IResultObject#SMS_ScheduleToken>] [-Enable <bool>] [-EnforceMandatory <bool>] [-PassThru] [-ScanSchedule <IResultObject#SMS_ScheduleToken>] [-TimeUnit {Days | Hours}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -Bits -Name <string> [-EnableBitsMaxBandwidth <bool>] [-EnableDownloadOffSchedule <bool>] [-MaxBandwidthBeginHr <int>] [-MaxBandwidthEndHr <int>] [-MaxTransferRateOffSchedule <int>] [-MaxTransferRateOnSchedule <int>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -ClientPolicy -Name <string> [-EnableUserPolicy <bool>] [-EnableUserPolicyOnInternet <bool>] [-EnableUserPolicyOnTS <bool>] [-PassThru] [-PolicyPollingMins <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -Compliance -Name <string> [-EnableComplianceEvaluation <bool>] [-EnableUserDataAndProfile <bool>] [-PassThru] [-Schedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -ComputerRestart -Name <string> [-PassThru] [-RebootLogoffNotificationCountdownMins <int>] [-RebootLogoffNotificationFinalWindowMins <int>] [-ReplaceToastNotificationWithDialog <bool>] [-NoRebootEnforcement <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -EndpointProtection -Name <string> [-DisableFirstSignatureUpdate <bool>] [-Enable <bool>] [-ForceRebootHr <int>] [-InstallEndpointProtectionClient <bool>] [-PassThru] [-RemoveThirdParty <bool>] [-SuppressReboot <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -HardwareInventory -Name <string> [-Enable <bool>] [-InventoryReportId <string>] [-PassThru] [-Schedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -Enrollment -Name <string> [-Enable <bool>] [-EnrollmentProfileName <string>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -Name <string> -NetworkAccessProtection [-Enable <bool>] [-ForceScan <bool>] [-PassThru] [-Schedule <IResultObject#SMS_ScheduleToken>] [-UseUtcForEvaluationTime <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -Name <string> -SoftwareMetering [-Enable <bool>] [-PassThru] [-Schedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -Name <string> -SoftwareInventory [-Enable <bool>] [-PassThru] [-Schedule <IResultObject#SMS_ScheduleToken>] [-SoftwareInventoryFileDisplayName <string>] [-SoftwareInventoryFileInventoriedName <string>] [-SoftwareInventoryFileName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -MeteredNetwork -Name <string> [-MeteredNetworkUsage {None | Allow | Limit | Block}] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -Name <string> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -Name <string> -StateMessage [-PassThru] [-ReportingCycleMins <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSetting -Name <string> -SoftwareDeployment [-PassThru] [-Schedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AccessLevel <AccessLevelType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddPortalToTrustedSiteList <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowClientChange <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowCloudDistributionPoint <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetCloudSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowPermittedViewer <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      AllowPermittedViewersToRemoteDesktop
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowPortalToHaveElevatedTrust <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowRemoteControlOfUnattendedComputer <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowUserAffinity <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetUserDeviceAffinitySettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowUserToOptOutFromPowerPlan <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetPowerManagementSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplicationCatalogWebsitePointServerName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AudibleSignal <AudibleSignalType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AutoApproveAffinity <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetUserDeviceAffinitySettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BatchingTimeout <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSoftwareUpdatesSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Bits
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBackgroundIntelligentTransferSettingsByName
+        Aliases                      BitsSettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BrandingTitle <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientPolicy
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetClientPolicySettingsByName
+        Aliases                      ClientPolicySettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CloudService
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetCloudSettingsByName
+        Aliases                      CloudServicesSettings, CloudServices
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Compliance
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComplianceSettingsByName
+        Aliases                      ComplianceSettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ComputerAgent
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      ComputerAgentSettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ComputerRestart
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerRestartSettingsByName
+        Aliases                      ComputerRestartSettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentEvaluationSchedule <IResultObject#SMS_ScheduleToken>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSoftwareUpdatesSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableFirstSignatureUpdate <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetEndpointProtectionSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisplayNewProgramNotification <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Enable <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetEndpointProtectionSettingsByName, SetPowerManagementSettingsByName, SetHardwareInventorySettingsByName, SetMobileDeviceSettingsByName, SetNetworkAccessProtectionSettingsByName, SetSoftwareMeteringSettingsByName, SetSoftwareUpdatesSettingsByName, SetSoftwareInventorySettingsByName
+        Aliases                      EnableEndpointProtection, EnablePowerManagement, EnableHardwareInventory, EnableDeviceEnrollment, EnableNetworkAccessProtection, EnableSoftwareMetering, EnableSoftwareUpdatesOnClient, EnableSoftwareInventory
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableBitsMaxBandwidth <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBackgroundIntelligentTransferSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableComplianceEvaluation <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComplianceSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableDownloadOffSchedule <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBackgroundIntelligentTransferSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableThirdPartyOrchestration <EnableThirdPartyOrchestrationType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableUserDataAndProfile <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComplianceSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableUserPolicy <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetClientPolicySettingsByName
+        Aliases                      EnableUserPolicyPolling
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableUserPolicyOnInternet <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetClientPolicySettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableUserPolicyOnTS <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetClientPolicySettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableWakeupProxy <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetPowerManagementSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EndpointProtection
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetEndpointProtectionSettingsByName
+        Aliases                      EndpointProtectionSettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnforceMandatory <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSoftwareUpdatesSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Enrollment
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetMobileDeviceSettingsByName
+        Aliases                      EnrollmentSettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnrollmentProfileName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetMobileDeviceSettingsByName
+        Aliases                      DeviceEnrollmentProfileName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FinalReminderMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      FinalReminderMinutesInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FirewallExceptionForWakeupProxy <WakeUpProxyFirewallExceptionTypes>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetPowerManagementSettingsByName
+        Aliases                      WindowsFirewallExceptionsForWakeUpProxy
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FirewallExceptionProfile <FirewallExceptionProfileType[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceRebootHr <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetEndpointProtectionSettingsByName
+        Aliases                      ForceRebootPeriod, ForceRebootHours
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceScan <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetNetworkAccessProtectionSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -GrantRemoteControlPermissionToLocalAdministrator <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HardwareInventory
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetHardwareInventorySettingsByName
+        Aliases                      HardwareInventorySettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InitialReminderHours <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      InitialReminderHoursInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallEndpointProtectionClient <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetEndpointProtectionSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallRestriction <InstallRestrictionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InterimReminderHours <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      InterimReminderHoursInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InventoryReportId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetHardwareInventorySettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LogOnThresholdMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetUserDeviceAffinitySettingsByName
+        Aliases                      UserAffinityLogOnThresholdMinutes, UserAffinityLogOnThresholdMins
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ManageRemoteDesktopSetting <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ManageSolicitedRemoteAssistance <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ManageUnsolicitedRemoteAssistance <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaxBandwidthBeginHr <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBackgroundIntelligentTransferSettingsByName
+        Aliases                      MaxBandwidthValidFrom
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaxBandwidthEndHr <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBackgroundIntelligentTransferSettingsByName
+        Aliases                      MaxBandwidthValidTo
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaxTransferRateOffSchedule <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBackgroundIntelligentTransferSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaxTransferRateOnSchedule <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBackgroundIntelligentTransferSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MeteredNetwork
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetMeteredNetworksSettingsByName
+        Aliases                      MeteredNetworkSettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MeteredNetworkUsage <MeteredNetworkUsageType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetMeteredNetworksSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByName, SetCloudSettingsByName, SetEndpointProtectionSettingsByName, SetSecurityScopeByName, SetPowerManagementSettingsByName, SetStateMessagingSettingsByName, SetUserDeviceAffinitySettingsByName, SetBackgroundIntelligentTransferSettingsByName, SetClientPolicySettingsByName, SetComplianceSettingsByName, SetComputerAgentSettingsByName, SetComputerRestartSettingsByName, SetMeteredNetworksSettingsByName, SetRemoteToolsSettingsByName, SetMobileDeviceSettingsByName, SetHardwareInventorySettingsByName, SetNetworkAccessProtectionSettingsByName, SetSoftwareDeploymentSettingsByName, SetSoftwareMeteringSettingsByName, SetSoftwareUpdatesSettingsByName, SetSoftwareInventorySettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NetworkAccessProtection
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetNetworkAccessProtectionSettingsByName
+        Aliases                      NetworkAccessProtectionSettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NewName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoRebootEnforcement <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerRestartSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PermittedViewer <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      PermittedViewers
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PolicyPollingMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetClientPolicySettingsByName
+        Aliases                      PolicyPollingInterval, PollingIntervalMins
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PortalUrl <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PowerManagement
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetPowerManagementSettingsByName
+        Aliases                      PowerManagementSettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PowerShellExecutionPolicy <PowerShellExecutionPolicyType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Priority <PriorityChangeType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PromptUserForPermission <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RebootLogoffNotificationCountdownMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerRestartSettingsByName
+        Aliases                      RebootLogoffNotificationCountdownDurationMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RebootLogoffNotificationFinalWindowMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerRestartSettingsByName
+        Aliases                      RebootLogoffNotificationFinalWindowMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoteControl
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      RemoteToolsSettings, RemoteTools
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveThirdParty <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetEndpointProtectionSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ReplaceToastNotificationWithDialog <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerRestartSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ReportingCycleMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStateMessagingSettingsByName
+        Aliases                      StateMessagingReportingCycleMinutes, StateMessagingReportingCycleMins
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RequireAuthentication <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScanSchedule <IResultObject#SMS_ScheduleToken>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSoftwareUpdatesSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Schedule <IResultObject#SMS_ScheduleToken>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSoftwareInventorySettingsByName, SetSoftwareMeteringSettingsByName, SetSoftwareDeploymentSettingsByName, SetNetworkAccessProtectionSettingsByName, SetHardwareInventorySettingsByName, SetComplianceSettingsByName
+        Aliases                      InventorySchedule, NapEvaluationSchedule, EvaluationSchedule, DataCollectionSchedule, SoftwareInventorySchedule
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SelectApplicationCatalogWebsitePoint <ApplicationCatalogWebsitePointType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ShowNotificationIconOnTaskbar <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ShowSessionConnectionBar <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteToolsSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareDeployment
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSoftwareDeploymentSettingsByName
+        Aliases                      SoftwareDeploymentSettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareInventory
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSoftwareInventorySettingsByName
+        Aliases                      SoftwareInventorySettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareInventoryFileDisplayName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSoftwareInventorySettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareInventoryFileInventoriedName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSoftwareInventorySettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareInventoryFileName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSoftwareInventorySettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareMetering
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSoftwareMeteringSettingsByName
+        Aliases                      SoftwareMeteringSettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdate
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSoftwareUpdatesSettingsByName
+        Aliases                      SoftwareUpdatesSettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StateMessage
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStateMessagingSettingsByName
+        Aliases                      StateMessageSettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SuppressReboot <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetEndpointProtectionSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SuspendBitLocker <SuspendBitLockerType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TimeUnit <BatchingTimeoutType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSoftwareUpdatesSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UsageThresholdDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetUserDeviceAffinitySettingsByName
+        Aliases                      UserAffinityUsageThresholdDays
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseNewSoftwareCenter <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComputerAgentSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseUtcForEvaluationTime <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetNetworkAccessProtectionSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserDeviceAffinity
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetUserDeviceAffinitySettingsByName
+        Aliases                      UserDeviceAffinitySettings
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WakeOnLanPort <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetPowerManagementSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WakeupProxyDirectAccessPrefix <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetPowerManagementSettingsByName
+        Aliases                      IPv6PrefixesForDirectAccessOrInterveningNetworkDevices
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WakeupProxyPort <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetPowerManagementSettingsByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

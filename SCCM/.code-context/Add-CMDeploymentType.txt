@@ -1,0 +1,655 @@
+
+NAME
+    Add-CMDeploymentType
+    
+SYNTAX
+    Add-CMDeploymentType -ContentLocation <string> -MsiInstaller [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-EnableContentLocationFallback <bool>] [-Force32BitInstaller <bool>] [-ForceForUnknownPublisher <bool>] [-InputObject <IResultObject>] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-InstallationProgram <string>] [-Language <string[]>] [-OnSlowNetworkMode {DoNothing | Download | DownloadContentForStreaming}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -AndroidInstaller -ContentLocation <string> [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-ForceForUnknownPublisher <bool>] [-InputObject <IResultObject>] [-Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -AppV5xInstaller -ContentLocation <string> [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-EnableContentLocationFallback <bool>] [-ForceForUnknownPublisher <bool>] [-InputObject <IResultObject>] [-Language <string[]>] [-OnFastNetworkMode {RunLocal | RunFromNetwork | DownloadContentForStreaming}] [-OnSlowNetworkMode {DoNothing | Download | DownloadContentForStreaming}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -AppvInstaller -ContentLocation <string> [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-EnableContentLocationFallback <bool>] [-ForceForUnknownPublisher <bool>] [-InputObject <IResultObject>] [-Language <string[]>] [-OnFastNetworkMode {RunLocal | RunFromNetwork | DownloadContentForStreaming}] [-OnSlowNetworkMode {DoNothing | Download | DownloadContentForStreaming}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -ContentLocation <string> -IosAppStoreInstaller [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-ForceForUnknownPublisher <bool>] [-InputObject <IResultObject>] [-Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -ContentLocation <string> -IosInstaller [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-ForceForUnknownPublisher <bool>] [-InputObject <IResultObject>] [-Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -ContentLocation <string> -MacInstaller [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-ForceForUnknownPublisher <bool>] [-InputObject <IResultObject>] [-Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -DeploymentTypeName <string> -InstallationProgram <string> -ScriptContent <string> -ScriptInstaller -ScriptType {PowerShell | VBScript | JavaScript} [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-ContentLocation <string>] [-DetectDeploymentTypeByCustomScript] [-EnableBranchCache <bool>] [-EnableContentLocationFallback <bool>] [-EstimatedInstallationTimeMins <int>] [-Force32BitDetectionScript <bool>] [-Force32BitInstaller <bool>] [-InputObject <IResultObject>] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-InstallationProgramVisibility {Normal | Minimized | Maximized | Hidden}] [-InstallationStartIn <string>] [-Language <string[]>] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-ManualSpecifyDeploymentType] [-MaximumAllowedRunTimeMins <int>] [-OnSlowNetworkMode {DoNothing | Download | DownloadContentForStreaming}] [-PersistContentInClientCache <bool>] [-RequireUserInteraction <bool>] [-UninstallProgram <string>] [-UninstallStartIn <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -ContentLocation <string> -WebAppInstaller [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-InputObject <IResultObject>] [-Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -ContentLocation <string> -Windows8AppInstaller [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-EnableContentLocationFallback <bool>] [-ForceForUnknownPublisher <bool>] [-InputObject <IResultObject>] [-Language <string[]>] [-OnSlowNetworkMode {DoNothing | Download | DownloadContentForStreaming}] [-TriggerVpn <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -ApplicationNameInWindowsStore <string> -RemoteComputerName <string> -WindowsStoreInstaller [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-ForceForUnknownPublisher <bool>] [-InputObject <IResultObject>] [-Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -ContentLocation <string> -WindowsPhone8Installer [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-ForceForUnknownPublisher <bool>] [-InputObject <IResultObject>] [-Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -ContentLocation <string> -WindowsPhoneStoreInstaller [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-ForceForUnknownPublisher <bool>] [-InputObject <IResultObject>] [-Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -ContentLocation <string> -WMInstaller [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-EnableUserUninstall <bool>] [-ForceForUnknownPublisher <bool>] [-InputObject <IResultObject>] [-Language <string[]>] [-ManualSpecifyDeploymentType] [-PfxFileLocation <string>] [-PfxFilePassword <securestring>] [-SignContentFile <bool>] [-SignedContentFileLocation <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -ContentLocation <string> -MobileMsiInstaller [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-ForceForUnknownPublisher <bool>] [-InputObject <IResultObject>] [-InstallationCommandLine <string>] [-Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -DeploymentTypeName <string> -MobileMsiInstaller [-AddRequirement <Rule[]>] [-AdministratorComment <string>] [-ApplicationName <string>] [-ContentLocation <string>] [-InputObject <IResultObject>] [-Language <string[]>] [-ManualSpecifyDeploymentType] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMDeploymentType -AndroidGooglePlayInstaller -ContentLocation <string> [-AdministratorComment <string>] [-ApplicationName <string>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <string>] [-ForceForUnknownPublisher <bool>] [-InputObject <IResultObject>] [-Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddRequirement <Rule[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByAndroidInstallerAuto, AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByAppvInstallerAuto, AddDeploymentTypeByIosAppStoreInstallerAuto, AddDeploymentTypeByIosInstallerAuto, AddDeploymentTypeByMacInstallerAuto, AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByScriptInstallerManual, AddDeploymentTypeByWebAppInstallerAuto, AddDeploymentTypeByWindows8AppInstallerAuto, AddDeploymentTypeByWindowsStoreInstallerAuto, AddDeploymentTypeByWinPhone8InstallerAuto, AddDeploymentTypeByWinPhoneStoreInstallerAuto, AddDeploymentTypeByWMInstaller, AddDeploymentTypeByMobileMsiInstallerAuto, AddDeploymentTypeByMobileMsiInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AdministratorComment <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AndroidGooglePlayInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByAndroidGooglePlayInstallerAuto
+        Aliases                      AndroidDeepLinkInstaller
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AndroidInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByAndroidInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AppV5xInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByAppV5xInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplicationName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplicationNameInWindowsStore <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByWindowsStoreInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AppvInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByAppvInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AutoIdentifyFromInstallationFile
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByAndroidGooglePlayInstallerAuto, AddDeploymentTypeByAndroidInstallerAuto, AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByAppvInstallerAuto, AddDeploymentTypeByIosAppStoreInstallerAuto, AddDeploymentTypeByIosInstallerAuto, AddDeploymentTypeByMacInstallerAuto, AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByWebAppInstallerAuto, AddDeploymentTypeByWindows8AppInstallerAuto, AddDeploymentTypeByWindowsStoreInstallerAuto, AddDeploymentTypeByWinPhone8InstallerAuto, AddDeploymentTypeByWinPhoneStoreInstallerAuto, AddDeploymentTypeByWMInstaller, AddDeploymentTypeByMobileMsiInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ContentLocation <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByAndroidGooglePlayInstallerAuto, AddDeploymentTypeByAndroidInstallerAuto, AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByAppvInstallerAuto, AddDeploymentTypeByIosAppStoreInstallerAuto, AddDeploymentTypeByIosInstallerAuto, AddDeploymentTypeByMacInstallerAuto, AddDeploymentTypeByMobileMsiInstallerAuto, AddDeploymentTypeByMobileMsiInstallerManual, AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByScriptInstallerManual, AddDeploymentTypeByWebAppInstallerAuto, AddDeploymentTypeByWindows8AppInstallerAuto, AddDeploymentTypeByWinPhone8InstallerAuto, AddDeploymentTypeByWinPhoneStoreInstallerAuto, AddDeploymentTypeByWMInstaller
+        Aliases                      InstallationFileLocation, WebAppUrl
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentTypeName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByAndroidGooglePlayInstallerAuto, AddDeploymentTypeByAndroidInstallerAuto, AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByAppvInstallerAuto, AddDeploymentTypeByIosAppStoreInstallerAuto, AddDeploymentTypeByIosInstallerAuto, AddDeploymentTypeByMacInstallerAuto, AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByScriptInstallerManual, AddDeploymentTypeByWebAppInstallerAuto, AddDeploymentTypeByWindows8AppInstallerAuto, AddDeploymentTypeByWindowsStoreInstallerAuto, AddDeploymentTypeByWinPhone8InstallerAuto, AddDeploymentTypeByWinPhoneStoreInstallerAuto, AddDeploymentTypeByWMInstaller, AddDeploymentTypeByMobileMsiInstallerAuto, AddDeploymentTypeByMobileMsiInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DetectDeploymentTypeByCustomScript
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableBranchCache <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      AllowClientsToShareContentOnSameSubnet
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableContentLocationFallback <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByAppvInstallerAuto, AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByWindows8AppInstallerAuto, AddDeploymentTypeByScriptInstallerManual
+        Aliases                      AllowClientsToUseFallbackSourceLocationForContent
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableUserUninstall <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByWMInstaller
+        Aliases                      AllowUserToUninstall, AllowsUsersToUninstallThisContent
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EstimatedInstallationTimeMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      EstimatedInstallationTimeMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force32BitDetectionScript <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      RunScriptAs32BitProcessOn64BitClient
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force32BitInstaller <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByScriptInstallerManual
+        Aliases                      RunInstallationProgramAs32BitProcessOn64BitClient
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceForUnknownPublisher <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByAndroidGooglePlayInstallerAuto, AddDeploymentTypeByAndroidInstallerAuto, AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByAppvInstallerAuto, AddDeploymentTypeByIosAppStoreInstallerAuto, AddDeploymentTypeByIosInstallerAuto, AddDeploymentTypeByMacInstallerAuto, AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByWindows8AppInstallerAuto, AddDeploymentTypeByWindowsStoreInstallerAuto, AddDeploymentTypeByWinPhone8InstallerAuto, AddDeploymentTypeByWinPhoneStoreInstallerAuto, AddDeploymentTypeByWMInstaller, AddDeploymentTypeByMobileMsiInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           (All)
+        Aliases                      Application
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallationBehaviorType <InstallationBehaviorType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByScriptInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallationCommandLine <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByMobileMsiInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallationProgram <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByScriptInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallationProgramVisibility <UserInteractionMode>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallationStartIn <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IosAppStoreInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByIosAppStoreInstallerAuto
+        Aliases                      IosDeepLinkInstaller
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IosInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByIosInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Language <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LogonRequirementType <LogonRequirementType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MacInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByMacInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ManualSpecifyDeploymentType
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual, AddDeploymentTypeByWMInstaller, AddDeploymentTypeByMobileMsiInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaximumAllowedRunTimeMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      MaximumAllowedRunTimeMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MobileMsiInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByMobileMsiInstallerAuto, AddDeploymentTypeByMobileMsiInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MsiInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByMsiInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OnFastNetworkMode <OnFastNetworkMode>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByAppvInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OnSlowNetworkMode <ContentHandlingMode>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByAppvInstallerAuto, AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByWindows8AppInstallerAuto, AddDeploymentTypeByScriptInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PersistContentInClientCache <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PfxFileLocation <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByWMInstaller
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PfxFilePassword <securestring>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByWMInstaller
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoteComputerName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByWindowsStoreInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RequireUserInteraction <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      RequiresUserInteraction
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScriptContent <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScriptInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScriptType <CreateDtConstantsUtilities+ScriptLanguage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SignContentFile <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByWMInstaller
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SignedContentFileLocation <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByWMInstaller
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TriggerVpn <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByWindows8AppInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UninstallProgram <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UninstallStartIn <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByScriptInstallerManual
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WMInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByWMInstaller
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WebAppInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByWebAppInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Windows8AppInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByWindows8AppInstallerAuto
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WindowsPhone8Installer
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByWinPhone8InstallerAuto
+        Aliases                      WinPhone8Installer
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WindowsPhoneStoreInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByWinPhoneStoreInstallerAuto
+        Aliases                      WinPhone8DeeplinkInstaller, WindowsPhone8StoreInstaller
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WindowsStoreInstaller
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddDeploymentTypeByWindowsStoreInstallerAuto
+        Aliases                      DeeplinkInstaller
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    IResultObject#SMS_DeploymentType
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

@@ -1,0 +1,519 @@
+
+NAME
+    New-CMTaskSequence
+    
+SYNTAX
+    New-CMTaskSequence -BootImagePackageId <string> -BuildOperatingSystemImage -JoinDomain {DomainType | WorkgroupType} -Name <string> -OperatingSystemFileAccount <string> -OperatingSystemFilePath <string> -OperatingSystemImageIndex <uint> -OperatingSystemImagePackageId <string> [-ApplicationName <string[]>] [-IconLocationFile <string>] [-ApplyAll <bool>] [-ClientPackagePackageId <string>] [-CreatedBy <string>] [-Description <string>] [-DomainAccount <string>] [-DomainName <string>] [-DomainOrganizationUnit <string>] [-DomainPassword <securestring>] [-GeneratePassword <bool>] [-HighPerformance <bool>] [-IgnoreInvalidApplication <bool>] [-ImageDescription <string>] [-ImageVersion <string>] [-InstallationLicensingMode {NonSpecify | PerSeat | PerServer}] [-InstallationProperty <string>] [-LocalAdminPassword <securestring>] [-MaximumServerConnection <int>] [-OperatingSystemFileAccountPassword <securestring>] [-ProductKey <string>] [-SoftwareUpdateStyle {All | Mandatory | NoInstall}] [-TimeZone <TimeZoneInfo>] [-WorkgroupName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMTaskSequence -BootImagePackageId <string> -InstallOperatingSystemImage -JoinDomain {DomainType | WorkgroupType} -Name <string> -OperatingSystemImageIndex <uint> -OperatingSystemImagePackageId <string> [-ApplicationName <string[]>] [-IconLocationFile <string>] [-ApplyAll <bool>] [-CaptureLocallyUsingLink <bool>] [-CaptureNetworkSetting <bool>] [-CaptureUserSetting <bool>] [-CaptureWindowsSetting <bool>] [-ClientPackagePackageId <string>] [-ConfigureBitLocker <bool>] [-Description <string>] [-DomainAccount <string>] [-DomainName <string>] [-DomainOrganizationUnit <string>] [-DomainPassword <securestring>] [-GeneratePassword <bool>] [-HighPerformance <bool>] [-IgnoreInvalidApplication <bool>] [-InstallationLicensingMode {NonSpecify | PerSeat | PerServer}] [-InstallationProperty <string>] [-LocalAdminPassword <securestring>] [-PartitionAndFormatTarget <bool>] [-ProductKey <string>] [-SaveLocally <bool>] [-SoftwareUpdateStyle {All | Mandatory | NoInstall}] [-TimeZone <TimeZoneInfo>] [-UserStateMigrationToolPackageId <string>] [-WorkgroupName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMTaskSequence -Name <string> -UpgradeOperatingSystem -UpgradePackageId <string> [-ApplicationName <string[]>] [-IconLocationFile <string>] [-HighPerformance <bool>] [-IgnoreInvalidApplication <bool>] [-ProductKey <string>] [-SoftwareUpdateStyle {All | Mandatory | NoInstall}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMTaskSequence -CustomTaskSequence -Name <string> [-IconLocationFile <string>] [-BootImagePackageId <string>] [-Description <string>] [-HighPerformance <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -ApplicationName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage, UpgradeOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplyAll <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      ApplyAllImages
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BootImagePackageId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage, NewCustom
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BuildOperatingSystemImage
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBuildOSImage
+        Aliases                      BuildOperatingSystemImageOption
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CaptureLocallyUsingLink <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage
+        Aliases                      CaptureLocallyUsingLinks
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CaptureNetworkSetting <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CaptureUserSetting <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CaptureWindowsSetting <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientPackagePackageId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ConfigureBitLocker <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CreatedBy <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CustomTaskSequence
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewCustom
+        Aliases                      CustomOption
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage, NewCustom
+        Aliases                      TaskSequenceDescription
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DomainAccount <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DomainName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DomainOrganizationUnit <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DomainPassword <securestring>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -GeneratePassword <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HighPerformance <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage, NewCustom, UpgradeOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IconLocationFile <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage, NewCustom, UpgradeOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IgnoreInvalidApplication <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage, UpgradeOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ImageDescription <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ImageVersion <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallOperatingSystemImage
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage
+        Aliases                      InstallOperatingSystemImageOption
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallationLicensingMode <ServerLicensingMode>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallationProperty <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -JoinDomain <JoinType>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LocalAdminPassword <securestring>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaximumServerConnection <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage, NewCustom, UpgradeOSImage
+        Aliases                      TaskSequenceName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemFileAccount <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBuildOSImage
+        Aliases                      CaptureOperatingSystemFileAccount
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemFileAccountPassword <securestring>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemFilePath <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBuildOSImage
+        Aliases                      CaptureOperatingSystemFilePath
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemImageIndex <uint>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemImagePackageId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PartitionAndFormatTarget <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ProductKey <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage, UpgradeOSImage
+        Aliases                      InstallationProductKey
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SaveLocally <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdateStyle <SoftwareUpdateStyleType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage, UpgradeOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TimeZone <TimeZoneInfo>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UpgradeOperatingSystem
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           UpgradeOSImage
+        Aliases                      UpgradeOperatingSystemOption
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UpgradePackageId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           UpgradeOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserStateMigrationToolPackageId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WorkgroupName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewInstallOSImage, NewBuildOSImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject#SMS_TaskSequencePackage
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

@@ -1,0 +1,425 @@
+
+NAME
+    Set-CMAutoDeploymentRuleDeployment
+    
+SYNTAX
+    Set-CMAutoDeploymentRuleDeployment [-InputObject] <IResultObject#SMS_AdrDeploymentSettings> [-AlertTime <int>] [-AlertTimeUnit {Hours | Days | Weeks | Months}] [-AllowDownloadFromMicrosoftUpdate <bool>] [-AllowRestart <bool>] [-AllowSoftwareInstallationOutsideMaintenanceWindow <bool>] [-AllowUseMeteredNetwork <bool>] [-AvailableImmediately <bool>] [-AvailableTime <int>] [-AvailableTimeUnit {Hours | Days | Weeks | Months}] [-Collection <IResultObject#SMS_Collection;CollectionType=2>] [-CollectionId <string>] [-CollectionName <string>] [-DeadlineImmediately <bool>] [-DeadlineTime <int>] [-DeadlineTimeUnit {Hours | Days | Weeks | Months}] [-DisableOperationsManager <bool>] [-EnableDeployment <bool>] [-GenerateOperationsManagerAlert <bool>] [-GenerateSuccessAlert <bool>] [-NoInstallOnRemote <bool>] [-NoInstallOnUnprotected <bool>] [-PassThru] [-RequirePostRebootFullScan <bool>] [-SendWakeupPacket <bool>] [-SoftDeadlineEnabled <bool>] [-SuccessPercentage <int>] [-SuppressRestartServer <bool>] [-SuppressRestartWorkstation <bool>] [-UseBranchCache <bool>] [-UserNotification {DisplayAll | DisplaySoftwareCenterOnly | HideAll}] [-UseUtc <bool>] [-VerboseLevel {OnlyErrorMessages | OnlySuccessAndErrorMessages | AllMessages}] [-WriteFilterHandling <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMAutoDeploymentRuleDeployment [-Id] <int> [-AlertTime <int>] [-AlertTimeUnit {Hours | Days | Weeks | Months}] [-AllowDownloadFromMicrosoftUpdate <bool>] [-AllowRestart <bool>] [-AllowSoftwareInstallationOutsideMaintenanceWindow <bool>] [-AllowUseMeteredNetwork <bool>] [-AvailableImmediately <bool>] [-AvailableTime <int>] [-AvailableTimeUnit {Hours | Days | Weeks | Months}] [-Collection <IResultObject#SMS_Collection;CollectionType=2>] [-CollectionId <string>] [-CollectionName <string>] [-DeadlineImmediately <bool>] [-DeadlineTime <int>] [-DeadlineTimeUnit {Hours | Days | Weeks | Months}] [-DisableOperationsManager <bool>] [-EnableDeployment <bool>] [-GenerateOperationsManagerAlert <bool>] [-GenerateSuccessAlert <bool>] [-NoInstallOnRemote <bool>] [-NoInstallOnUnprotected <bool>] [-PassThru] [-RequirePostRebootFullScan <bool>] [-SendWakeupPacket <bool>] [-SoftDeadlineEnabled <bool>] [-SuccessPercentage <int>] [-SuppressRestartServer <bool>] [-SuppressRestartWorkstation <bool>] [-UseBranchCache <bool>] [-UserNotification {DisplayAll | DisplaySoftwareCenterOnly | HideAll}] [-UseUtc <bool>] [-VerboseLevel {OnlyErrorMessages | OnlySuccessAndErrorMessages | AllMessages}] [-WriteFilterHandling <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AlertTime <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AlertTimeUnit <TimeUnitType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowDownloadFromMicrosoftUpdate <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowRestart <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowSoftwareInstallationOutsideMaintenanceWindow <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowUseMeteredNetwork <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AvailableImmediately <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AvailableTime <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AvailableTimeUnit <TimeUnitType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Collection <IResultObject#SMS_Collection;CollectionType=2>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeadlineImmediately <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeadlineTime <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeadlineTimeUnit <TimeUnitType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableOperationsManager <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DisableOperationManager
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableDeployment <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      Enable, EnabledAfterCreate, EnableAfterCreate
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -GenerateOperationsManagerAlert <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      GenerateOperationManagerAlert
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -GenerateSuccessAlert <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <int>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           ById
+        Aliases                      ActionID
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_AdrDeploymentSettings>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           ByValue
+        Aliases                      AutoDeploymentRuleDeployment
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoInstallOnRemote <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoInstallOnUnprotected <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RequirePostRebootFullScan <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RunEvaluationAfterRestart
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SendWakeupPacket <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EnableWakeOnLan
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftDeadlineEnabled <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DelayEnforcementAndUpToGracePeriod
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SuccessPercentage <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SuppressRestartServer <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SuppressRestartWorkstation <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseBranchCache <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseUtc <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserNotification <UserNotificationOption>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -VerboseLevel <VerboseLevelType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WriteFilterHandling <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    IResultObject#SMS_AdrDeploymentSettings
+    
+    
+ALIASES
+    Set-CMSoftwareUpdateAutoDeploymentRuleDeployment
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

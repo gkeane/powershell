@@ -1,0 +1,488 @@
+
+NAME
+    Add-CMMsiDeploymentType
+    
+SYNTAX
+    Add-CMMsiDeploymentType -ApplicationName <string> -ContentLocation <string> [-CacheContent] [-ContentFallback] [-DeploymentTypeName <string>] [-EnableBranchCache] [-EstimatedRuntimeMins <int>] [-Force32Bit] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-InstallCommand <string>] [-InstallWorkingDirectory <string>] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-ProductCode <string>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RepairCommand <string>] [-RepairWorkingDirectory <string>] [-RequireUserInteraction] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-SourceUpdateProductCode <string>] [-UninstallCommand <string>] [-UninstallContentLocation <string>] [-UninstallOption {SameAsInstall | NoneRequired | Different}] [-UninstallWorkingDirectory <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMMsiDeploymentType -AddDetectionClause <DetectionClause[]> -ApplicationId <int> -DeploymentTypeName <string> -InstallCommand <string> [-CacheContent] [-ContentFallback] [-ContentLocation <string>] [-DetectionClauseConnector <hashtable[]>] [-EnableBranchCache] [-EstimatedRuntimeMins <int>] [-Force32Bit] [-GroupDetectionClauses <string[]>] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-InstallWorkingDirectory <string>] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RepairCommand <string>] [-RepairWorkingDirectory <string>] [-RequireUserInteraction] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-SourceUpdateProductCode <string>] [-UninstallCommand <string>] [-UninstallContentLocation <string>] [-UninstallOption {SameAsInstall | NoneRequired | Different}] [-UninstallWorkingDirectory <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMMsiDeploymentType -AddDetectionClause <DetectionClause[]> -ApplicationName <string> -DeploymentTypeName <string> -InstallCommand <string> [-CacheContent] [-ContentFallback] [-ContentLocation <string>] [-DetectionClauseConnector <hashtable[]>] [-EnableBranchCache] [-EstimatedRuntimeMins <int>] [-Force32Bit] [-GroupDetectionClauses <string[]>] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-InstallWorkingDirectory <string>] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RepairCommand <string>] [-RepairWorkingDirectory <string>] [-RequireUserInteraction] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-SourceUpdateProductCode <string>] [-UninstallCommand <string>] [-UninstallContentLocation <string>] [-UninstallOption {SameAsInstall | NoneRequired | Different}] [-UninstallWorkingDirectory <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMMsiDeploymentType -AddDetectionClause <DetectionClause[]> -DeploymentTypeName <string> -InputObject <IResultObject> -InstallCommand <string> [-CacheContent] [-ContentFallback] [-ContentLocation <string>] [-DetectionClauseConnector <hashtable[]>] [-EnableBranchCache] [-EstimatedRuntimeMins <int>] [-Force32Bit] [-GroupDetectionClauses <string[]>] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-InstallWorkingDirectory <string>] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RepairCommand <string>] [-RepairWorkingDirectory <string>] [-RequireUserInteraction] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-SourceUpdateProductCode <string>] [-UninstallCommand <string>] [-UninstallContentLocation <string>] [-UninstallOption {SameAsInstall | NoneRequired | Different}] [-UninstallWorkingDirectory <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMMsiDeploymentType -ApplicationId <int> -DeploymentTypeName <string> -InstallCommand <string> -ScriptLanguage {PowerShell | VBScript | JavaScript} [-CacheContent] [-ContentFallback] [-ContentLocation <string>] [-EnableBranchCache] [-EstimatedRuntimeMins <int>] [-Force32Bit] [-ForceScriptDetection32Bit] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-InstallWorkingDirectory <string>] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RepairCommand <string>] [-RepairWorkingDirectory <string>] [-RequireUserInteraction] [-ScriptFile <string>] [-ScriptText <string>] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-SourceUpdateProductCode <string>] [-UninstallCommand <string>] [-UninstallContentLocation <string>] [-UninstallOption {SameAsInstall | NoneRequired | Different}] [-UninstallWorkingDirectory <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMMsiDeploymentType -ApplicationId <int> -ContentLocation <string> [-CacheContent] [-ContentFallback] [-DeploymentTypeName <string>] [-EnableBranchCache] [-EstimatedRuntimeMins <int>] [-Force32Bit] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-InstallCommand <string>] [-InstallWorkingDirectory <string>] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-ProductCode <string>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RepairCommand <string>] [-RepairWorkingDirectory <string>] [-RequireUserInteraction] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-SourceUpdateProductCode <string>] [-UninstallCommand <string>] [-UninstallContentLocation <string>] [-UninstallOption {SameAsInstall | NoneRequired | Different}] [-UninstallWorkingDirectory <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMMsiDeploymentType -ApplicationName <string> -DeploymentTypeName <string> -InstallCommand <string> -ScriptLanguage {PowerShell | VBScript | JavaScript} [-CacheContent] [-ContentFallback] [-ContentLocation <string>] [-EnableBranchCache] [-EstimatedRuntimeMins <int>] [-Force32Bit] [-ForceScriptDetection32Bit] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-InstallWorkingDirectory <string>] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RepairCommand <string>] [-RepairWorkingDirectory <string>] [-RequireUserInteraction] [-ScriptFile <string>] [-ScriptText <string>] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-SourceUpdateProductCode <string>] [-UninstallCommand <string>] [-UninstallContentLocation <string>] [-UninstallOption {SameAsInstall | NoneRequired | Different}] [-UninstallWorkingDirectory <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMMsiDeploymentType -DeploymentTypeName <string> -InputObject <IResultObject> -InstallCommand <string> -ScriptLanguage {PowerShell | VBScript | JavaScript} [-CacheContent] [-ContentFallback] [-ContentLocation <string>] [-EnableBranchCache] [-EstimatedRuntimeMins <int>] [-Force32Bit] [-ForceScriptDetection32Bit] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-InstallWorkingDirectory <string>] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RepairCommand <string>] [-RepairWorkingDirectory <string>] [-RequireUserInteraction] [-ScriptFile <string>] [-ScriptText <string>] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-SourceUpdateProductCode <string>] [-UninstallCommand <string>] [-UninstallContentLocation <string>] [-UninstallOption {SameAsInstall | NoneRequired | Different}] [-UninstallWorkingDirectory <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMMsiDeploymentType -ContentLocation <string> -InputObject <IResultObject> [-CacheContent] [-ContentFallback] [-DeploymentTypeName <string>] [-EnableBranchCache] [-EstimatedRuntimeMins <int>] [-Force32Bit] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-InstallCommand <string>] [-InstallWorkingDirectory <string>] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-ProductCode <string>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RepairCommand <string>] [-RepairWorkingDirectory <string>] [-RequireUserInteraction] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-SourceUpdateProductCode <string>] [-UninstallCommand <string>] [-UninstallContentLocation <string>] [-UninstallOption {SameAsInstall | NoneRequired | Different}] [-UninstallWorkingDirectory <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddDetectionClause <DetectionClause[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdDetectionClause, ByAppNameDetectionClause, ByAppValueDetectionClause
+        Aliases                      AddDetectionClauses
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddLanguage <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddLanguages, Languages, Language
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddRequirement <Rule[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplicationId <int>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdDetectionClause, ByAppIdScript, ByAppId
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplicationName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppNameDetectionClause, ByAppNameScript, ByAppName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CacheContent
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PersistContentInClientCache
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Comment <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AdministratorComment
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ContentFallback
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EnableContentLocationFallback, AllowClientsToUseFallbackSourceLocationForContent
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ContentLocation <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdDetectionClause, ByAppNameDetectionClause, ByAppValueDetectionClause, ByAppIdScript, ByAppNameScript, ByAppValueScript, ByAppId, ByAppName, ByAppValue
+        Aliases                      InstallationFileLocation
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentTypeName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdDetectionClause, ByAppNameDetectionClause, ByAppValueDetectionClause, ByAppIdScript, ByAppNameScript, ByAppValueScript, ByAppId, ByAppName, ByAppValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DetectionClauseConnector <hashtable[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdDetectionClause, ByAppNameDetectionClause, ByAppValueDetectionClause
+        Aliases                      DetectionClauseConnectors
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableBranchCache
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AllowClientsToShareContentOnSameSubnet
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EstimatedRuntimeMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EstimatedInstallationTimeMinutes, EstimatedInstallationTimeMins, EstimatedRunTimeMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ForceForUnknownPublisher
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force32Bit
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      Force32BitInstaller
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceScriptDetection32Bit
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdScript, ByAppNameScript, ByAppValueScript
+        Aliases                      Force32BitDetectionScript
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -GroupDetectionClauses <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdDetectionClause, ByAppNameDetectionClause, ByAppValueDetectionClause
+        Aliases                      GroupDetectionClausesByLogicalName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           ByAppValueDetectionClause, ByAppValueScript, ByAppValue
+        Aliases                      Application
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallCommand <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdDetectionClause, ByAppNameDetectionClause, ByAppValueDetectionClause, ByAppIdScript, ByAppNameScript, ByAppValueScript, ByAppId, ByAppName, ByAppValue
+        Aliases                      InstallationProgram
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallWorkingDirectory <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      InstallationStartIn, InstallFolder
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallationBehaviorType <InstallationBehaviorType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LogonRequirementType <LogonRequirementType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaximumRuntimeMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      MaximumAllowedRunTimeMinutes, MaximumAllowedRunTimeMins, MaximumRunTimeMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ProductCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppId, ByAppName, ByAppValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RebootBehavior <PostExecutionBehavior>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveLanguage <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveLanguages
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveRequirement <Rule[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveRequirements
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RepairCommand <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RepairProgram
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RepairWorkingDirectory <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RepairStartIn, RepairFolder
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RequireUserInteraction
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RequiresUserInteraction
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScriptFile <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdScript, ByAppNameScript, ByAppValueScript
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScriptLanguage <ScriptLanguage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdScript, ByAppNameScript, ByAppValueScript
+        Aliases                      ScriptType
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScriptText <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdScript, ByAppNameScript, ByAppValueScript
+        Aliases                      ScriptContent
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SlowNetworkDeploymentMode <ContentHandlingMode>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SourceUpdateProductCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UninstallCommand <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      UninstallationProgram
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UninstallContentLocation <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UninstallOption <UninstallContentSetting>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UninstallWorkingDirectory <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      UninstallationStartIn, UninstallFolder
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserInteractionMode <UserInteractionMode>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      InstallationProgramVisibility
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

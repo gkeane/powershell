@@ -1,0 +1,264 @@
+
+NAME
+    Set-CMConfigurationPolicyDeployment
+    
+SYNTAX
+    Set-CMConfigurationPolicyDeployment -InputObject <IResultObject> [-EnableEnforcement <bool>] [-GenerateAlert <bool>] [-MonitoredByScom <bool>] [-OverrideServiceWindow <bool>] [-ParameterValue <int>] [-PostponeDateTime <datetime>] [-Schedule <IResultObject#SMS_ScheduleToken>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMConfigurationPolicyDeployment -FirewallPolicyId <string> [-EnableEnforcement <bool>] [-GenerateAlert <bool>] [-MonitoredByScom <bool>] [-OverrideServiceWindow <bool>] [-ParameterValue <int>] [-PostponeDateTime <datetime>] [-Schedule <IResultObject#SMS_ScheduleToken>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMConfigurationPolicyDeployment -FirewallPolicyName <string> [-EnableEnforcement <bool>] [-GenerateAlert <bool>] [-MonitoredByScom <bool>] [-OverrideServiceWindow <bool>] [-ParameterValue <int>] [-PostponeDateTime <datetime>] [-Schedule <IResultObject#SMS_ScheduleToken>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMConfigurationPolicyDeployment -RemoteConnectionProfileId <string> [-EnableEnforcement <bool>] [-GenerateAlert <bool>] [-MonitoredByScom <bool>] [-OverrideServiceWindow <bool>] [-ParameterValue <int>] [-PostponeDateTime <datetime>] [-Schedule <IResultObject#SMS_ScheduleToken>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMConfigurationPolicyDeployment -RemoteConnectionProfileName <string> [-EnableEnforcement <bool>] [-GenerateAlert <bool>] [-MonitoredByScom <bool>] [-OverrideServiceWindow <bool>] [-ParameterValue <int>] [-PostponeDateTime <datetime>] [-Schedule <IResultObject#SMS_ScheduleToken>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMConfigurationPolicyDeployment -UserDataAndProfileId <string> [-EnableEnforcement <bool>] [-GenerateAlert <bool>] [-MonitoredByScom <bool>] [-OverrideServiceWindow <bool>] [-ParameterValue <int>] [-PostponeDateTime <datetime>] [-Schedule <IResultObject#SMS_ScheduleToken>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMConfigurationPolicyDeployment -UserDataAndProfileName <string> [-EnableEnforcement <bool>] [-GenerateAlert <bool>] [-MonitoredByScom <bool>] [-OverrideServiceWindow <bool>] [-ParameterValue <int>] [-PostponeDateTime <datetime>] [-Schedule <IResultObject#SMS_ScheduleToken>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -Collection <IResultObject#SMS_Collection>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  true
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableEnforcement <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FirewallPolicyId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFWPolicyDeploymentByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FirewallPolicyName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFWPolicyDeploymentByNameMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -GenerateAlert <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetPoicyByValueMandatory
+        Aliases                      UserDataAndProfile, FirewallPolicy, RemoteConnectionProfile, DeploymentSummary, Assignment
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MonitoredByScom <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OverrideServiceWindow <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ParameterValue <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PostponeDateTime <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoteConnectionProfileId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteConnectionDeploymentByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoteConnectionProfileName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetRemoteConnectionDeploymentByNameMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Schedule <IResultObject#SMS_ScheduleToken>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserDataAndProfileId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetUSMPolicyDeploymentByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserDataAndProfileName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetUSMPolicyDeploymentByNameMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

@@ -1,0 +1,685 @@
+
+NAME
+    Set-CMDistributionPoint
+    
+SYNTAX
+    Set-CMDistributionPoint [-InputObject] <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point> [-EnableMaintenanceMode <bool>] [-AddBoundaryGroupName <string[]>] [-AddMacAddressForRespondingPxeRequest <string[]>] [-AllowFallbackForContent <bool>] [-AllowPreStaging <bool>] [-AllowProxyTraffic <bool>] [-AllowPxeResponse <bool>] [-CertificateExpirationTimeUtc <datetime>] [-CertificatePassword <securestring>] [-CertificatePath <string>] [-ClearMacAddressForRespondingPxeRequest] [-ClientCommunicationType {Http | Https}] [-ClientConnectionType {Intranet | Internet | InternetAndIntranet}] [-ClientTransferRate {None | ProfileCustom | Profile10Mbps | Profile100Mbps | Profile1Gbps}] [-ContentMonitoringPriority {Lowest | Low | Medium | High | Highest}] [-ContentValidationSchedule <IResultObject#SMS_ScheduleToken>] [-Description <string>] [-EnableAnonymous <bool>] [-EnableBranchCache <bool>] [-EnableContentValidation <bool>] [-EnableLedbat <bool>] [-EnableMulticast <bool>] [-EnableNonWdsPxe <bool>] [-EnablePreferredMP <bool>] [-EnablePullDP <bool>] [-EnablePxe <bool>] [-EnableScheduledMulticast <bool>] [-EnableUnknownComputerSupport <bool>] [-EndIPAddress <string>] [-EndUdpPort <int>] [-Force] [-InitialMPForLookup <string>] [-KeepWds <bool>] [-MacAddressForRespondingPxeRequest <string[]>] [-MinimumSessionSize <int>] [-MulticastMaximumClientCount <int>] [-PassThru] [-PxePassword <securestring>] [-PxeServerResponseDelaySec <int>] [-ReassignSiteCode <string>] [-RemoveBoundaryGroupName <string[]>] [-RemoveMacAddressForRespondingPxeRequest <string[]>] [-RespondToAllNetwork] [-SessionStartDelayMins <int>] [-SourceDistributionPoint <string[]>] [-SourceDPRank <int[]>] [-StartIPAddress <string>] [-StartUdpPort <int>] [-UseAnyRangeIP] [-UseComputerAccount] [-UserDeviceAffinity {DoNotUse | AllowWithManualApproval | AllowWithAutomaticApproval}] [-UserName <string>] [-EnableDoinc <bool>] [-DiskSpaceUnit {GB | Percentage}] [-DiskSpaceDoinc <int>] [-LocalDriveDoinc {Automatic | A: | B: | C: | D: | E: | F: | G: | H: | I: | J: | K: | L: | M: | N: | O: | P: | Q: | R: | S: | T: | U: | V: | W: | X: | Y: | Z:}] [-RetainDoincCache <bool>] [-AgreeDoincLicense <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMDistributionPoint [-SiteSystemServerName] <string> [-EnableMaintenanceMode <bool>] [-AddBoundaryGroupName <string[]>] [-AddMacAddressForRespondingPxeRequest <string[]>] [-AllowFallbackForContent <bool>] [-AllowPreStaging <bool>] [-AllowProxyTraffic <bool>] [-AllowPxeResponse <bool>] [-CertificateExpirationTimeUtc <datetime>] [-CertificatePassword <securestring>] [-CertificatePath <string>] [-ClearMacAddressForRespondingPxeRequest] [-ClientCommunicationType {Http | Https}] [-ClientConnectionType {Intranet | Internet | InternetAndIntranet}] [-ClientTransferRate {None | ProfileCustom | Profile10Mbps | Profile100Mbps | Profile1Gbps}] [-ContentMonitoringPriority {Lowest | Low | Medium | High | Highest}] [-ContentValidationSchedule <IResultObject#SMS_ScheduleToken>] [-Description <string>] [-EnableAnonymous <bool>] [-EnableBranchCache <bool>] [-EnableContentValidation <bool>] [-EnableLedbat <bool>] [-EnableMulticast <bool>] [-EnableNonWdsPxe <bool>] [-EnablePreferredMP <bool>] [-EnablePullDP <bool>] [-EnablePxe <bool>] [-EnableScheduledMulticast <bool>] [-EnableUnknownComputerSupport <bool>] [-EndIPAddress <string>] [-EndUdpPort <int>] [-Force] [-InitialMPForLookup <string>] [-KeepWds <bool>] [-MacAddressForRespondingPxeRequest <string[]>] [-MinimumSessionSize <int>] [-MulticastMaximumClientCount <int>] [-PassThru] [-PxePassword <securestring>] [-PxeServerResponseDelaySec <int>] [-ReassignSiteCode <string>] [-RemoveBoundaryGroupName <string[]>] [-RemoveMacAddressForRespondingPxeRequest <string[]>] [-RespondToAllNetwork] [-SessionStartDelayMins <int>] [-SiteCode <string>] [-SourceDistributionPoint <string[]>] [-SourceDPRank <int[]>] [-StartIPAddress <string>] [-StartUdpPort <int>] [-UseAnyRangeIP] [-UseComputerAccount] [-UserDeviceAffinity {DoNotUse | AllowWithManualApproval | AllowWithAutomaticApproval}] [-UserName <string>] [-EnableDoinc <bool>] [-DiskSpaceUnit {GB | Percentage}] [-DiskSpaceDoinc <int>] [-LocalDriveDoinc {Automatic | A: | B: | C: | D: | E: | F: | G: | H: | I: | J: | K: | L: | M: | N: | O: | P: | Q: | R: | S: | T: | U: | V: | W: | X: | Y: | Z:}] [-RetainDoincCache <bool>] [-AgreeDoincLicense <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddBoundaryGroupName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddBoundaryGroupNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddMacAddressForRespondingPxeRequest <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AgreeDoincLicense <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowFallbackForContent <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowPreStaging <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowProxyTraffic <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EnableCloudGateway
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowPxeResponse <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AllowRespondIncomingPxeRequest
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CertificateExpirationTimeUtc <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CertificatePassword <securestring>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CertificatePath <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearMacAddressForRespondingPxeRequest
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientCommunicationType <ComputerCommunicationType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientConnectionType <ClientConnectionTypes>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientTransferRate <NetworkProfile>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ContentMonitoringPriority <Priority>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ContentValidationSchedule <IResultObject#SMS_ScheduleToken>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ValidateContentSchedule
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DiskSpaceDoinc <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DiskSpaceUnit <DiskSpaceEnum>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableAnonymous <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableBranchCache <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableContentValidation <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EnableValidateContent
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableDoinc <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableLedbat <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableMaintenanceMode <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableMulticast <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableNonWdsPxe <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnablePreferredMP <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnablePullDP <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnablePxe <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EnablePxeSupport
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableScheduledMulticast <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableUnknownComputerSupport <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EndIPAddress <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EndUdpPort <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InitialMPForLookup <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetByValue
+        Aliases                      DistributionPoint
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -KeepWds <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LocalDriveDoinc <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MacAddressForRespondingPxeRequest <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MinimumSessionSize <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MulticastMaximumClientCount <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PxePassword <securestring>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ComputersUsePxePassword
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PxeServerResponseDelaySec <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PxeServerResponseDelaySeconds
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ReassignSiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveBoundaryGroupName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveBoundaryGroupNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveMacAddressForRespondingPxeRequest <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RespondToAllNetwork
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RetainDoincCache <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SessionStartDelayMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SessionStartDelayMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteSystemServerName <string>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           SetByName
+        Aliases                      Name, ServerName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SourceDPRank <int[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SourceDPRanks
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SourceDistributionPoint <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SourceDistributionPoints
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StartIPAddress <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StartUdpPort <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseAnyRangeIP
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseComputerAccount
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserDeviceAffinity <UserDeviceAffinityType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    IResultObject#SMS_SCI_SysResUse
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

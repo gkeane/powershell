@@ -1,0 +1,158 @@
+
+NAME
+    Remove-CMDistributionPointFromGroup
+    
+SYNTAX
+    Remove-CMDistributionPointFromGroup -DistributionPoint <IResultObject#SMS_SCI_SysResUse> -DistributionPointGroup <IResultObject#SMS_DistributionPointGroup> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDistributionPointFromGroup -DistributionPoint <IResultObject#SMS_SCI_SysResUse> -DistributionPointGroupId <string> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDistributionPointFromGroup -DistributionPoint <IResultObject#SMS_SCI_SysResUse> -DistributionPointGroupName <string> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDistributionPointFromGroup -DistributionPointGroup <IResultObject#SMS_DistributionPointGroup> -DistributionPointId <string> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDistributionPointFromGroup -DistributionPointGroup <IResultObject#SMS_DistributionPointGroup> -DistributionPointName <string> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDistributionPointFromGroup -DistributionPointGroupId <string> -DistributionPointId <string> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDistributionPointFromGroup -DistributionPointGroupId <string> -DistributionPointName <string> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDistributionPointFromGroup -DistributionPointGroupName <string> -DistributionPointId <string> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMDistributionPointFromGroup -DistributionPointGroupName <string> -DistributionPointName <string> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistributionPoint <IResultObject#SMS_SCI_SysResUse>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           RemoveDistributionPointFromGroupByObject_Id, RemoveDistributionPointFromGroupByObject_Name, RemoveDistributionPointFromGroupByObject_Object
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistributionPointGroup <IResultObject#SMS_DistributionPointGroup>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           RemoveDistributionPointFromGroupById_Object, RemoveDistributionPointFromGroupByName_Object, RemoveDistributionPointFromGroupByObject_Object
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistributionPointGroupId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveDistributionPointFromGroupById_Id, RemoveDistributionPointFromGroupByName_Id, RemoveDistributionPointFromGroupByObject_Id
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistributionPointGroupName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveDistributionPointFromGroupById_Name, RemoveDistributionPointFromGroupByName_Name, RemoveDistributionPointFromGroupByObject_Name
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistributionPointId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveDistributionPointFromGroupById_Id, RemoveDistributionPointFromGroupById_Name, RemoveDistributionPointFromGroupById_Object
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistributionPointName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveDistributionPointFromGroupByName_Id, RemoveDistributionPointFromGroupByName_Name, RemoveDistributionPointFromGroupByName_Object
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

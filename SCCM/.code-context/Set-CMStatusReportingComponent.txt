@@ -1,0 +1,227 @@
+
+NAME
+    Set-CMStatusReportingComponent
+    
+SYNTAX
+    Set-CMStatusReportingComponent -InputObject <IResultObject#SMS_Site> [-ClientLogChecked <bool>] [-ClientLogFailureChecked <bool>] [-ClientLogType {AllMilestonesAndAllDetails | AllMilestones | ErrorAndWarningMilestones | ErrorMilestones}] [-ClientReportChecked <bool>] [-ClientReportFailureChecked <bool>] [-ClientReportType {AllMilestonesAndAllDetails | AllMilestones | ErrorAndWarningMilestones | ErrorMilestones}] [-ServerLogChecked <bool>] [-ServerLogFailureChecked <bool>] [-ServerLogType {AllMilestonesAndAllDetails | AllMilestones | ErrorAndWarningMilestones | ErrorMilestones}] [-ServerReportChecked <bool>] [-ServerReportFailureChecked <bool>] [-ServerReportType {AllMilestonesAndAllDetails | AllMilestones | ErrorAndWarningMilestones | ErrorMilestones}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMStatusReportingComponent -Name <string> [-ClientLogChecked <bool>] [-ClientLogFailureChecked <bool>] [-ClientLogType {AllMilestonesAndAllDetails | AllMilestones | ErrorAndWarningMilestones | ErrorMilestones}] [-ClientReportChecked <bool>] [-ClientReportFailureChecked <bool>] [-ClientReportType {AllMilestonesAndAllDetails | AllMilestones | ErrorAndWarningMilestones | ErrorMilestones}] [-ServerLogChecked <bool>] [-ServerLogFailureChecked <bool>] [-ServerLogType {AllMilestonesAndAllDetails | AllMilestones | ErrorAndWarningMilestones | ErrorMilestones}] [-ServerReportChecked <bool>] [-ServerReportFailureChecked <bool>] [-ServerReportType {AllMilestonesAndAllDetails | AllMilestones | ErrorAndWarningMilestones | ErrorMilestones}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMStatusReportingComponent [-ClientLogChecked <bool>] [-ClientLogFailureChecked <bool>] [-ClientLogType {AllMilestonesAndAllDetails | AllMilestones | ErrorAndWarningMilestones | ErrorMilestones}] [-ClientReportChecked <bool>] [-ClientReportFailureChecked <bool>] [-ClientReportType {AllMilestonesAndAllDetails | AllMilestones | ErrorAndWarningMilestones | ErrorMilestones}] [-ServerLogChecked <bool>] [-ServerLogFailureChecked <bool>] [-ServerLogType {AllMilestonesAndAllDetails | AllMilestones | ErrorAndWarningMilestones | ErrorMilestones}] [-ServerReportChecked <bool>] [-ServerReportFailureChecked <bool>] [-ServerReportType {AllMilestonesAndAllDetails | AllMilestones | ErrorAndWarningMilestones | ErrorMilestones}] [-SiteCode <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -ClientLogChecked <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientLogFailureChecked <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientLogType <StatusReportOrLogType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientReportChecked <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientReportFailureChecked <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientReportType <StatusReportOrLogType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_Site>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory
+        Aliases                      SiteName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ServerLogChecked <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ServerLogFailureChecked <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ServerLogType <StatusReportOrLogType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ServerReportChecked <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ServerReportFailureChecked <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ServerReportType <StatusReportOrLogType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

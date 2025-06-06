@@ -1,0 +1,267 @@
+
+NAME
+    New-CMApplicationAutoPhasedDeployment
+    
+SYNTAX
+    New-CMApplicationAutoPhasedDeployment [-Application] <IResultObject> -Name <string> [-BeginCondition {AfterPeriod | Manually}] [-CriteriaOption {Compliance | Number}] [-CriteriaValue <int>] [-DaysAfterPreviousPhaseSuccess <int>] [-DeadlineUnit {Hours | Days | Weeks | Months}] [-DeadlineValue <int>] [-FirstCollection <IResultObject#SMS_Collection>] [-FirstCollectionId <string>] [-FirstCollectionName <string>] [-InstallationChoice {AsSoonAsPossible | AfterPeriod}] [-SecondCollection <IResultObject#SMS_Collection>] [-SecondCollectionId <string>] [-SecondCollectionName <string>] [-ThrottlingDays <int>] [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMApplicationAutoPhasedDeployment [-ApplicationId] <string> -Name <string> [-BeginCondition {AfterPeriod | Manually}] [-CriteriaOption {Compliance | Number}] [-CriteriaValue <int>] [-DaysAfterPreviousPhaseSuccess <int>] [-DeadlineUnit {Hours | Days | Weeks | Months}] [-DeadlineValue <int>] [-FirstCollection <IResultObject#SMS_Collection>] [-FirstCollectionId <string>] [-FirstCollectionName <string>] [-InstallationChoice {AsSoonAsPossible | AfterPeriod}] [-SecondCollection <IResultObject#SMS_Collection>] [-SecondCollectionId <string>] [-SecondCollectionName <string>] [-ThrottlingDays <int>] [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMApplicationAutoPhasedDeployment [-ApplicationName] <string> -Name <string> [-BeginCondition {AfterPeriod | Manually}] [-CriteriaOption {Compliance | Number}] [-CriteriaValue <int>] [-DaysAfterPreviousPhaseSuccess <int>] [-DeadlineUnit {Hours | Days | Weeks | Months}] [-DeadlineValue <int>] [-FirstCollection <IResultObject#SMS_Collection>] [-FirstCollectionId <string>] [-FirstCollectionName <string>] [-InstallationChoice {AsSoonAsPossible | AfterPeriod}] [-SecondCollection <IResultObject#SMS_Collection>] [-SecondCollectionId <string>] [-SecondCollectionName <string>] [-ThrottlingDays <int>] [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -Application <IResultObject>
+        
+        Required?                    true
+        Position?                    1
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplicationId <string>
+        
+        Required?                    true
+        Position?                    1
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory
+        Aliases                      CIId, CI_ID
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplicationName <string>
+        
+        Required?                    true
+        Position?                    1
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory
+        Aliases                      ApplicationLocalizedDisplayName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BeginCondition <BeginConditionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CriteriaOption <CriteriaType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CriteriaValue <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DaysAfterPreviousPhaseSuccess <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeadlineUnit <TimeUnitType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeadlineValue <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FirstCollection <IResultObject#SMS_Collection>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FirstCollectionId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FirstCollectionName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallationChoice <InstallationChoiceType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SecondCollection <IResultObject#SMS_Collection>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SecondCollectionId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SecondCollectionName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ThrottlingDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    IResultObject#SMS_PhasedDeployment
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

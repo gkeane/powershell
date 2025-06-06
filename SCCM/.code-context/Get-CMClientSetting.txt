@@ -1,0 +1,108 @@
+
+NAME
+    Get-CMClientSetting
+    
+SYNTAX
+    Get-CMClientSetting [-Name <string>] [-Raw] [-Setting {BackgroundIntelligentTransfer | Cloud | ClientCache | ClientPolicy | ComplianceSettings | ComputerAgent | ComputerRestart | DeliveryOptimization | EndpointProtection | HardwareInventory | MeteredNetwork | MobileDevice | NetworkAccessProtection | PowerManagement | RemoteTools | SoftwareCenter | SoftwareDeployment | SoftwareInventory | SoftwareMetering | SoftwareUpdates | StateMessaging | UserAndDeviceAffinity | WindowsAnalytics}] [-SettingType {Default | Device | User}] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    Get-CMClientSetting -Id <string> [-Raw] [-Setting {BackgroundIntelligentTransfer | Cloud | ClientCache | ClientPolicy | ComplianceSettings | ComputerAgent | ComputerRestart | DeliveryOptimization | EndpointProtection | HardwareInventory | MeteredNetwork | MobileDevice | NetworkAccessProtection | PowerManagement | RemoteTools | SoftwareCenter | SoftwareDeployment | SoftwareInventory | SoftwareMetering | SoftwareUpdates | StateMessaging | UserAndDeviceAffinity | WindowsAnalytics}] [-SettingType {Default | Device | User}] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory
+        Aliases                      SettingsId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  true
+        
+    -Raw
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Setting <SettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName, SearchByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SettingType <Types>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByName, SearchByIdMandatory
+        Aliases                      Type
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject[]#SMS_ClientSettings
+    IResultObject#SMS_ClientSettings
+    IResultObject#SMS_ClientSettingsDefault
+    Dictionary<string, object>
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

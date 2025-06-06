@@ -1,0 +1,149 @@
+
+NAME
+    Add-CMCollectionToAdministrativeUser
+    
+SYNTAX
+    Add-CMCollectionToAdministrativeUser -InputObject <IResultObject#SMS_Collection> -User <IResultObject#SMS_Admin> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToAdministrativeUser -CollectionId <string> -UserId <int> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToAdministrativeUser -CollectionId <string> -UserName <string> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToAdministrativeUser -CollectionId <string> -User <IResultObject#SMS_Admin> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToAdministrativeUser -CollectionName <string> -UserId <int> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToAdministrativeUser -CollectionName <string> -UserName <string> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToAdministrativeUser -CollectionName <string> -User <IResultObject#SMS_Admin> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToAdministrativeUser -InputObject <IResultObject#SMS_Collection> -UserId <int> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMCollectionToAdministrativeUser -InputObject <IResultObject#SMS_Collection> -UserName <string> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -CollectionId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddCollectionToAdminById_Id, AddCollectionToAdminById_Name, AddCollectionToAdminById_Object
+        Aliases                      UserCollectionId, DeviceCollectionId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddCollectionToAdminByName_Id, AddCollectionToAdminByName_Name, AddCollectionToAdminByName_Object
+        Aliases                      UserCollectionName, DeviceCollectionName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_Collection>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           AddCollectionToAdminByObject_Id, AddCollectionToAdminByObject_Name, AddCollectionToAdminByObject_Object
+        Aliases                      Collection, UserCollection, DeviceCollection
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -User <IResultObject#SMS_Admin>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           AddCollectionToAdminById_Object, AddCollectionToAdminByName_Object, AddCollectionToAdminByObject_Object
+        Aliases                      AdministrativeUser
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserId <int>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddCollectionToAdminById_Id, AddCollectionToAdminByName_Id, AddCollectionToAdminByObject_Id
+        Aliases                      AdministrativeUserId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AddCollectionToAdminById_Name, AddCollectionToAdminByName_Name, AddCollectionToAdminByObject_Name
+        Aliases                      AdministrativeUserName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    Add-CMDeviceCollectionToAdministrativeUser
+    Add-CMUserCollectionToAdministrativeUser
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

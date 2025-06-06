@@ -1,0 +1,269 @@
+
+NAME
+    New-CMMigrationJob
+    
+SYNTAX
+    New-CMMigrationJob -MigrationObject <IResultObject#SMS_MigrationEntity[]> -Name <string> -ObjectMigrationJobType -SecurityScope <IResultObject[]> [-ContentObjectsSiteCodeMapping <hashtable>] [-Description <string>] [-MigrationJobSchedule <datetime>] [-OverwriteAllObject <bool>] [-SaveObjectInfoPath <string>] [-SiteCodeReplacementMapping <hashtable>] [-TransferOrganizationalFolderStructure <bool>] [-UtcTime <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMMigrationJob -CollectionMigrationJobType -MigrationCollection <IResultObject#SMS_MigrationCollectionInfo[]> -Name <string> -SecurityScope <IResultObject[]> [-CollectionLimitingMapping <hashtable>] [-Description <string>] [-EnableProgramAfterAdvertisementMigrated <bool>] [-MigrationJobSchedule <datetime>] [-OverwriteAllObject <bool>] [-SaveCollectionInfoPath <string>] [-SaveObjectInfoPath <string>] [-SiteCodeReplacementMapping <hashtable>] [-TransferOrganizationalFolderStructure <bool>] [-UtcTime <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMMigrationJob -CollectionMigrationJobType -MigrateObjectWithSpecifiedCollection -MigrationCollection <IResultObject#SMS_MigrationCollectionInfo[]> -MigrationObject <IResultObject#SMS_MigrationEntity[]> -Name <string> -SecurityScope <IResultObject[]> [-CollectionLimitingMapping <hashtable>] [-ContentObjectsSiteCodeMapping <hashtable>] [-Description <string>] [-EnableProgramAfterAdvertisementMigrated <bool>] [-MigrationJobSchedule <datetime>] [-OverwriteAllObject <bool>] [-SaveCollectionInfoPath <string>] [-SaveObjectInfoPath <string>] [-SiteCodeReplacementMapping <hashtable>] [-TransferOrganizationalFolderStructure <bool>] [-UtcTime <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMMigrationJob -MigrationObject <IResultObject#SMS_MigrationEntity[]> -Name <string> -ObjectModifiedAfterMigrationJobType -SecurityScope <IResultObject[]> [-ContentObjectsSiteCodeMapping <hashtable>] [-Description <string>] [-MigrationJobSchedule <datetime>] [-OverwriteAllObject <bool>] [-SaveObjectInfoPath <string>] [-SiteCodeReplacementMapping <hashtable>] [-TransferOrganizationalFolderStructure <bool>] [-UtcTime <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -CollectionLimitingMapping <hashtable>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionMigrationJobType
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ContentObjectsSiteCodeMapping <hashtable>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewMigrationJobByCollectionMigrateObject, NewMigrationJobByObject, NewMigrationJobByObjectModified
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableProgramAfterAdvertisementMigrated <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MigrateObjectWithSpecifiedCollection
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewMigrationJobByCollectionMigrateObject
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MigrationCollection <IResultObject#SMS_MigrationCollectionInfo[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewMigrationJobByCollectionMigrateObject, NewMigrationJobByCollectionNotMigrateObject
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MigrationJobSchedule <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MigrationObject <IResultObject#SMS_MigrationEntity[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewMigrationJobByObject, NewMigrationJobByObjectModified, NewMigrationJobByCollectionMigrateObject
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ObjectMigrationJobType
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewMigrationJobByObject
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ObjectModifiedAfterMigrationJobType
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewMigrationJobByObjectModified
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OverwriteAllObject <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SaveCollectionInfoPath <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SaveObjectInfoPath <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SecurityScope <IResultObject[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteCodeReplacementMapping <hashtable>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject, NewMigrationJobByObject, NewMigrationJobByObjectModified
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TransferOrganizationalFolderStructure <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UtcTime <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject#SMS_MigrationJob
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

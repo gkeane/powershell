@@ -1,0 +1,236 @@
+
+NAME
+    Set-CMClientSettingSoftwareInventory
+    
+SYNTAX
+    Set-CMClientSettingSoftwareInventory -Name <string> [-AddCollectFile <hashtable[]>] [-AddInventoryFileType <hashtable[]>] [-CleanCollectFile] [-CleanInventoryFileType] [-Enable <bool>] [-FileDisplayName <string>] [-FileInventoriedName <string>] [-FileName <string>] [-RemoveCollectFile <hashtable[]>] [-RemoveInventoryFileType <hashtable[]>] [-ReportOption {None | ProductOnly | FileOnly | FullDetail}] [-Schedule <IResultObject#SMS_ScheduleToken>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSettingSoftwareInventory -DefaultSetting [-AddCollectFile <hashtable[]>] [-AddInventoryFileType <hashtable[]>] [-CleanCollectFile] [-CleanInventoryFileType] [-Enable <bool>] [-FileDisplayName <string>] [-FileInventoriedName <string>] [-FileName <string>] [-RemoveCollectFile <hashtable[]>] [-RemoveInventoryFileType <hashtable[]>] [-ReportOption {None | ProductOnly | FileOnly | FullDetail}] [-Schedule <IResultObject#SMS_ScheduleToken>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSettingSoftwareInventory -InputObject <IResultObject#SMS_ClientSettings> [-AddCollectFile <hashtable[]>] [-AddInventoryFileType <hashtable[]>] [-CleanCollectFile] [-CleanInventoryFileType] [-Enable <bool>] [-FileDisplayName <string>] [-FileInventoriedName <string>] [-FileName <string>] [-RemoveCollectFile <hashtable[]>] [-RemoveInventoryFileType <hashtable[]>] [-ReportOption {None | ProductOnly | FileOnly | FullDetail}] [-Schedule <IResultObject#SMS_ScheduleToken>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddCollectFile <hashtable[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddCollectFiles
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddInventoryFileType <hashtable[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddInventoryFileTypes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CleanCollectFile
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      CleanCollectFiles
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CleanInventoryFileType
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      CleanInventoryFileTypes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DefaultSetting
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDefaultSetting
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Enable <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EnableSoftwareInventory
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FileDisplayName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SoftwareInventoryFileDisplayName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FileInventoriedName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SoftwareInventoryFileInventoriedName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FileName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SoftwareInventoryFileName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_ClientSettings>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetCustomSettingByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetCustomSettingByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveCollectFile <hashtable[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveCollectFiles
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveInventoryFileType <hashtable[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveInventoryFileTypes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ReportOption <ReportOptionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Schedule <IResultObject#SMS_ScheduleToken>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      InventorySchedule, SoftwareInventorySchedule
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

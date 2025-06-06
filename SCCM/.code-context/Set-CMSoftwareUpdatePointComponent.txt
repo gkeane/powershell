@@ -1,0 +1,407 @@
+
+NAME
+    Set-CMSoftwareUpdatePointComponent
+    
+SYNTAX
+    Set-CMSoftwareUpdatePointComponent [-AddCompany <string[]>] [-AddLanguageSummaryDetail <string[]>] [-AddLanguageUpdateFile <string[]>] [-AddProduct <string[]>] [-AddProductFamily <string[]>] [-AddUpdateClassification <string[]>] [-ContentFileOption {FullFilesOnly | ExpressForWindows10Only}] [-DefaultWsusServer <string>] [-EnableCallWsusCleanupWizard <bool>] [-EnableManualCertManagement <bool>] [-EnableSyncFailureAlert <bool>] [-EnableThirdPartyUpdates <bool>] [-FeatureUpdateMaxRuntimeMins <int>] [-ImmediatelyExpireSupersedence <bool>] [-ImmediatelyExpireSupersedenceForFeature <bool>] [-NonFeatureUpdateMaxRuntimeMins <int>] [-NonWindowsUpdateMaxRuntimeMins <int>] [-PassThru] [-RemoveCompany <string[]>] [-RemoveLanguageSummaryDetail <string[]>] [-RemoveLanguageUpdateFile <string[]>] [-RemoveProduct <string[]>] [-RemoveProductFamily <string[]>] [-RemoveUpdateClassification <string[]>] [-ReportingEvent {DoNotCreateWsusReportingEvents | CreateOnlyWsusStatusReportingEvents | CreateAllWsusReportingEvents}] [-Schedule <IResultObject#SMS_ScheduleToken>] [-SiteCode <string>] [-SynchronizeAction {SynchronizeFromMicrosoftUpdate | SynchronizeFromAnUpstreamDataSourceLocation | DoNotSynchronizeFromMicrosoftUpdateOrUpstreamDataSource}] [-UpstreamSourceLocation <string>] [-WaitMonth <int>] [-WaitMonthForFeature <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMSoftwareUpdatePointComponent -Name <string> [-AddCompany <string[]>] [-AddLanguageSummaryDetail <string[]>] [-AddLanguageUpdateFile <string[]>] [-AddProduct <string[]>] [-AddProductFamily <string[]>] [-AddUpdateClassification <string[]>] [-ContentFileOption {FullFilesOnly | ExpressForWindows10Only}] [-DefaultWsusServer <string>] [-EnableCallWsusCleanupWizard <bool>] [-EnableManualCertManagement <bool>] [-EnableSyncFailureAlert <bool>] [-EnableThirdPartyUpdates <bool>] [-FeatureUpdateMaxRuntimeMins <int>] [-ImmediatelyExpireSupersedence <bool>] [-ImmediatelyExpireSupersedenceForFeature <bool>] [-NonFeatureUpdateMaxRuntimeMins <int>] [-NonWindowsUpdateMaxRuntimeMins <int>] [-PassThru] [-RemoveCompany <string[]>] [-RemoveLanguageSummaryDetail <string[]>] [-RemoveLanguageUpdateFile <string[]>] [-RemoveProduct <string[]>] [-RemoveProductFamily <string[]>] [-RemoveUpdateClassification <string[]>] [-ReportingEvent {DoNotCreateWsusReportingEvents | CreateOnlyWsusStatusReportingEvents | CreateAllWsusReportingEvents}] [-Schedule <IResultObject#SMS_ScheduleToken>] [-SynchronizeAction {SynchronizeFromMicrosoftUpdate | SynchronizeFromAnUpstreamDataSourceLocation | DoNotSynchronizeFromMicrosoftUpdateOrUpstreamDataSource}] [-UpstreamSourceLocation <string>] [-WaitMonth <int>] [-WaitMonthForFeature <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMSoftwareUpdatePointComponent -InputObject <IResultObject> [-AddCompany <string[]>] [-AddLanguageSummaryDetail <string[]>] [-AddLanguageUpdateFile <string[]>] [-AddProduct <string[]>] [-AddProductFamily <string[]>] [-AddUpdateClassification <string[]>] [-ContentFileOption {FullFilesOnly | ExpressForWindows10Only}] [-DefaultWsusServer <string>] [-EnableCallWsusCleanupWizard <bool>] [-EnableManualCertManagement <bool>] [-EnableSyncFailureAlert <bool>] [-EnableThirdPartyUpdates <bool>] [-FeatureUpdateMaxRuntimeMins <int>] [-ImmediatelyExpireSupersedence <bool>] [-ImmediatelyExpireSupersedenceForFeature <bool>] [-NonFeatureUpdateMaxRuntimeMins <int>] [-NonWindowsUpdateMaxRuntimeMins <int>] [-PassThru] [-RemoveCompany <string[]>] [-RemoveLanguageSummaryDetail <string[]>] [-RemoveLanguageUpdateFile <string[]>] [-RemoveProduct <string[]>] [-RemoveProductFamily <string[]>] [-RemoveUpdateClassification <string[]>] [-ReportingEvent {DoNotCreateWsusReportingEvents | CreateOnlyWsusStatusReportingEvents | CreateAllWsusReportingEvents}] [-Schedule <IResultObject#SMS_ScheduleToken>] [-SynchronizeAction {SynchronizeFromMicrosoftUpdate | SynchronizeFromAnUpstreamDataSourceLocation | DoNotSynchronizeFromMicrosoftUpdateOrUpstreamDataSource}] [-UpstreamSourceLocation <string>] [-WaitMonth <int>] [-WaitMonthForFeature <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddCompany <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      AddCompanies
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddLanguageSummaryDetail <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      AddLanguageSummaryDetails
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddLanguageUpdateFile <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddProduct <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      AddProducts
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddProductFamily <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      AddProductFamilies
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddUpdateClassification <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ContentFileOption <ContentFileOptions>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DefaultWsusServer <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableCallWsusCleanupWizard <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableManualCertManagement <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableSyncFailureAlert <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableThirdPartyUpdates <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FeatureUpdateMaxRuntimeMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ImmediatelyExpireSupersedence <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      ImmediatelyExpireSupersedenceForNonFeature
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ImmediatelyExpireSupersedenceForFeature <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SearchByValueMandatory
+        Aliases                      Site, SiteComponent
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory
+        Aliases                      SiteName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NonFeatureUpdateMaxRuntimeMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NonWindowsUpdateMaxRuntimeMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveCompany <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      RemoveCompanies
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveLanguageSummaryDetail <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      RemoveLanguageSummaryDetails
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveLanguageUpdateFile <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveProduct <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      RemoveProducts
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveProductFamily <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      RemoveProductFamilies
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveUpdateClassification <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ReportingEvent <ReportingEventType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Schedule <IResultObject#SMS_ScheduleToken>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SynchronizeAction <SynchronizeActionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UpstreamSourceLocation <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WaitMonth <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      WaitMonthForNonFeature
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WaitMonthForFeature <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    IResultObject#SMS_SCI_Component
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

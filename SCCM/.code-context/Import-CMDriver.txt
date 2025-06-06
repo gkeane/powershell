@@ -1,0 +1,193 @@
+
+NAME
+    Import-CMDriver
+    
+SYNTAX
+    Import-CMDriver -Path <string> [-AdministrativeCategory <IResultObject#SMS_CategoryInstance[]>] [-AdministrativeCategoryName <string[]>] [-BootImagePackage <IResultObject#SMS_BootImagePackage[]>] [-DriverPackage <IResultObject#SMS_DriverPackage[]>] [-EnableAndAllowInstall <bool>] [-ImportDuplicateDriverOption {NotImport | AppendCategory | KeepExistingCategory | OverwriteCategory}] [-ImportFolder] [-SupportedPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-SupportedPlatformName <string[]>] [-UpdateBootImageDistributionPoint <bool>] [-UpdateDriverPackageDistributionPoint <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AdministrativeCategory <IResultObject#SMS_CategoryInstance[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AdministrativeCategories
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AdministrativeCategoryName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AdministrativeCategoryNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BootImagePackage <IResultObject#SMS_BootImagePackage[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      BootImagePackages
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriverPackage <IResultObject#SMS_DriverPackage[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DriverPackages
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableAndAllowInstall <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ImportDuplicateDriverOption <ImportDuplicateDriverOption>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ImportFolder
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Path <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FileName, FilePath, ImportFilePath, Location, UncFileLocation
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SupportedPlatform <IResultObject#SMS_SupportedPlatforms[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SupportedPlatforms
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SupportedPlatformName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SupportedPlatformNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UpdateBootImageDistributionPoint <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      UpdateDistributionPointsForBootImagePackage, UpdateBootImageDistributionPoints
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UpdateDriverPackageDistributionPoint <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      UpdateDistributionPointsforDriverPackage
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject#SMS_Driver
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

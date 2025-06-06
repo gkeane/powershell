@@ -1,0 +1,306 @@
+
+NAME
+    Set-CMCloudManagementGateway
+    
+SYNTAX
+    Set-CMCloudManagementGateway -InputObject <IResultObject#SMS_AzureService> [-CARootCert <hashtable>] [-CheckClientCertRevocation <bool>] [-Description <string>] [-EnableCloudDPFunction <bool>] [-EnableStorageQuota <bool>] [-EnableTrafficOut <bool>] [-EnforceProtocol <bool>] [-Force] [-PassThru] [-RemoveCertThumbprints <string[]>] [-ServiceCertPassword <securestring>] [-ServiceCertPath <string>] [-StorageCriticalPct <int>] [-StorageQuotaGB <int>] [-StorageWarningPct <int>] [-TrafficCriticalPct <int>] [-TrafficOutGB <int>] [-TrafficOutStopService <bool>] [-TrafficWarningPct <int>] [-VMInstanceCount <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMCloudManagementGateway -Id <string> [-CARootCert <hashtable>] [-CheckClientCertRevocation <bool>] [-Description <string>] [-EnableCloudDPFunction <bool>] [-EnableStorageQuota <bool>] [-EnableTrafficOut <bool>] [-EnforceProtocol <bool>] [-Force] [-PassThru] [-RemoveCertThumbprints <string[]>] [-ServiceCertPassword <securestring>] [-ServiceCertPath <string>] [-StorageCriticalPct <int>] [-StorageQuotaGB <int>] [-StorageWarningPct <int>] [-TrafficCriticalPct <int>] [-TrafficOutGB <int>] [-TrafficOutStopService <bool>] [-TrafficWarningPct <int>] [-VMInstanceCount <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMCloudManagementGateway -Name <string> [-CARootCert <hashtable>] [-CheckClientCertRevocation <bool>] [-Description <string>] [-EnableCloudDPFunction <bool>] [-EnableStorageQuota <bool>] [-EnableTrafficOut <bool>] [-EnforceProtocol <bool>] [-Force] [-PassThru] [-RemoveCertThumbprints <string[]>] [-ServiceCertPassword <securestring>] [-ServiceCertPath <string>] [-StorageCriticalPct <int>] [-StorageQuotaGB <int>] [-StorageWarningPct <int>] [-TrafficCriticalPct <int>] [-TrafficOutGB <int>] [-TrafficOutStopService <bool>] [-TrafficWarningPct <int>] [-VMInstanceCount <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -CARootCert <hashtable>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      CARootCertificate, CARootCertificates
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CheckClientCertRevocation <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableCloudDPFunction <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableStorageQuota <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableTrafficOut <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnforceProtocol <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById
+        Aliases                      AzureServiceId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_AzureService>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveCertThumbprints <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ServiceCertPassword <securestring>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ServiceCertificatePassword
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ServiceCertPath <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ServiceCertificatePath
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StorageCriticalPct <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      StorageCriticalPercent
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StorageQuotaGB <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StorageWarningPct <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      StorageWarningPercent
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TrafficCriticalPct <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TrafficOutGB <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TrafficOutStopService <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      StopTrafficOutService
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TrafficWarningPct <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -VMInstanceCount <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      VMInstancesCount
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

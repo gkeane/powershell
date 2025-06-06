@@ -1,0 +1,241 @@
+
+NAME
+    Set-CMFileReplicationRoute
+    
+SYNTAX
+    Set-CMFileReplicationRoute -DestinationSiteCode <string> -SourceSiteCode <string> [-FileReplicationAccountName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMFileReplicationRoute -ControlNetworkLoadSchedule -DestinationSiteCode <string> -SourceSiteCode <string> [-AvailabilityLevel {All | MediumHigh | High | Closed}] [-BeginHr <int>] [-DaysOfWeek {Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday}] [-EndHr <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMFileReplicationRoute -DestinationSiteCode <string> -PulseMode -SourceSiteCode <string> [-DataBlockSizeKB <int>] [-DelayBetweenDataBlockSec <int>] [-FileReplicationAccountName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMFileReplicationRoute -DestinationSiteCode <string> -SourceSiteCode <string> -Unlimited [-FileReplicationAccountName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMFileReplicationRoute -DestinationSiteCode <string> -Limited -SourceSiteCode <string> [-FileReplicationAccountName <string>] [-LimitAvailableBandwidthPercent <int>] [-LimitedBeginHr <int>] [-LimitedEndHr <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AvailabilityLevel <AvailabilityLevel>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFileReplicationRouteBySchedule
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BeginHr <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFileReplicationRouteBySchedule
+        Aliases                      TimePeriodStart, BeginHour
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ControlNetworkLoadSchedule
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFileReplicationRouteBySchedule
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DataBlockSizeKB <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFileReplicationRouteByPulseMode
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DaysOfWeek <DaysOfWeek[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFileReplicationRouteBySchedule
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DelayBetweenDataBlockSec <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFileReplicationRouteByPulseMode
+        Aliases                      DelayBetweenDataBlocksSeconds, DelayBetweenDataBlocksSec
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DestinationSiteCode <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DesSiteCode, DestSiteCode, ServerFqdn
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EndHr <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFileReplicationRouteBySchedule
+        Aliases                      TimePeriodEnd, EndHour
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FileReplicationAccountName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFileReplicationAccount, SetFileReplicationRouteByUnlimited, SetFileReplicationRouteByPulseMode, SetFileReplicationRouteByLimited
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LimitAvailableBandwidthPercent <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFileReplicationRouteByLimited
+        Aliases                      LimitAvailableBandwidthPercentage
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Limited
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFileReplicationRouteByLimited
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LimitedBeginHr <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFileReplicationRouteByLimited
+        Aliases                      LimitedTimePeriodStart, LimitedBeginHour
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LimitedEndHr <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFileReplicationRouteByLimited
+        Aliases                      LimitedTimePeriodEnd, LimitedEndHour
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PulseMode
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFileReplicationRouteByPulseMode
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SourceSiteCode <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SiteCode
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Unlimited
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetFileReplicationRouteByUnlimited
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    
+    
+    
+ALIASES
+    Set-CMDistributionPointDataTransferRoute
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

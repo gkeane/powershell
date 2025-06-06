@@ -1,0 +1,237 @@
+
+NAME
+    Set-CMBoundaryGroup
+    
+SYNTAX
+    Set-CMBoundaryGroup -InputObject <IResultObject#SMS_BoundaryGroup> [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <string[]>] [-AllowPeerDownload <bool>] [-ClearSiteSystemServer] [-DefaultSiteCode <string>] [-Description <string>] [-NewName <string>] [-PassThru] [-PreferCloudDPOverDP <bool>] [-PreferDPOverPeer <bool>] [-RemoveSiteSystemServer <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Site System[]>] [-RemoveSiteSystemServerName <string[]>] [-SubnetPeerDownloadOnly <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMBoundaryGroup -Id <string> [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <string[]>] [-AllowPeerDownload <bool>] [-ClearSiteSystemServer] [-DefaultSiteCode <string>] [-Description <string>] [-NewName <string>] [-PassThru] [-PreferCloudDPOverDP <bool>] [-PreferDPOverPeer <bool>] [-RemoveSiteSystemServer <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Site System[]>] [-RemoveSiteSystemServerName <string[]>] [-SubnetPeerDownloadOnly <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMBoundaryGroup -Name <string> [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <string[]>] [-AllowPeerDownload <bool>] [-ClearSiteSystemServer] [-DefaultSiteCode <string>] [-Description <string>] [-NewName <string>] [-PassThru] [-PreferCloudDPOverDP <bool>] [-PreferDPOverPeer <bool>] [-RemoveSiteSystemServer <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Site System[]>] [-RemoveSiteSystemServerName <string[]>] [-SubnetPeerDownloadOnly <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddSiteSystemServer <IResultObject[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddSiteSystemServers
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddSiteSystemServerName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddSiteSystemServerNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowPeerDownload <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearSiteSystemServer
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ClearSiteSystemServers
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DefaultSiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById
+        Aliases                      GroupId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_BoundaryGroup>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NewName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PreferCloudDPOverDP <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PreferCloudDistributionPointOverDistributionPoint
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PreferDPOverPeer <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PreferDistributionPointOverPeerInSubnet
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveSiteSystemServer <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Site System[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveSiteSystemServers
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveSiteSystemServerName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveSiteSystemServerNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SubnetPeerDownloadOnly <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PeerWithinSameSubnetOnly
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    IResultObject#SMS_BoundaryGroup
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

@@ -1,0 +1,618 @@
+
+NAME
+    New-CMTaskSequenceMedia
+    
+SYNTAX
+    New-CMTaskSequenceMedia -BootableMedia -BootImageDistributionPointServerName <string> -BootImageId <string> -BootImageManagementPointServerName <string[]> -MediaInputType {Usb | CdDvd | Hd} -MediaMode {Dynamic | SiteBased} -MediaPath <string> -ProtectPassword <bool> [-AllowUacPrompt] [-AllowUnattendedDeployment <bool>] [-CommandDistributionPointServerName <string>] [-CommandIncludeFile <bool>] [-CommandPackageName <string>] [-CreateMediaSelfCertificate <bool>] [-DriveName <string>] [-EnablePrestartCommand <bool>] [-EnableUnknownSupport <bool>] [-ExpirationDate <datetime>] [-ImportCertificatePassword <securestring>] [-ImportCertificatePath <string>] [-MediaSize {None | Size650MB | Size4GB | Size8GB | SizeUnlimited}] [-Password <securestring>] [-PrestartCommandLine <string>] [-StartDate <datetime>] [-UserDeviceAffinity {DoNotAllow | AdministratorApproval | AutoApproval}] [-Variable <hashtable>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMTaskSequenceMedia -MediaInputType {Usb | CdDvd | Hd} -MediaPath <string> -ProtectPassword <bool> -StandaloneMedia -TaskSequenceDistributionPointServerName <string[]> -TaskSequenceId <string> [-AllowUacPrompt] [-AllowUnattendedDeployment <bool>] [-CommandDistributionPointServerName <string>] [-CommandIncludeFile <bool>] [-CommandPackageName <string>] [-DriveName <string>] [-EnablePrestartCommand <bool>] [-IncludeApplicationDependency <bool>] [-MediaSize {None | Size650MB | Size4GB | Size8GB | SizeUnlimited}] [-Password <securestring>] [-PrestartCommandLine <string>] [-Variable <hashtable>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMTaskSequenceMedia -MediaPath <string> -StandaloneMedia -TaskSequence <IResultObject#SMS_TaskSequencePackage> -TaskSequenceDistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point[]> [-AllowUacPrompt] [-AllowUnattendedDeployment <bool>] [-CommandIncludeFile <bool>] [-CommandPackage <IResultObject#SMS_Package>] [-CommandPackageDistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point>] [-DriveName <string>] [-EnablePrestartCommand <bool>] [-IncludeApplicationDependency <bool>] [-MediaInputType {Usb | CdDvd | Hd}] [-MediaSize {None | Size650MB | Size4GB | Size8GB | SizeUnlimited}] [-Password <securestring>] [-PrestartCommandLine <string>] [-ProtectPassword <bool>] [-Variable <hashtable>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMTaskSequenceMedia -BootableMedia -BootImage <IResultObject#SMS_BootImagePackage> -BootImageDistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point> -BootImageManagementPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Management Point[]> -MediaPath <string> [-AllowUacPrompt] [-AllowUnattendedDeployment <bool>] [-CommandIncludeFile <bool>] [-CommandPackage <IResultObject#SMS_Package>] [-CommandPackageDistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point>] [-CreateMediaSelfCertificate <bool>] [-DriveName <string>] [-EnablePrestartCommand <bool>] [-EnableUnknownSupport <bool>] [-ExpirationDate <datetime>] [-ImportCertificatePassword <securestring>] [-ImportCertificatePath <string>] [-MediaInputType {Usb | CdDvd | Hd}] [-MediaMode {Dynamic | SiteBased}] [-MediaSize {None | Size650MB | Size4GB | Size8GB | SizeUnlimited}] [-Password <securestring>] [-PrestartCommandLine <string>] [-ProtectPassword <bool>] [-StartDate <datetime>] [-UserDeviceAffinity {DoNotAllow | AdministratorApproval | AutoApproval}] [-Variable <hashtable>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMTaskSequenceMedia -BootImageDistributionPointServerName <string> -BootImageId <string> -BootImageManagementPointServerName <string[]> -MediaMode {Dynamic | SiteBased} -MediaPath <string> -OperatingSystemImageDistributionPointServerName <string> -PrestagedMedia -ProtectPassword <bool> -TaskSequenceDistributionPointServerName <string[]> -TaskSequenceId <string> [-AllowUacPrompt] [-AllowUnattendedDeployment <bool>] [-Application <IResultObject[]>] [-ApplicationName <string[]>] [-CommandDistributionPointServerName <string>] [-CommandIncludeFile <bool>] [-CommandPackageName <string>] [-Comment <string>] [-CreatedBy <string>] [-DriverPackage <IResultObject#SMS_DriverPackage[]>] [-DriverPackageName <string[]>] [-OperatingSystemImageName <string>] [-OperatingSystemImagePackageId <string>] [-Package <IResultObject#SMS_Package[]>] [-PackageName <string[]>] [-PrestartCommandLine <string>] [-Variable <hashtable>] [-Version <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMTaskSequenceMedia -BootImage <IResultObject#SMS_BootImagePackage> -BootImageDistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point> -BootImageManagementPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Management Point[]> -MediaMode {Dynamic | SiteBased} -MediaPath <string> -OperatingSystemImageDistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point> -PrestagedMedia -TaskSequence <IResultObject#SMS_TaskSequencePackage> -TaskSequenceDistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point[]> [-AllowUacPrompt] [-AllowUnattendedDeployment <bool>] [-Application <IResultObject[]>] [-CommandIncludeFile <bool>] [-CommandPackage <IResultObject#SMS_Package>] [-CommandPackageDistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point>] [-Comment <string>] [-CreatedBy <string>] [-DriverPackage <IResultObject#SMS_DriverPackage[]>] [-OperatingSystemImagePackage <IResultObject#SMS_ImagePackage>] [-Package <IResultObject#SMS_Package[]>] [-PrestartCommandLine <string>] [-ProtectPassword <bool>] [-Variable <hashtable>] [-Version <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMTaskSequenceMedia -BootImage <IResultObject#SMS_BootImagePackage> -BootImageDistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point> -CaptureMedia -MediaPath <string> [-AllowUacPrompt] [-DriveName <string>] [-MediaInputType {Usb | CdDvd | Hd}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMTaskSequenceMedia -BootImageDistributionPointServerName <string> -BootImageId <string> -CaptureMedia -MediaInputType {Usb | CdDvd | Hd} -MediaPath <string> [-AllowUacPrompt] [-DriveName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AllowUacPrompt
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowUnattendedDeployment <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMedia, NewBootableMediaByValue, NewPrestagedMedia, NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Application <IResultObject[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           NewPrestagedMedia, NewPrestagedMediaByValue
+        Aliases                      Applications
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplicationName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPrestagedMedia
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BootImage <IResultObject#SMS_BootImagePackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           NewCaptureMediaByValue, NewBootableMediaByValue, NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BootImageDistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           NewCaptureMediaByValue, NewBootableMediaByValue, NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BootImageDistributionPointServerName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewCaptureMedia, NewBootableMedia, NewPrestagedMedia
+        Aliases                      DistributionPointServerName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BootImageId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewCaptureMedia, NewBootableMedia, NewPrestagedMedia
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BootImageManagementPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Management Point[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           NewBootableMediaByValue, NewPrestagedMediaByValue
+        Aliases                      BootImageManagementPoints
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BootImageManagementPointServerName <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBootableMedia, NewPrestagedMedia
+        Aliases                      ManagementPointServerName, BootImageManagementPointServerNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BootableMedia
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBootableMedia, NewBootableMediaByValue
+        Aliases                      BootableMediaOption
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CaptureMedia
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewCaptureMedia, NewCaptureMediaByValue
+        Aliases                      CaptureMediaOption
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CommandDistributionPointServerName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewBootableMedia, NewPrestagedMedia
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CommandIncludeFile <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMedia, NewBootableMediaByValue, NewPrestagedMedia, NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CommandPackage <IResultObject#SMS_Package>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CommandPackageDistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CommandPackageName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewBootableMedia, NewPrestagedMedia
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Comment <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPrestagedMedia, NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CreateMediaSelfCertificate <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBootableMedia, NewBootableMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CreatedBy <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPrestagedMedia, NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriveName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewStandAloneMediaByValue, NewCaptureMedia, NewCaptureMediaByValue, NewBootableMedia, NewBootableMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriverPackage <IResultObject#SMS_DriverPackage[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           NewPrestagedMedia, NewPrestagedMediaByValue
+        Aliases                      DriverPackages, PackageDriver, PackageDrivers
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriverPackageName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPrestagedMedia
+        Aliases                      PackageDriverName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnablePrestartCommand <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMedia, NewBootableMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableUnknownSupport <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBootableMedia, NewBootableMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ExpirationDate <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBootableMedia, NewBootableMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ImportCertificatePassword <securestring>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBootableMedia, NewBootableMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ImportCertificatePath <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBootableMedia, NewBootableMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IncludeApplicationDependency <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewStandAloneMediaByValue
+        Aliases                      IncludeApplicationDependencies
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MediaInputType <MediaInputType>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewStandAloneMediaByValue, NewCaptureMedia, NewCaptureMediaByValue, NewBootableMedia, NewBootableMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MediaMode <MediaMode>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPrestagedMedia, NewPrestagedMediaByValue, NewBootableMedia, NewBootableMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MediaPath <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMedia, NewBootableMediaByValue, NewCaptureMedia, NewCaptureMediaByValue, NewPrestagedMedia, NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MediaSize <MediaSize>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMedia, NewBootableMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemImageDistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemImageDistributionPointServerName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPrestagedMedia
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemImageName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPrestagedMedia
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemImagePackage <IResultObject#SMS_ImagePackage>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemImagePackageId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPrestagedMedia
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Package <IResultObject#SMS_Package[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           NewPrestagedMedia, NewPrestagedMediaByValue
+        Aliases                      Packages
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PackageName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPrestagedMedia
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Password <securestring>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMedia, NewBootableMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PrestagedMedia
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPrestagedMedia, NewPrestagedMediaByValue
+        Aliases                      PrestagedMediaOption, PrestageMedia
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PrestartCommandLine <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMedia, NewBootableMediaByValue, NewPrestagedMedia, NewPrestagedMediaByValue
+        Aliases                      CommandLine
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ProtectPassword <bool>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMedia, NewBootableMediaByValue, NewPrestagedMedia, NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StandaloneMedia
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewStandAloneMediaByValue
+        Aliases                      StandAloneMediaOption
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StartDate <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBootableMedia, NewBootableMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TaskSequence <IResultObject#SMS_TaskSequencePackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           NewStandAloneMediaByValue, NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TaskSequenceDistributionPoint <IResultObject#SMS_SCI_SysResUse;RoleName=SMS Distribution Point[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           NewStandAloneMediaByValue, NewPrestagedMediaByValue
+        Aliases                      TaskSequenceDistributionPoints
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TaskSequenceDistributionPointServerName <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewPrestagedMedia
+        Aliases                      TaskSequenceDistributionPointServerNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TaskSequenceId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewPrestagedMedia
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserDeviceAffinity <UserDeviceAffinityType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewBootableMedia, NewBootableMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Variable <hashtable>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMedia, NewBootableMediaByValue, NewPrestagedMedia, NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Version <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewPrestagedMedia, NewPrestagedMediaByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

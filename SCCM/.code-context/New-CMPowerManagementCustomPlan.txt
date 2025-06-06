@@ -1,0 +1,545 @@
+
+NAME
+    New-CMPowerManagementCustomPlan
+    
+SYNTAX
+    New-CMPowerManagementCustomPlan -Peak [-AllowHybridSleepAC <bool>] [-AllowHybridSleepDC <bool>] [-AllowStandbyAC <bool>] [-AllowStandbyDC <bool>] [-CriticalBatteryAC {None | Sleep | Hibernate | Shutdown}] [-CriticalBatteryDC {None | Sleep | Hibernate | Shutdown}] [-Description <string>] [-DisplayOffMinAC <int>] [-DisplayOffMinDC <int>] [-HardDiskIdleMinAC <int>] [-HardDiskIdleMinDC <int>] [-HibernateMinAC <int>] [-HibernateMinDC <int>] [-LidDownAC {None | Sleep | Hibernate | Shutdown}] [-LidDownDC {None | Sleep | Hibernate | Shutdown}] [-LowBatteryAC {None | Sleep | Hibernate | Shutdown}] [-LowBatteryDC {None | Sleep | Hibernate | Shutdown}] [-Name <string>] [-NoAllowStandby] [-NoCriticalBattery] [-NoDisplayOff] [-NoHardDiskIdle] [-NoHibernate] [-NoHybridSleep] [-NoLidDown] [-NoLowBattery] [-NoPowerButton] [-NoRequirePasswordOnWake] [-NoSleep] [-NoSleepButton] [-NoSleepIdle] [-NoStartButton] [-NoWakeOnTimer] [-PowerButtonAC {None | Sleep | Hibernate | Shutdown}] [-PowerButtonDC {None | Sleep | Hibernate | Shutdown}] [-RequirePasswordOnWakeAC <bool>] [-RequirePasswordOnWakeDC <bool>] [-SleepButtonAC {None | Sleep | Hibernate | Shutdown}] [-SleepButtonDC {None | Sleep | Hibernate | Shutdown}] [-SleepIdlePctAC <int>] [-SleepIdlePctDC <int>] [-SleepMinAC <int>] [-SleepMinDC <int>] [-StartButtonAC {Sleep | Hibernate | Shutdown}] [-StartButtonDC {Sleep | Hibernate | Shutdown}] [-WakeOnTimerAC <bool>] [-WakeOnTimerDC <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    New-CMPowerManagementCustomPlan -NonPeak [-AllowHybridSleepAC <bool>] [-AllowHybridSleepDC <bool>] [-AllowStandbyAC <bool>] [-AllowStandbyDC <bool>] [-CriticalBatteryAC {None | Sleep | Hibernate | Shutdown}] [-CriticalBatteryDC {None | Sleep | Hibernate | Shutdown}] [-Description <string>] [-DisplayOffMinAC <int>] [-DisplayOffMinDC <int>] [-HardDiskIdleMinAC <int>] [-HardDiskIdleMinDC <int>] [-HibernateMinAC <int>] [-HibernateMinDC <int>] [-LidDownAC {None | Sleep | Hibernate | Shutdown}] [-LidDownDC {None | Sleep | Hibernate | Shutdown}] [-LowBatteryAC {None | Sleep | Hibernate | Shutdown}] [-LowBatteryDC {None | Sleep | Hibernate | Shutdown}] [-Name <string>] [-NoAllowStandby] [-NoCriticalBattery] [-NoDisplayOff] [-NoHardDiskIdle] [-NoHibernate] [-NoHybridSleep] [-NoLidDown] [-NoLowBattery] [-NoPowerButton] [-NoRequirePasswordOnWake] [-NoSleep] [-NoSleepButton] [-NoSleepIdle] [-NoStartButton] [-NoWakeOnTimer] [-PowerButtonAC {None | Sleep | Hibernate | Shutdown}] [-PowerButtonDC {None | Sleep | Hibernate | Shutdown}] [-RequirePasswordOnWakeAC <bool>] [-RequirePasswordOnWakeDC <bool>] [-SleepButtonAC {None | Sleep | Hibernate | Shutdown}] [-SleepButtonDC {None | Sleep | Hibernate | Shutdown}] [-SleepIdlePctAC <int>] [-SleepIdlePctDC <int>] [-SleepMinAC <int>] [-SleepMinDC <int>] [-StartButtonAC {Sleep | Hibernate | Shutdown}] [-StartButtonDC {Sleep | Hibernate | Shutdown}] [-WakeOnTimerAC <bool>] [-WakeOnTimerDC <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AllowHybridSleepAC <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowHybridSleepDC <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowStandbyAC <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowStandbyDC <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CriticalBatteryAC <PowerSettingAction>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CriticalBatteryDC <PowerSettingAction>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisplayOffMinAC <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisplayOffMinDC <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HardDiskIdleMinAC <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HardDiskIdleMinDC <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HibernateMinAC <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HibernateMinDC <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LidDownAC <PowerSettingAction>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LidDownDC <PowerSettingAction>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LowBatteryAC <PowerSettingAction>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LowBatteryDC <PowerSettingAction>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoAllowStandby
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoCriticalBattery
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoDisplayOff
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoHardDiskIdle
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoHibernate
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoHybridSleep
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoLidDown
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoLowBattery
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoPowerButton
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoRequirePasswordOnWake
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoSleep
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoSleepButton
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoSleepIdle
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoStartButton
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NoWakeOnTimer
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NonPeak
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NonPeak
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Peak
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           Peak
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PowerButtonAC <PowerSettingAction>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PowerButtonDC <PowerSettingAction>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RequirePasswordOnWakeAC <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RequirePasswordOnWakeDC <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SleepButtonAC <PowerSettingAction>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SleepButtonDC <PowerSettingAction>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SleepIdlePctAC <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SleepIdlePctDC <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SleepMinAC <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SleepMinDC <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StartButtonAC <PowerSettingAction>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StartButtonDC <PowerSettingAction>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WakeOnTimerAC <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WakeOnTimerDC <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    Microsoft.ConfigurationManagement.AdminConsole.CollectionProperty.PowerSchema
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

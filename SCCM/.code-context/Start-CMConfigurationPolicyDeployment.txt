@@ -1,0 +1,278 @@
+
+NAME
+    Start-CMConfigurationPolicyDeployment
+    
+SYNTAX
+    Start-CMConfigurationPolicyDeployment -CollectionName <string> -FirewallPolicy <IResultObject#SMS_ConfigurationPolicy;CategoryInstance_UniqueID=SettingsAndPolicy:SMS_FirewallSettings> [-PassThru] [-Schedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Start-CMConfigurationPolicyDeployment -CollectionName <string> -UserDataAndProfileId <string> [-EnableEnforcement <bool>] [-GenerateAlert <bool>] [-MonitoredByScom <bool>] [-OverrideServiceWindow <bool>] [-ParameterValue <int>] [-PassThru] [-PostponeDate <datetime>] [-PostponeTime <datetime>] [-Schedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Start-CMConfigurationPolicyDeployment -CollectionName <string> -UserDataAndProfileName <string> [-EnableEnforcement <bool>] [-GenerateAlert <bool>] [-MonitoredByScom <bool>] [-OverrideServiceWindow <bool>] [-ParameterValue <int>] [-PassThru] [-PostponeDate <datetime>] [-PostponeTime <datetime>] [-Schedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Start-CMConfigurationPolicyDeployment -CollectionName <string> -UserDataAndProfile <IResultObject#SMS_ConfigurationPolicy;CategoryInstance_UniqueID=SettingsAndPolicy:SMS_UserStateManagementSettings> [-EnableEnforcement <bool>] [-GenerateAlert <bool>] [-MonitoredByScom <bool>] [-OverrideServiceWindow <bool>] [-ParameterValue <int>] [-PassThru] [-PostponeDate <datetime>] [-PostponeTime <datetime>] [-Schedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Start-CMConfigurationPolicyDeployment -CollectionName <string> -FirewallPolicyName <string> [-PassThru] [-Schedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Start-CMConfigurationPolicyDeployment -CollectionName <string> -FirewallPolicyId <string> [-PassThru] [-Schedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Start-CMConfigurationPolicyDeployment -CollectionName <string> -RemoteConnectionProfileId <string> [-EnableEnforcement <bool>] [-GenerateAlert <bool>] [-MonitoredByScom <bool>] [-OverrideServiceWindow <bool>] [-ParameterValue <int>] [-PassThru] [-PostponeDate <datetime>] [-PostponeTime <datetime>] [-Schedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Start-CMConfigurationPolicyDeployment -CollectionName <string> -RemoteConnectionProfileName <string> [-EnableEnforcement <bool>] [-GenerateAlert <bool>] [-MonitoredByScom <bool>] [-OverrideServiceWindow <bool>] [-ParameterValue <int>] [-PassThru] [-PostponeDate <datetime>] [-PostponeTime <datetime>] [-Schedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Start-CMConfigurationPolicyDeployment -CollectionName <string> -RemoteConnectionProfile <IResultObject#SMS_ConfigurationPolicy;CategoryInstance_UniqueID=SettingsAndPolicy:SMS_RemoteConnectionSettings> [-EnableEnforcement <bool>] [-GenerateAlert <bool>] [-MonitoredByScom <bool>] [-OverrideServiceWindow <bool>] [-ParameterValue <int>] [-PassThru] [-PostponeDate <datetime>] [-PostponeTime <datetime>] [-Schedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -CollectionName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployFWPolicyByNameMandatory, DeployFWPolicyByIdMandatory, DeployFWPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableEnforcement <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FirewallPolicy <IResultObject#SMS_ConfigurationPolicy;CategoryInstance_UniqueID=SettingsAndPolicy:SMS_FirewallSettings>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           DeployFWPolicyByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FirewallPolicyId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployFWPolicyByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FirewallPolicyName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployFWPolicyByNameMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -GenerateAlert <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MonitoredByScom <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OverrideServiceWindow <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ParameterValue <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PostponeDate <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PostponeTime <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoteConnectionProfile <IResultObject#SMS_ConfigurationPolicy;CategoryInstance_UniqueID=SettingsAndPolicy:SMS_RemoteConnectionSettings>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           DeployRCPolicyByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoteConnectionProfileId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployRCPolicyByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoteConnectionProfileName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployRCPolicyByNameMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Schedule <IResultObject#SMS_ScheduleToken>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployFWPolicyByNameMandatory, DeployFWPolicyByIdMandatory, DeployFWPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserDataAndProfile <IResultObject#SMS_ConfigurationPolicy;CategoryInstance_UniqueID=SettingsAndPolicy:SMS_UserStateManagementSettings>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           DeployUSMPolicyByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserDataAndProfileId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployUSMPolicyByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserDataAndProfileName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           DeployUSMPolicyByNameMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

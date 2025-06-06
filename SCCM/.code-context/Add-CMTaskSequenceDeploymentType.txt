@@ -1,0 +1,368 @@
+
+NAME
+    Add-CMTaskSequenceDeploymentType
+    
+SYNTAX
+    Add-CMTaskSequenceDeploymentType -ApplicationName <string> -InstallTaskSequenceId <string> [-DeploymentTypeName <string>] [-EstimatedRuntimeMins <int>] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-ProductCode <string>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RequireUserInteraction] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-UninstallTaskSequenceId <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMTaskSequenceDeploymentType -AddDetectionClause <DetectionClause[]> -ApplicationId <int> -DeploymentTypeName <string> -InstallTaskSequenceId <string> [-DetectionClauseConnector <hashtable[]>] [-EstimatedRuntimeMins <int>] [-GroupDetectionClauses <string[]>] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RequireUserInteraction] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-UninstallTaskSequenceId <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMTaskSequenceDeploymentType -AddDetectionClause <DetectionClause[]> -ApplicationName <string> -DeploymentTypeName <string> -InstallTaskSequenceId <string> [-DetectionClauseConnector <hashtable[]>] [-EstimatedRuntimeMins <int>] [-GroupDetectionClauses <string[]>] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RequireUserInteraction] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-UninstallTaskSequenceId <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMTaskSequenceDeploymentType -AddDetectionClause <DetectionClause[]> -DeploymentTypeName <string> -InputObject <IResultObject> -InstallTaskSequenceId <string> [-DetectionClauseConnector <hashtable[]>] [-EstimatedRuntimeMins <int>] [-GroupDetectionClauses <string[]>] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RequireUserInteraction] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-UninstallTaskSequenceId <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMTaskSequenceDeploymentType -ApplicationId <int> -DeploymentTypeName <string> -InstallTaskSequenceId <string> -ScriptLanguage {PowerShell | VBScript | JavaScript} [-EstimatedRuntimeMins <int>] [-ForceScriptDetection32Bit] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RequireUserInteraction] [-ScriptFile <string>] [-ScriptText <string>] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-UninstallTaskSequenceId <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMTaskSequenceDeploymentType -ApplicationId <int> -InstallTaskSequenceId <string> [-DeploymentTypeName <string>] [-EstimatedRuntimeMins <int>] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-ProductCode <string>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RequireUserInteraction] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-UninstallTaskSequenceId <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMTaskSequenceDeploymentType -ApplicationName <string> -DeploymentTypeName <string> -InstallTaskSequenceId <string> -ScriptLanguage {PowerShell | VBScript | JavaScript} [-EstimatedRuntimeMins <int>] [-ForceScriptDetection32Bit] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RequireUserInteraction] [-ScriptFile <string>] [-ScriptText <string>] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-UninstallTaskSequenceId <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMTaskSequenceDeploymentType -DeploymentTypeName <string> -InputObject <IResultObject> -InstallTaskSequenceId <string> -ScriptLanguage {PowerShell | VBScript | JavaScript} [-EstimatedRuntimeMins <int>] [-ForceScriptDetection32Bit] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RequireUserInteraction] [-ScriptFile <string>] [-ScriptText <string>] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-UninstallTaskSequenceId <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Add-CMTaskSequenceDeploymentType -InputObject <IResultObject> -InstallTaskSequenceId <string> [-DeploymentTypeName <string>] [-EstimatedRuntimeMins <int>] [-InstallationBehaviorType {InstallForUser | InstallForSystem | InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser}] [-LogonRequirementType {OnlyWhenUserLoggedOn | WhereOrNotUserLoggedOn | WhetherOrNotUserLoggedOn | OnlyWhenNoUserLoggedOn}] [-MaximumRuntimeMins <int>] [-ProductCode <string>] [-RebootBehavior {BasedOnExitCode | NoAction | ForceReboot | ProgramReboot}] [-RequireUserInteraction] [-SlowNetworkDeploymentMode {DoNothing | Download}] [-UninstallTaskSequenceId <string>] [-UserInteractionMode {Normal | Minimized | Maximized | Hidden}] [-AddRequirement <Rule[]>] [-RemoveLanguage <string[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <string[]>] [-Comment <string>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddDetectionClause <DetectionClause[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdDetectionClause, ByAppNameDetectionClause, ByAppValueDetectionClause
+        Aliases                      AddDetectionClauses
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddLanguage <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddLanguages, Languages, Language
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddRequirement <Rule[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplicationId <int>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdDetectionClause, ByAppIdScript, ByAppId
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplicationName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppNameDetectionClause, ByAppNameScript, ByAppName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Comment <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AdministratorComment
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentTypeName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdDetectionClause, ByAppNameDetectionClause, ByAppValueDetectionClause, ByAppIdScript, ByAppNameScript, ByAppValueScript, ByAppId, ByAppName, ByAppValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DetectionClauseConnector <hashtable[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdDetectionClause, ByAppNameDetectionClause, ByAppValueDetectionClause
+        Aliases                      DetectionClauseConnectors
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EstimatedRuntimeMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EstimatedInstallationTimeMinutes, EstimatedInstallationTimeMins, EstimatedRunTimeMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ForceForUnknownPublisher
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceScriptDetection32Bit
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdScript, ByAppNameScript, ByAppValueScript
+        Aliases                      Force32BitDetectionScript
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -GroupDetectionClauses <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdDetectionClause, ByAppNameDetectionClause, ByAppValueDetectionClause
+        Aliases                      GroupDetectionClausesByLogicalName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           ByAppValueDetectionClause, ByAppValueScript, ByAppValue
+        Aliases                      Application
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallTaskSequenceId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallationBehaviorType <InstallationBehaviorType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LogonRequirementType <LogonRequirementType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaximumRuntimeMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      MaximumAllowedRunTimeMinutes, MaximumAllowedRunTimeMins, MaximumRunTimeMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ProductCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppId, ByAppName, ByAppValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RebootBehavior <PostExecutionBehavior>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveLanguage <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveLanguages
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveRequirement <Rule[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveRequirements
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RequireUserInteraction
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RequiresUserInteraction
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScriptFile <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdScript, ByAppNameScript, ByAppValueScript
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScriptLanguage <ScriptLanguage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdScript, ByAppNameScript, ByAppValueScript
+        Aliases                      ScriptType
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScriptText <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByAppIdScript, ByAppNameScript, ByAppValueScript
+        Aliases                      ScriptContent
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SlowNetworkDeploymentMode <ContentHandlingMode>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UninstallTaskSequenceId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      UninstallId, UninstallTaskSequencePackageId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserInteractionMode <UserInteractionMode>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      InstallationProgramVisibility
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

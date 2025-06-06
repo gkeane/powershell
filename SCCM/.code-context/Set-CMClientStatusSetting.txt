@@ -1,0 +1,144 @@
+
+NAME
+    Set-CMClientStatusSetting
+    
+SYNTAX
+    Set-CMClientStatusSetting [-ClientPolicyDays <int>] [-HardwareInventoryDays <int>] [-HeartbeatDiscoveryDays <int>] [-HistoryCleanupDays <int>] [-PassThru] [-SoftwareInventoryDays <int>] [-StatusMessageDays <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -ClientPolicyDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           Set
+        Aliases                      PolicyInactiveInterval, ClientPolicyDayInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HardwareInventoryDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           Set
+        Aliases                      HWInactiveInterval, HardwareInventoryDayInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HeartbeatDiscoveryDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           Set
+        Aliases                      DdrInactiveInterval, HeartbeatDiscoveryDayInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HistoryCleanupDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           Set
+        Aliases                      CleanUpInterval, HistoryCleanupDayInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareInventoryDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           Set
+        Aliases                      SWInactiveInterval, SoftwareInventoryDayInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StatusMessageDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           Set
+        Aliases                      StatusInactiveInterval, StatusMessageDayInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject[]#SMS_CH_Settings
+    IResultObject#SMS_CH_Settings
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

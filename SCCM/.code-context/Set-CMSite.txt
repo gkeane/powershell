@@ -1,0 +1,527 @@
+
+NAME
+    Set-CMSite
+    
+SYNTAX
+    Set-CMSite -InputObject <IResultObject#SMS_Site> [-AddActiveDirectoryForest <IResultObject#SMS_ADForest[]>] [-AddCertificateByPath <string[]>] [-AddClientRequestServiceType {WakeOnLanUdp | ClientNotificationTcp | ClientRequestHttpTcp | ClientRequestsHttpsTcp | ClientRequestHttpTcpDefault | ClientRequestsHttpsTcpDefault}] [-ClientCertificateCustomStoreName <string>] [-ClientCertificateSelectionCriteriaType {ClientAuthentication | CertificateSubjectContainsString | CertificateSubjectOrSanIncludesAttributes | CertificateSubjectOrSanIncludesAtrributes}] [-ClientCertificateSelectionCriteriaValue <string>] [-ClientCheckCertificateRevocationListForSiteSystem <bool>] [-ClientComputerCommunicationType {HttpsOnly | HttpsOrHttp}] [-Comment <string>] [-ConcurrentSendingDelayBeforeRetryingMins <int>] [-EnableLowFreeSpaceAlert <bool>] [-EnableWakeOnLan <bool>] [-FreeSpaceThresholdCriticalGB <int>] [-FreeSpaceThresholdWarningGB <int>] [-MaximumConcurrentSendingForAllSite <int>] [-MaximumConcurrentSendingForPerSite <int>] [-MaximumNumberOfSendingWakeupPacketBeforePausing <int>] [-PassThru] [-PortForClientRequestServiceType <int>] [-PromotePassiveSiteToActive] [-RemoveActiveDirectoryForest <IResultObject#SMS_ADForest[]>] [-RemoveCertificateByKey <string[]>] [-RemoveClientRequestServiceType {WakeOnLanUdp | ClientNotificationTcp | ClientRequestHttpTcp | ClientRequestsHttpsTcp | ClientRequestHttpTcpDefault | ClientRequestsHttpsTcpDefault}] [-RequireSha256 <bool>] [-RequireSigning <bool>] [-RetryInstallPassiveSite] [-RetryNumberForConcurrentSending <int>] [-RetryNumberOfSendingWakeupPacketTransmission <int>] [-SendingWakeupPacketBeforePausingWaitSec <int>] [-SendingWakeupPacketTransmissionDelayMins <int>] [-SendingWakeupPacketTransmissionOffsetMins <int>] [-SiteSystemCollectionBehavior {Block | Warn}] [-TakeActionForMultipleCertificateMatchCriteria {FailSelectionAndSendErrorMessage | SelectCertificateWithLongestValidityPeriod}] [-ThreadNumberOfSendingWakeupPacket <int>] [-ThresholdOfSelectCollectionByDefault <int>] [-ThresholdOfSelectCollectionMax <int>] [-UseCustomWebsite <bool>] [-UseEncryption <bool>] [-UsePkiClientCertificate <bool>] [-UseSmsGeneratedCert <bool>] [-WakeOnLanTransmissionMethodType {Unicast | SubnetDirectedBroadcasts}] [-WakeOnLanType {UseAmtPowerOnCommandsOrWakeupPackets | UseAmtPowerOnCommandsOnly | UseWakeupPacketsOnly}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMSite -Name <string> [-AddActiveDirectoryForest <IResultObject#SMS_ADForest[]>] [-AddCertificateByPath <string[]>] [-AddClientRequestServiceType {WakeOnLanUdp | ClientNotificationTcp | ClientRequestHttpTcp | ClientRequestsHttpsTcp | ClientRequestHttpTcpDefault | ClientRequestsHttpsTcpDefault}] [-ClientCertificateCustomStoreName <string>] [-ClientCertificateSelectionCriteriaType {ClientAuthentication | CertificateSubjectContainsString | CertificateSubjectOrSanIncludesAttributes | CertificateSubjectOrSanIncludesAtrributes}] [-ClientCertificateSelectionCriteriaValue <string>] [-ClientCheckCertificateRevocationListForSiteSystem <bool>] [-ClientComputerCommunicationType {HttpsOnly | HttpsOrHttp}] [-Comment <string>] [-ConcurrentSendingDelayBeforeRetryingMins <int>] [-EnableLowFreeSpaceAlert <bool>] [-EnableWakeOnLan <bool>] [-FreeSpaceThresholdCriticalGB <int>] [-FreeSpaceThresholdWarningGB <int>] [-MaximumConcurrentSendingForAllSite <int>] [-MaximumConcurrentSendingForPerSite <int>] [-MaximumNumberOfSendingWakeupPacketBeforePausing <int>] [-PassThru] [-PortForClientRequestServiceType <int>] [-PromotePassiveSiteToActive] [-RemoveActiveDirectoryForest <IResultObject#SMS_ADForest[]>] [-RemoveCertificateByKey <string[]>] [-RemoveClientRequestServiceType {WakeOnLanUdp | ClientNotificationTcp | ClientRequestHttpTcp | ClientRequestsHttpsTcp | ClientRequestHttpTcpDefault | ClientRequestsHttpsTcpDefault}] [-RequireSha256 <bool>] [-RequireSigning <bool>] [-RetryInstallPassiveSite] [-RetryNumberForConcurrentSending <int>] [-RetryNumberOfSendingWakeupPacketTransmission <int>] [-SendingWakeupPacketBeforePausingWaitSec <int>] [-SendingWakeupPacketTransmissionDelayMins <int>] [-SendingWakeupPacketTransmissionOffsetMins <int>] [-SiteSystemCollectionBehavior {Block | Warn}] [-TakeActionForMultipleCertificateMatchCriteria {FailSelectionAndSendErrorMessage | SelectCertificateWithLongestValidityPeriod}] [-ThreadNumberOfSendingWakeupPacket <int>] [-ThresholdOfSelectCollectionByDefault <int>] [-ThresholdOfSelectCollectionMax <int>] [-UseCustomWebsite <bool>] [-UseEncryption <bool>] [-UsePkiClientCertificate <bool>] [-UseSmsGeneratedCert <bool>] [-WakeOnLanTransmissionMethodType {Unicast | SubnetDirectedBroadcasts}] [-WakeOnLanType {UseAmtPowerOnCommandsOrWakeupPackets | UseAmtPowerOnCommandsOnly | UseWakeupPacketsOnly}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMSite [-AddActiveDirectoryForest <IResultObject#SMS_ADForest[]>] [-AddCertificateByPath <string[]>] [-AddClientRequestServiceType {WakeOnLanUdp | ClientNotificationTcp | ClientRequestHttpTcp | ClientRequestsHttpsTcp | ClientRequestHttpTcpDefault | ClientRequestsHttpsTcpDefault}] [-ClientCertificateCustomStoreName <string>] [-ClientCertificateSelectionCriteriaType {ClientAuthentication | CertificateSubjectContainsString | CertificateSubjectOrSanIncludesAttributes | CertificateSubjectOrSanIncludesAtrributes}] [-ClientCertificateSelectionCriteriaValue <string>] [-ClientCheckCertificateRevocationListForSiteSystem <bool>] [-ClientComputerCommunicationType {HttpsOnly | HttpsOrHttp}] [-Comment <string>] [-ConcurrentSendingDelayBeforeRetryingMins <int>] [-EnableLowFreeSpaceAlert <bool>] [-EnableWakeOnLan <bool>] [-FreeSpaceThresholdCriticalGB <int>] [-FreeSpaceThresholdWarningGB <int>] [-MaximumConcurrentSendingForAllSite <int>] [-MaximumConcurrentSendingForPerSite <int>] [-MaximumNumberOfSendingWakeupPacketBeforePausing <int>] [-PassThru] [-PortForClientRequestServiceType <int>] [-PromotePassiveSiteToActive] [-RemoveActiveDirectoryForest <IResultObject#SMS_ADForest[]>] [-RemoveCertificateByKey <string[]>] [-RemoveClientRequestServiceType {WakeOnLanUdp | ClientNotificationTcp | ClientRequestHttpTcp | ClientRequestsHttpsTcp | ClientRequestHttpTcpDefault | ClientRequestsHttpsTcpDefault}] [-RequireSha256 <bool>] [-RequireSigning <bool>] [-RetryInstallPassiveSite] [-RetryNumberForConcurrentSending <int>] [-RetryNumberOfSendingWakeupPacketTransmission <int>] [-SendingWakeupPacketBeforePausingWaitSec <int>] [-SendingWakeupPacketTransmissionDelayMins <int>] [-SendingWakeupPacketTransmissionOffsetMins <int>] [-SiteCode <string>] [-SiteSystemCollectionBehavior {Block | Warn}] [-TakeActionForMultipleCertificateMatchCriteria {FailSelectionAndSendErrorMessage | SelectCertificateWithLongestValidityPeriod}] [-ThreadNumberOfSendingWakeupPacket <int>] [-ThresholdOfSelectCollectionByDefault <int>] [-ThresholdOfSelectCollectionMax <int>] [-UseCustomWebsite <bool>] [-UseEncryption <bool>] [-UsePkiClientCertificate <bool>] [-UseSmsGeneratedCert <bool>] [-WakeOnLanTransmissionMethodType {Unicast | SubnetDirectedBroadcasts}] [-WakeOnLanType {UseAmtPowerOnCommandsOrWakeupPackets | UseAmtPowerOnCommandsOnly | UseWakeupPacketsOnly}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddActiveDirectoryForest <IResultObject#SMS_ADForest[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddCertificateByPath <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddClientRequestServiceType <ClientRequestServiceType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientCertificateCustomStoreName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetBySiteCodeMandatory, SetByObject
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientCertificateSelectionCriteriaType <ClientCertificateSelectionCriteriaType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetBySiteCodeMandatory, SetByObject
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientCertificateSelectionCriteriaValue <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientCheckCertificateRevocationListForSiteSystem <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientComputerCommunicationType <ClientComputerCommunicationType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Comment <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ConcurrentSendingDelayBeforeRetryingMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ConcurrentSendingDelayBeforeRetryingMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableLowFreeSpaceAlert <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      GenerateAlertWhenFreeDiskSpaceOnSiteDatabaseIsLow
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableWakeOnLan <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FreeSpaceThresholdCriticalGB <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      CriticalAlertWhenFreeDiskSpaceFallBelowFollowingValueGB
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FreeSpaceThresholdWarningGB <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      WarningAlertWhenFreeDiskSpaceFallBelowFollowingValueGB
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_Site>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetByObject
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaximumConcurrentSendingForAllSite <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaximumConcurrentSendingForPerSite <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaximumNumberOfSendingWakeupPacketBeforePausing <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory
+        Aliases                      SiteName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PortForClientRequestServiceType <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PromotePassiveSiteToActive
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveActiveDirectoryForest <IResultObject#SMS_ADForest[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveCertificateByKey <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveClientRequestServiceType <ClientRequestServiceType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RequireSha256 <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RequireSigning <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RetryInstallPassiveSite
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RetryNumberForConcurrentSending <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RetryNumberOfSendingWakeupPacketTransmission <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SendingWakeupPacketBeforePausingWaitSec <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SendingWakeupPacketBeforePausingWaitSeconds
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SendingWakeupPacketTransmissionDelayMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SendingWakeupPacketTransmissionDelayMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SendingWakeupPacketTransmissionOffsetMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SendingWakeupPacketTransmissionOffsetMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetBySiteCodeMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteSystemCollectionBehavior <CollectionBehaviorType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      BehaviorWhenCollectionIncludesComputerHostSiteSystemRole
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TakeActionForMultipleCertificateMatchCriteria <TakeActionForMultipleCertificateMatchCriteria>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ThreadNumberOfSendingWakeupPacket <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ThresholdOfSelectCollectionByDefault <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SizeOfCustomCollectionCanSelectByDefault
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ThresholdOfSelectCollectionMax <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SizeOfCustomCollectionCanSelectMaximum
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseCustomWebsite <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseEncryption <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UsePkiClientCertificate <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseSmsGeneratedCert <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      UseConfigurationManagerGeneratedCertificateForHttp
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WakeOnLanTransmissionMethodType <WakeOnLanTransmissionMethodType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WakeOnLanType <WakeOnLanType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

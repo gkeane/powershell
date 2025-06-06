@@ -1,0 +1,159 @@
+
+NAME
+    Remove-CMBoundaryFromGroup
+    
+SYNTAX
+    Remove-CMBoundaryFromGroup -BoundaryGroupId <int> -BoundaryId <int> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMBoundaryFromGroup -BoundaryGroupId <int> -BoundaryName <string> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMBoundaryFromGroup -BoundaryGroupId <int> -BoundaryInputObject <IResultObject#SMS_Boundary> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMBoundaryFromGroup -BoundaryGroupInputObject <IResultObject#SMS_BoundaryGroup> -BoundaryId <int> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMBoundaryFromGroup -BoundaryGroupInputObject <IResultObject#SMS_BoundaryGroup> -BoundaryName <string> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMBoundaryFromGroup -BoundaryGroupInputObject <IResultObject#SMS_BoundaryGroup> -BoundaryInputObject <IResultObject#SMS_Boundary> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMBoundaryFromGroup -BoundaryGroupName <string> -BoundaryId <int> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMBoundaryFromGroup -BoundaryGroupName <string> -BoundaryName <string> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMBoundaryFromGroup -BoundaryGroupName <string> -BoundaryInputObject <IResultObject#SMS_Boundary> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -BoundaryGroupId <int>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveBoundaryFromGroupById_Id, RemoveBoundaryFromGroupByName_Id, RemoveBoundaryFromGroupByObject_Id
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BoundaryGroupInputObject <IResultObject#SMS_BoundaryGroup>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveBoundaryFromGroupById_Object, RemoveBoundaryFromGroupByName_Object, RemoveBoundaryFromGroupByObject_Object
+        Aliases                      BoundaryGroup
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BoundaryGroupName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveBoundaryFromGroupById_Name, RemoveBoundaryFromGroupByName_Name, RemoveBoundaryFromGroupByObject_Name
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BoundaryId <int>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveBoundaryFromGroupById_Id, RemoveBoundaryFromGroupById_Name, RemoveBoundaryFromGroupById_Object
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BoundaryInputObject <IResultObject#SMS_Boundary>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveBoundaryFromGroupByObject_Id, RemoveBoundaryFromGroupByObject_Name, RemoveBoundaryFromGroupByObject_Object
+        Aliases                      Boundary
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BoundaryName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveBoundaryFromGroupByName_Id, RemoveBoundaryFromGroupByName_Name, RemoveBoundaryFromGroupByName_Object
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

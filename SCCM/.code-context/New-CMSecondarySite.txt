@@ -1,0 +1,372 @@
+
+NAME
+    New-CMSecondarySite
+    
+SYNTAX
+    New-CMSecondarySite -CertificateExpirationTimeUtc <datetime> -CreateSelfSignedCertificate -Http -InstallationSourceFile <IResultObject#SMS_EmbeddedProperty[]> -SecondarySiteCode <string> -ServerName <string> -SiteName <string> -SqlServerSetting <IResultObject#SMS_EmbeddedProperty[]> [-AllowFallbackForContent <bool>] [-AllowPreStaging <bool>] [-BoundaryGroup <IResultObject#SMS_BoundaryGroup[]>] [-ContentMonitoringPriority {Lowest | Low | Medium | High | Highest}] [-EnableAnonymous <bool>] [-EnableBranchCache] [-InstallationFolder <string>] [-InstallInternetServer <bool>] [-MinFreeSpaceMB <int>] [-PrimaryContentLibraryLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-PrimaryPackageShareLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-PrimarySiteCode <string>] [-SecondaryContentLibraryLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-SecondaryPackageShareLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-ValidateContentSchedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSecondarySite -CertificateExpirationTimeUtc <datetime> -CreateSelfSignedCertificate -Https -InstallationSourceFile <IResultObject#SMS_EmbeddedProperty[]> -SecondarySiteCode <string> -ServerName <string> -SiteName <string> -SqlServerSetting <IResultObject#SMS_EmbeddedProperty[]> [-AllowFallbackForContent <bool>] [-AllowPreStaging <bool>] [-BoundaryGroup <IResultObject#SMS_BoundaryGroup[]>] [-ClientConnectionType {Intranet | Internet | InternetAndIntranet}] [-ContentMonitoringPriority {Lowest | Low | Medium | High | Highest}] [-EnableBranchCache] [-InstallationFolder <string>] [-InstallInternetServer <bool>] [-MinFreeSpaceMB <int>] [-PrimaryContentLibraryLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-PrimaryPackageShareLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-PrimarySiteCode <string>] [-SecondaryContentLibraryLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-SecondaryPackageShareLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-ValidateContentSchedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSecondarySite -CertificatePassword <securestring> -CertificatePath <string> -Https -ImportCertificate -InstallationSourceFile <IResultObject#SMS_EmbeddedProperty[]> -SecondarySiteCode <string> -ServerName <string> -SiteName <string> -SqlServerSetting <IResultObject#SMS_EmbeddedProperty[]> [-AllowFallbackForContent <bool>] [-AllowPreStaging <bool>] [-BoundaryGroup <IResultObject#SMS_BoundaryGroup[]>] [-ClientConnectionType {Intranet | Internet | InternetAndIntranet}] [-ContentMonitoringPriority {Lowest | Low | Medium | High | Highest}] [-EnableBranchCache] [-ForceWhenDuplicateCertificate <bool>] [-InstallationFolder <string>] [-InstallInternetServer <bool>] [-MinFreeSpaceMB <int>] [-PrimaryContentLibraryLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-PrimaryPackageShareLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-PrimarySiteCode <string>] [-SecondaryContentLibraryLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-SecondaryPackageShareLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-ValidateContentSchedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMSecondarySite -CertificatePassword <securestring> -CertificatePath <string> -Http -ImportCertificate -InstallationSourceFile <IResultObject#SMS_EmbeddedProperty[]> -SecondarySiteCode <string> -ServerName <string> -SiteName <string> -SqlServerSetting <IResultObject#SMS_EmbeddedProperty[]> [-AllowFallbackForContent <bool>] [-AllowPreStaging <bool>] [-BoundaryGroup <IResultObject#SMS_BoundaryGroup[]>] [-ContentMonitoringPriority {Lowest | Low | Medium | High | Highest}] [-EnableAnonymous <bool>] [-EnableBranchCache] [-ForceWhenDuplicateCertificate <bool>] [-InstallationFolder <string>] [-InstallInternetServer <bool>] [-MinFreeSpaceMB <int>] [-PrimaryContentLibraryLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-PrimaryPackageShareLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-PrimarySiteCode <string>] [-SecondaryContentLibraryLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-SecondaryPackageShareLocation {Automatic | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z}] [-ValidateContentSchedule <IResultObject#SMS_ScheduleToken>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AllowFallbackForContent <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowPreStaging <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BoundaryGroup <IResultObject#SMS_BoundaryGroup[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      BoundaryGroups
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CertificateExpirationTimeUtc <datetime>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewDistributionPointByHTTPSAndCreateCertificate, NewDistributionPointByHTTPAndCreateCertificate
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CertificatePassword <securestring>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewDistributionPointByHTTPSAndImportCertificate, NewDistributionPointByHTTPAndImportCertificate
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CertificatePath <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewDistributionPointByHTTPSAndImportCertificate, NewDistributionPointByHTTPAndImportCertificate
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientConnectionType <ClientConnectionTypes>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewDistributionPointByHTTPSAndCreateCertificate, NewDistributionPointByHTTPSAndImportCertificate
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ContentMonitoringPriority <Priority>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CreateSelfSignedCertificate
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewDistributionPointByHTTPSAndCreateCertificate, NewDistributionPointByHTTPAndCreateCertificate
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableAnonymous <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewDistributionPointByHTTPAndCreateCertificate, NewDistributionPointByHTTPAndImportCertificate
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableBranchCache
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWhenDuplicateCertificate <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewDistributionPointByHTTPSAndImportCertificate, NewDistributionPointByHTTPAndImportCertificate
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Http
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewDistributionPointByHTTPAndCreateCertificate, NewDistributionPointByHTTPAndImportCertificate
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Https
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewDistributionPointByHTTPSAndCreateCertificate, NewDistributionPointByHTTPSAndImportCertificate
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ImportCertificate
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewDistributionPointByHTTPSAndImportCertificate, NewDistributionPointByHTTPAndImportCertificate
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallInternetServer <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallationFolder <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      InstallDir
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallationSourceFile <IResultObject#SMS_EmbeddedProperty[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MinFreeSpaceMB <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PrimaryContentLibraryLocation <DriveType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PrimaryPackageShareLocation <DriveType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PrimarySiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ParentSiteCode
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SecondaryContentLibraryLocation <DriveType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SecondaryPackageShareLocation <DriveType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SecondarySiteCode <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SiteCode
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ServerName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SqlServerSetting <IResultObject#SMS_EmbeddedProperty[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ValidateContentSchedule <IResultObject#SMS_ScheduleToken>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject#SMS_Site
+    IResultObject#SMS_SCI_SiteDefinition
+    IResultObject#SMS_SCI_SysResUse
+    IResultObject[]#SMS_SCI_Address
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

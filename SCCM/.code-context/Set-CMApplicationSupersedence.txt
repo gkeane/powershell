@@ -1,0 +1,236 @@
+
+NAME
+    Set-CMApplicationSupersedence
+    
+SYNTAX
+    Set-CMApplicationSupersedence [-Id] <int> [-CurrentDeploymentTypeId <int>] [-CurrentDeploymentTypeName <string>] [-CurrentDeploymentType <IResultObject#SMS_DeploymentType>] [-SupersededApplicationId <int>] [-SupersededApplicationName <string>] [-SupersededApplication <IResultObject>] [-OldDeploymentTypeId <int>] [-OldDeploymentTypeName <string>] [-OldDeploymentType <IResultObject#SMS_DeploymentType>] [-IsUninstall <bool>] [-RemoveSupersedence] [-Force] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMApplicationSupersedence [-Name] <string> [-CurrentDeploymentTypeId <int>] [-CurrentDeploymentTypeName <string>] [-CurrentDeploymentType <IResultObject#SMS_DeploymentType>] [-SupersededApplicationId <int>] [-SupersededApplicationName <string>] [-SupersededApplication <IResultObject>] [-OldDeploymentTypeId <int>] [-OldDeploymentTypeName <string>] [-OldDeploymentType <IResultObject#SMS_DeploymentType>] [-IsUninstall <bool>] [-RemoveSupersedence] [-Force] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMApplicationSupersedence [-InputObject] <IResultObject> [-CurrentDeploymentTypeId <int>] [-CurrentDeploymentTypeName <string>] [-CurrentDeploymentType <IResultObject#SMS_DeploymentType>] [-SupersededApplicationId <int>] [-SupersededApplicationName <string>] [-SupersededApplication <IResultObject>] [-OldDeploymentTypeId <int>] [-OldDeploymentTypeName <string>] [-OldDeploymentType <IResultObject#SMS_DeploymentType>] [-IsUninstall <bool>] [-RemoveSupersedence] [-Force] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CurrentDeploymentType <IResultObject#SMS_DeploymentType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ReplacementDeploymentType, SupersedingDeploymentType
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CurrentDeploymentTypeId <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      CurrentDeploymentTypeCIId, CurrentDeploymentTypeCI_ID, ReplacementDeploymentTypeId, ReplacementDeploymentTypeCIId, ReplacementDeploymentTypeCI_ID, SupersedingDeploymentTypeId, SupersedingDeploymentTypeCIId, SupersedingDeploymentTypeCI_ID
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CurrentDeploymentTypeName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ReplacementDeploymentTypeName, SupersedingDeploymentTypeName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <int>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           SetById
+        Aliases                      ApplicationId, CurrentApplicationId, CurrentApplicationCIId, CurrentApplicationCI_ID
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetByValue
+        Aliases                      Application, CurrentApplication
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsUninstall <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           SetByName
+        Aliases                      ApplicationName, LocalizedDisplayName, CurrentApplicationName, CurrentApplicationLocalizedDisplayName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OldDeploymentType <IResultObject#SMS_DeploymentType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SupersededDeploymentType
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OldDeploymentTypeId <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      OldDeploymentTypeCIId, OldDeploymentTypeCI_ID, SupersededDeploymentTypeId, SupersededDeploymentTypeCIId, SupersededDeploymentTypeCI_ID
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OldDeploymentTypeName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SupersededDeploymentTypeName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveSupersedence
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SupersededApplication <IResultObject>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SupersededApplicationId <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SupersededApplicationCIId, SupersededApplicationCI_ID
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SupersededApplicationName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SupersededApplicationLocalizedDisplayName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

@@ -1,0 +1,237 @@
+
+NAME
+    New-CMTSStepRunPowerShellScript
+    
+SYNTAX
+    New-CMTSStepRunPowerShellScript -Name <string> [-SuccessCode <int[]>] [-Condition <IResultObject#SMS_TaskSequence_ConditionOperand[]>] [-ContinueOnError] [-Description <string>] [-Disable] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMTSStepRunPowerShellScript -Name <string> -SourceScript <string> [-ExecutionPolicy {AllSigned | Undefined | Bypass}] [-OutputVariableName <string>] [-Parameter <string>] [-SuccessCode <int[]>] [-TimeoutMins <int>] [-UserName <string>] [-UserPassword <securestring>] [-WorkingDirectory <string>] [-Condition <IResultObject#SMS_TaskSequence_ConditionOperand[]>] [-ContinueOnError] [-Description <string>] [-Disable] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMTSStepRunPowerShellScript -Name <string> -PackageId <string> -ScriptName <string> [-ExecutionPolicy {AllSigned | Undefined | Bypass}] [-OutputVariableName <string>] [-Parameter <string>] [-SuccessCode <int[]>] [-TimeoutMins <int>] [-UserName <string>] [-UserPassword <securestring>] [-WorkingDirectory <string>] [-Condition <IResultObject#SMS_TaskSequence_ConditionOperand[]>] [-ContinueOnError] [-Description <string>] [-Disable] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -Condition <IResultObject#SMS_TaskSequence_ConditionOperand[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      Conditions
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ContinueOnError
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Disable
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DisableThisStep
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ExecutionPolicy <ExecutionPolicyType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RunScriptFromSource, RunScriptFromPackage
+        Aliases                      PowerShellExecutionPolicy
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName, RunScriptFromSource, RunScriptFromPackage
+        Aliases                      StepName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OutputVariableName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RunScriptFromSource, RunScriptFromPackage
+        Aliases                      Output, OutputVariable
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PackageId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RunScriptFromPackage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Parameter <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RunScriptFromSource, RunScriptFromPackage
+        Aliases                      Parameters
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScriptName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RunScriptFromPackage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SourceScript <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RunScriptFromSource
+        Aliases                      SourceCode
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SuccessCode <int[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SuccessCodes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TimeoutMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RunScriptFromSource, RunScriptFromPackage
+        Aliases                      TimeoutInMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RunScriptFromSource, RunScriptFromPackage
+        Aliases                      User
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserPassword <securestring>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RunScriptFromSource, RunScriptFromPackage
+        Aliases                      Password
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WorkingDirectory <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RunScriptFromSource, RunScriptFromPackage
+        Aliases                      StartIn
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject#SMS_TaskSequence_RunPowerShellScriptAction
+    
+    
+ALIASES
+    New-CMTaskSequenceStepRunPowerShellScript
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

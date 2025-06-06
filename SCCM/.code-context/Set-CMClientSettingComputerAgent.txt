@@ -1,0 +1,316 @@
+
+NAME
+    Set-CMClientSettingComputerAgent
+    
+SYNTAX
+    Set-CMClientSettingComputerAgent -Name <string> [-AddPortalToTrustedSiteList <bool>] [-AllowPortalToHaveElevatedTrust <bool>] [-BrandingTitle <string>] [-DisableDeadlineRandom <bool>] [-DisplayNewProgramNotification <bool>] [-EnableHealthAttestation <bool>] [-EnableThirdPartyOrchestration {No | Yes}] [-FinalReminderMins <int>] [-HealthAttestationUrl <string>] [-InitialReminderHr <int>] [-InstallRestriction {AllUsers | OnlyAdministrators | OnlyAdministratorsAndPrimaryUsers | NoUsers}] [-InterimReminderHr <int>] [-PortalUrl <string>] [-PowerShellExecutionPolicy {AllSigned | Bypass | Restricted}] [-TrustMicrosoftSigningCertificates <bool>] [-SelectWebsitePoint {Fqdn | AutoDetect | NetBios}] [-SuspendBitLocker {Never | Always}] [-UseNewSoftwareCenter <bool>] [-UseOnPremisesHealthAttestation <bool>] [-WebsitePointServerName <string>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSettingComputerAgent -DefaultSetting [-AddPortalToTrustedSiteList <bool>] [-AllowPortalToHaveElevatedTrust <bool>] [-BrandingTitle <string>] [-DisableDeadlineRandom <bool>] [-DisplayNewProgramNotification <bool>] [-EnableHealthAttestation <bool>] [-EnableThirdPartyOrchestration {No | Yes}] [-FinalReminderMins <int>] [-HealthAttestationUrl <string>] [-InitialReminderHr <int>] [-InstallRestriction {AllUsers | OnlyAdministrators | OnlyAdministratorsAndPrimaryUsers | NoUsers}] [-InterimReminderHr <int>] [-PortalUrl <string>] [-PowerShellExecutionPolicy {AllSigned | Bypass | Restricted}] [-TrustMicrosoftSigningCertificates <bool>] [-SelectWebsitePoint {Fqdn | AutoDetect | NetBios}] [-SuspendBitLocker {Never | Always}] [-UseNewSoftwareCenter <bool>] [-UseOnPremisesHealthAttestation <bool>] [-WebsitePointServerName <string>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSettingComputerAgent -InputObject <IResultObject#SMS_ClientSettings> [-AddPortalToTrustedSiteList <bool>] [-AllowPortalToHaveElevatedTrust <bool>] [-BrandingTitle <string>] [-DisableDeadlineRandom <bool>] [-DisplayNewProgramNotification <bool>] [-EnableHealthAttestation <bool>] [-EnableThirdPartyOrchestration {No | Yes}] [-FinalReminderMins <int>] [-HealthAttestationUrl <string>] [-InitialReminderHr <int>] [-InstallRestriction {AllUsers | OnlyAdministrators | OnlyAdministratorsAndPrimaryUsers | NoUsers}] [-InterimReminderHr <int>] [-PortalUrl <string>] [-PowerShellExecutionPolicy {AllSigned | Bypass | Restricted}] [-TrustMicrosoftSigningCertificates <bool>] [-SelectWebsitePoint {Fqdn | AutoDetect | NetBios}] [-SuspendBitLocker {Never | Always}] [-UseNewSoftwareCenter <bool>] [-UseOnPremisesHealthAttestation <bool>] [-WebsitePointServerName <string>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddPortalToTrustedSiteList <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowPortalToHaveElevatedTrust <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BrandingTitle <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DefaultSetting
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDefaultSetting
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableDeadlineRandom <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DisableDeadlineRandomization
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisplayNewProgramNotification <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableHealthAttestation <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EnableHealthAttestationService
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableThirdPartyOrchestration <EnableThirdPartyOrchestrationType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FinalReminderMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FinalReminderMinutesInterval, FinalReminderMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HealthAttestationUrl <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      OnPremisesHealthAttestationServiceUrl
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InitialReminderHr <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      InitialReminderHoursInterval, InitialReminderHours
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_ClientSettings>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetCustomSettingByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallRestriction <InstallRestrictionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InterimReminderHr <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      InterimReminderHoursInterval, InterimReminderHours
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetCustomSettingByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PortalUrl <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PowerShellExecutionPolicy <PowerShellExecutionPolicyType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SelectWebsitePoint <ApplicationCatalogWebsitePointType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SelectApplicationCatalogWebsitePoint
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SuspendBitLocker <SuspendBitLockerType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TrustMicrosoftSigningCertificates <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseNewSoftwareCenter <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseOnPremisesHealthAttestation <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      UseOnPremisesHealthAttestationService
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WebsitePointServerName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ApplicationCatalogWebsitePointServerName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

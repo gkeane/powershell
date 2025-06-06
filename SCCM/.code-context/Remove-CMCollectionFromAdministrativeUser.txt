@@ -1,0 +1,159 @@
+
+NAME
+    Remove-CMCollectionFromAdministrativeUser
+    
+SYNTAX
+    Remove-CMCollectionFromAdministrativeUser -CollectionName <string> -UserName <string> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMCollectionFromAdministrativeUser -CollectionId <string> -UserId <int> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMCollectionFromAdministrativeUser -CollectionId <string> -UserName <string> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMCollectionFromAdministrativeUser -CollectionId <string> -User <IResultObject#SMS_Admin> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMCollectionFromAdministrativeUser -CollectionName <string> -UserId <int> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMCollectionFromAdministrativeUser -CollectionName <string> -User <IResultObject#SMS_Admin> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMCollectionFromAdministrativeUser -InputObject <IResultObject#SMS_Collection> -UserId <int> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMCollectionFromAdministrativeUser -InputObject <IResultObject#SMS_Collection> -UserName <string> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Remove-CMCollectionFromAdministrativeUser -InputObject <IResultObject#SMS_Collection> -User <IResultObject#SMS_Admin> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -CollectionId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveCollectionFromAdminById_Id, RemoveCollectionFromAdminById_Name, RemoveCollectionFromAdminById_Object
+        Aliases                      DeviceCollectionId, UserCollectionId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveCollectionFromAdminByName_Id, RemoveCollectionFromAdminByName_Name, RemoveCollectionFromAdminByName_Object
+        Aliases                      DeviceCollectionName, UserCollectionName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Force
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_Collection>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           RemoveCollectionFromAdminByObject_Id, RemoveCollectionFromAdminByObject_Name, RemoveCollectionFromAdminByObject_Object
+        Aliases                      DeviceCollection, UserCollection, Collection
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -User <IResultObject#SMS_Admin>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           RemoveCollectionFromAdminById_Object, RemoveCollectionFromAdminByName_Object, RemoveCollectionFromAdminByObject_Object
+        Aliases                      AdministrativeUser
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserId <int>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveCollectionFromAdminById_Id, RemoveCollectionFromAdminByName_Id, RemoveCollectionFromAdminByObject_Id
+        Aliases                      AdministrativeUserId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           RemoveCollectionFromAdminById_Name, RemoveCollectionFromAdminByName_Name, RemoveCollectionFromAdminByObject_Name
+        Aliases                      AdministrativeUserName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    Remove-CMDeviceCollectionFromAdministrativeUser
+    Remove-CMUserCollectionFromAdministrativeUser
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

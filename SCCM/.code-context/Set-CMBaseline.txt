@@ -1,0 +1,356 @@
+
+NAME
+    Set-CMBaseline
+    
+SYNTAX
+    Set-CMBaseline -Id <int> [-AddBaseline <string[]>] [-AddCategory <string[]>] [-AddOptionalConfigurationItem <string[]>] [-AddOSConfigurationItem <string[]>] [-AddProhibitedConfigurationItem <string[]>] [-AddRequiredConfigurationItem <string[]>] [-AddSoftwareUpdate <string[]>] [-AllowComanagedClients <bool>] [-ClearBaseline] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem] [-ClearProhibitedConfigurationItem] [-ClearRequiredConfigurationItem] [-ClearSoftwareUpdate] [-Description <string>] [-DesiredConfigurationDigestPath <string>] [-NewName <string>] [-PassThru] [-RemoveBaseline <string[]>] [-RemoveCategory <string[]>] [-RemoveOptionalConfigurationItem <string[]>] [-RemoveOSConfigurationItem <string[]>] [-RemoveProhibitedConfigurationItem <string[]>] [-RemoveRequiredConfigurationItem <string[]>] [-RemoveSoftwareUpdate <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMBaseline -Name <string> [-AddBaseline <string[]>] [-AddCategory <string[]>] [-AddOptionalConfigurationItem <string[]>] [-AddOSConfigurationItem <string[]>] [-AddProhibitedConfigurationItem <string[]>] [-AddRequiredConfigurationItem <string[]>] [-AddSoftwareUpdate <string[]>] [-AllowComanagedClients <bool>] [-ClearBaseline] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem] [-ClearProhibitedConfigurationItem] [-ClearRequiredConfigurationItem] [-ClearSoftwareUpdate] [-Description <string>] [-DesiredConfigurationDigestPath <string>] [-NewName <string>] [-PassThru] [-RemoveBaseline <string[]>] [-RemoveCategory <string[]>] [-RemoveOptionalConfigurationItem <string[]>] [-RemoveOSConfigurationItem <string[]>] [-RemoveProhibitedConfigurationItem <string[]>] [-RemoveRequiredConfigurationItem <string[]>] [-RemoveSoftwareUpdate <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMBaseline -InputObject <IResultObject> [-AddBaseline <string[]>] [-AddCategory <string[]>] [-AddOptionalConfigurationItem <string[]>] [-AddOSConfigurationItem <string[]>] [-AddProhibitedConfigurationItem <string[]>] [-AddRequiredConfigurationItem <string[]>] [-AddSoftwareUpdate <string[]>] [-AllowComanagedClients <bool>] [-ClearBaseline] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem] [-ClearProhibitedConfigurationItem] [-ClearRequiredConfigurationItem] [-ClearSoftwareUpdate] [-Description <string>] [-DesiredConfigurationDigestPath <string>] [-NewName <string>] [-PassThru] [-RemoveBaseline <string[]>] [-RemoveCategory <string[]>] [-RemoveOptionalConfigurationItem <string[]>] [-RemoveOSConfigurationItem <string[]>] [-RemoveProhibitedConfigurationItem <string[]>] [-RemoveRequiredConfigurationItem <string[]>] [-RemoveSoftwareUpdate <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddBaseline <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      AddBaselines
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddCategory <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddOSConfigurationItem <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      AddOSConfigurationItems
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddOptionalConfigurationItem <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      AddOptionalConfigurationItems
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddProhibitedConfigurationItem <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      AddProhibitedConfigurationItems
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddRequiredConfigurationItem <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      AddRequiredConfigurationItems
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddSoftwareUpdate <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      AddSoftwareUpdates
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowComanagedClients <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory, __AllParameterSets
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearBaseline
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearOSConfigurationItem
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearOptionalConfigurationItem
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearProhibitedConfigurationItem
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearRequiredConfigurationItem
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearSoftwareUpdate
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      LocalizedDescription
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DesiredConfigurationDigestPath <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <int>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByIdMandatory
+        Aliases                      CIId, CI_ID
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory
+        Aliases                      LocalizedDisplayName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NewName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveBaseline <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      RemoveBaselines
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveCategory <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveOSConfigurationItem <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      RemoveOSConfigurationItems
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveOptionalConfigurationItem <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      RemoveOptionalConfigurationItems
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveProhibitedConfigurationItem <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      RemoveProhibitedConfigurationItems
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveRequiredConfigurationItem <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      RemoveRequiredConfigurationItems
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveSoftwareUpdate <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByNameMandatory, SetByIdMandatory, SetByValueMandatory
+        Aliases                      RemoveSoftwareUpdates
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

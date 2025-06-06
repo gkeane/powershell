@@ -1,0 +1,286 @@
+
+NAME
+    Set-CMClientSettingRemoteTool
+    
+SYNTAX
+    Set-CMClientSettingRemoteTool -Name <string> [-AccessLevel {NoAccess | ViewOnly | FullControl}] [-AllowClientChange <bool>] [-AllowPermittedViewer <bool>] [-AllowUnattendedComputer <bool>] [-AudibleSignal {PlayNoSound | PlaySoundAtBeginAndEnd | PlaySoundRepeatedly}] [-FirewallExceptionProfile {Disabled | Public | Private | Domain}] [-GrantPermissionToLocalAdministrator <bool>] [-ManageRemoteDesktopSetting <bool>] [-ManageSolicitedRemoteAssistance <bool>] [-ManageUnsolicitedRemoteAssistance <bool>] [-PermittedViewer <string[]>] [-PromptUserForClipboardPermission <bool>] [-PromptUserForPermission <bool>] [-RemoteAssistanceAccessLevel {None | RemoteViewing | FullControl}] [-RequireAuthentication <bool>] [-ShowNotificationIconOnTaskbar <bool>] [-ShowSessionConnectionBar <bool>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSettingRemoteTool -DefaultSetting [-AccessLevel {NoAccess | ViewOnly | FullControl}] [-AllowClientChange <bool>] [-AllowPermittedViewer <bool>] [-AllowUnattendedComputer <bool>] [-AudibleSignal {PlayNoSound | PlaySoundAtBeginAndEnd | PlaySoundRepeatedly}] [-FirewallExceptionProfile {Disabled | Public | Private | Domain}] [-GrantPermissionToLocalAdministrator <bool>] [-ManageRemoteDesktopSetting <bool>] [-ManageSolicitedRemoteAssistance <bool>] [-ManageUnsolicitedRemoteAssistance <bool>] [-PermittedViewer <string[]>] [-PromptUserForClipboardPermission <bool>] [-PromptUserForPermission <bool>] [-RemoteAssistanceAccessLevel {None | RemoteViewing | FullControl}] [-RequireAuthentication <bool>] [-ShowNotificationIconOnTaskbar <bool>] [-ShowSessionConnectionBar <bool>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSettingRemoteTool -InputObject <IResultObject#SMS_ClientSettings> [-AccessLevel {NoAccess | ViewOnly | FullControl}] [-AllowClientChange <bool>] [-AllowPermittedViewer <bool>] [-AllowUnattendedComputer <bool>] [-AudibleSignal {PlayNoSound | PlaySoundAtBeginAndEnd | PlaySoundRepeatedly}] [-FirewallExceptionProfile {Disabled | Public | Private | Domain}] [-GrantPermissionToLocalAdministrator <bool>] [-ManageRemoteDesktopSetting <bool>] [-ManageSolicitedRemoteAssistance <bool>] [-ManageUnsolicitedRemoteAssistance <bool>] [-PermittedViewer <string[]>] [-PromptUserForClipboardPermission <bool>] [-PromptUserForPermission <bool>] [-RemoteAssistanceAccessLevel {None | RemoteViewing | FullControl}] [-RequireAuthentication <bool>] [-ShowNotificationIconOnTaskbar <bool>] [-ShowSessionConnectionBar <bool>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AccessLevel <AccessLevelType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowClientChange <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowPermittedViewer <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AllowPermittedViewersToRemoteDesktop
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowUnattendedComputer <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AllowRemoteControlOfUnattendedComputer
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AudibleSignal <AudibleSignalType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DefaultSetting
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDefaultSetting
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FirewallExceptionProfile <FirewallExceptionProfileType[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -GrantPermissionToLocalAdministrator <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      GrantRemoteControlPermissionToLocalAdministrator
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_ClientSettings>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetCustomSettingByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ManageRemoteDesktopSetting <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ManageSolicitedRemoteAssistance <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ManageUnsolicitedRemoteAssistance <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetCustomSettingByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PermittedViewer <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PermittedViewers
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PromptUserForClipboardPermission <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PromptUserForClipboardAccessPermission
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PromptUserForPermission <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PromptUserForRemoteControlPermission
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RequireAuthentication <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ShowNotificationIconOnTaskbar <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ShowSessionConnectionBar <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

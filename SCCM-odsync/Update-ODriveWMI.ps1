@@ -68,12 +68,52 @@ function Test-WMINamespaceAndClass {
             $newClass.Properties.Add("total_quota", "String", $null)
             $newClass.Properties.Add("folder_path", "String", $null)
             $newClass.Properties.Add("sync_history", "String", $null)  # Store as delimited string
+            $newClass.Properties.Add("last_ran", "String", $null)  # Add timestamp of when WMI was last updated
             
             # Then set the key property
             $newClass.Properties["folder_path"].Qualifiers.Add("Key", $true)
             
             $newClass.Put() | Out-Null
             Add-Content -Path $WMILogFile -Value "Successfully created WMI class: OneDrive" -Encoding UTF8
+        } else {
+            # Check and add any missing properties to the existing class
+            Add-Content -Path $WMILogFile -Value "Checking for missing properties in OneDrive class..." -Encoding UTF8
+            
+            $existingClass = New-Object System.Management.ManagementClass($namespace, "OneDrive", $null)
+            $requiredProperties = @{
+                "last_odsync" = "String"
+                "current_state" = "String"
+                "used_quota" = "String"
+                "total_quota" = "String"
+                "folder_path" = "String"
+                "sync_history" = "String"
+                "last_ran" = "String"
+            }
+            
+            $existingProperties = $existingClass.Properties | Select-Object -ExpandProperty Name
+            
+            foreach ($prop in $requiredProperties.GetEnumerator()) {
+                if ($existingProperties -notcontains $prop.Key) {
+                    Add-Content -Path $WMILogFile -Value "Adding missing property: $($prop.Key)" -Encoding UTF8
+                    try {
+                        $existingClass.Properties.Add($prop.Key, $prop.Value, $null)
+                        if ($prop.Key -eq "folder_path") {
+                            $existingClass.Properties["folder_path"].Qualifiers.Add("Key", $true)
+                        }
+                    } catch {
+                        Add-Content -Path $WMILogFile -Value "Error adding property $($prop.Key): $($_.Exception.Message)" -Encoding UTF8
+                    }
+                }
+            }
+            
+            # Save any changes to the class
+            try {
+                $existingClass.Put() | Out-Null
+                Add-Content -Path $WMILogFile -Value "Successfully updated WMI class properties" -Encoding UTF8
+            } catch {
+                Add-Content -Path $WMILogFile -Value "Error updating WMI class: $($_.Exception.Message)" -Encoding UTF8
+                return $false
+            }
         }
         return $true
     }
@@ -99,6 +139,7 @@ if (Test-WMINamespaceAndClass) {
             $wmiInstance.total_quota = $status.TotalQuota
             $wmiInstance.folder_path = $status.FolderPath
             $wmiInstance.sync_history = $syncHistory
+            $wmiInstance.last_ran = (Get-Date).ToString("MM/dd/yyyy HH:mm:ss")
             $wmiInstance.Put() | Out-Null
             Add-Content -Path $WMILogFile -Value "Updated WMI with last sync time and quotas" -Encoding UTF8
             return $true
@@ -116,6 +157,7 @@ if (Test-WMINamespaceAndClass) {
             $wmiInstance.total_quota = $status.TotalQuota
             $wmiInstance.folder_path = $status.FolderPath
             $wmiInstance.sync_history = $syncHistory
+            $wmiInstance.last_ran = (Get-Date).ToString("MM/dd/yyyy HH:mm:ss")
             $wmiInstance.Put() | Out-Null
             Add-Content -Path $WMILogFile -Value "Created new WMI instance with sync time and quotas" -Encoding UTF8
             return $true

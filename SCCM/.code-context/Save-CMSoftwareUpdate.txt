@@ -1,0 +1,202 @@
+
+NAME
+    Save-CMSoftwareUpdate
+    
+SYNTAX
+    Save-CMSoftwareUpdate -DeploymentPackageName <string> -SoftwareUpdateName <string[]> [-Location <string>] [-RetryCount <uint>] [-RetryDelaySec <uint>] [-SoftwareUpdateLanguage <string[]>] [-SoftwareUpdateO365Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Save-CMSoftwareUpdate -DeploymentPackageName <string> -SoftwareUpdateGroupId <string[]> [-Location <string>] [-RetryCount <uint>] [-RetryDelaySec <uint>] [-SoftwareUpdateLanguage <string[]>] [-SoftwareUpdateO365Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Save-CMSoftwareUpdate -DeploymentPackageName <string> -SoftwareUpdateGroupName <string[]> [-Location <string>] [-RetryCount <uint>] [-RetryDelaySec <uint>] [-SoftwareUpdateLanguage <string[]>] [-SoftwareUpdateO365Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Save-CMSoftwareUpdate -DeploymentPackageName <string> -SoftwareUpdateGroup <IResultObject#SMS_AuthorizationList> [-Location <string>] [-RetryCount <uint>] [-RetryDelaySec <uint>] [-SoftwareUpdateLanguage <string[]>] [-SoftwareUpdateO365Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Save-CMSoftwareUpdate -DeploymentPackageName <string> -SoftwareUpdateId <string[]> [-Location <string>] [-RetryCount <uint>] [-RetryDelaySec <uint>] [-SoftwareUpdateLanguage <string[]>] [-SoftwareUpdateO365Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Save-CMSoftwareUpdate -DeploymentPackageName <string> -SoftwareUpdate <IResultObject#SMS_SoftwareUpdate> [-Location <string>] [-RetryCount <uint>] [-RetryDelaySec <uint>] [-SoftwareUpdateLanguage <string[]>] [-SoftwareUpdateO365Language <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentPackageName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_UpdateGroup, SearchByNameMandatory_UpdateGroup, SearchByValueMandatory_UpdateGroup, SearchByIdMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Location <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_UpdateGroup, SearchByNameMandatory_UpdateGroup, SearchByValueMandatory_UpdateGroup, SearchByIdMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RetryCount <uint>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RetryDelaySec <uint>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdate <IResultObject#SMS_SoftwareUpdate>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdateGroup <IResultObject#SMS_AuthorizationList>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SearchByValueMandatory_UpdateGroup
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdateGroupId <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_UpdateGroup
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdateGroupName <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory_UpdateGroup
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdateId <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdateLanguage <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_UpdateGroup, SearchByNameMandatory_UpdateGroup, SearchByValueMandatory_UpdateGroup, SearchByIdMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdateName <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory
+        Aliases                      LocalizedDisplayName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdateO365Language <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_UpdateGroup, SearchByNameMandatory_UpdateGroup, SearchByValueMandatory_UpdateGroup, SearchByIdMandatory, SearchByNameMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    Invoke-CMSoftwareUpdateDownload
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

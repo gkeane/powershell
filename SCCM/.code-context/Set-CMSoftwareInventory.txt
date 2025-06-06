@@ -1,0 +1,226 @@
+
+NAME
+    Set-CMSoftwareInventory
+    
+SYNTAX
+    Set-CMSoftwareInventory -Id <string> [-CategoryId <int>] [-CleanTag1] [-CleanTag2] [-CleanTag3] [-FamilyId <int>] [-NewName <string>] [-ParentSoftwareId <string>] [-PassThru] [-Publisher <string>] [-Tag1Id <int>] [-Tag2Id <int>] [-Tag3Id <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMSoftwareInventory -Name <string[]> [-CategoryId <int>] [-CleanTag1] [-CleanTag2] [-CleanTag3] [-FamilyId <int>] [-NewName <string>] [-ParentSoftwareId <string>] [-PassThru] [-Publisher <string>] [-Tag1Id <int>] [-Tag2Id <int>] [-Tag3Id <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMSoftwareInventory -InputObject <IResultObject#SMS_AISoftwareList> [-CategoryId <int>] [-CleanTag1] [-CleanTag2] [-CleanTag3] [-FamilyId <int>] [-NewName <string>] [-ParentSoftwareId <string>] [-PassThru] [-Publisher <string>] [-Tag1Id <int>] [-Tag2Id <int>] [-Tag3Id <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -CategoryId <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById, SetByName, SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CleanTag1
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById, SetByName, SetByValueMandatory
+        Aliases                      CleanLabel1
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CleanTag2
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById, SetByName, SetByValueMandatory
+        Aliases                      CleanLabel2
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CleanTag3
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById, SetByName, SetByValueMandatory
+        Aliases                      CleanLabel3
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FamilyId <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById, SetByName, SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById
+        Aliases                      SoftwareKey
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_AISoftwareList>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByName
+        Aliases                      CommonName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NewName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById, SetByName, SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ParentSoftwareId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById, SetByName, SetByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Publisher <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById, SetByName, SetByValueMandatory
+        Aliases                      CommonPublisher
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Tag1Id <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById, SetByName, SetByValueMandatory
+        Aliases                      Label1Id
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Tag2Id <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById, SetByName, SetByValueMandatory
+        Aliases                      Label2Id
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Tag3Id <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById, SetByName, SetByValueMandatory
+        Aliases                      Label3Id
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

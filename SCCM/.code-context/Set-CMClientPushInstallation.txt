@@ -1,0 +1,219 @@
+
+NAME
+    Set-CMClientPushInstallation
+    
+SYNTAX
+    Set-CMClientPushInstallation -InputObject <IResultObject> [-AddAccount <string[]>] [-AllownNTLMFallback <bool>] [-ChosenAccount <string[]>] [-ClearAccount] [-EnableAutomaticClientPushInstallation <bool>] [-EnableSystemTypeConfigurationManager <bool>] [-EnableSystemTypeServer <bool>] [-EnableSystemTypeWorkstation <bool>] [-InstallationProperty <string>] [-InstallClientToDomainController <bool>] [-RemoveAccount <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientPushInstallation -InputObject <IResultObject> [-AddAccount <string[]>] [-AllownNTLMFallback <bool>] [-ChosenAccount <string[]>] [-ClearAccount] [-EnableAutomaticClientPushInstallation <bool>] [-EnableSystemTypeConfigurationManager <bool>] [-EnableSystemTypeServer <bool>] [-EnableSystemTypeWorkstation <bool>] [-InstallationProperty <string>] [-InstallClientToDomainController <bool>] [-RemoveAccount <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientPushInstallation -Name <string> [-AddAccount <string[]>] [-AllownNTLMFallback <bool>] [-ChosenAccount <string[]>] [-ClearAccount] [-EnableAutomaticClientPushInstallation <bool>] [-EnableSystemTypeConfigurationManager <bool>] [-EnableSystemTypeServer <bool>] [-EnableSystemTypeWorkstation <bool>] [-InstallationProperty <string>] [-InstallClientToDomainController <bool>] [-RemoveAccount <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientPushInstallation [-AddAccount <string[]>] [-AllownNTLMFallback <bool>] [-ChosenAccount <string[]>] [-ClearAccount] [-EnableAutomaticClientPushInstallation <bool>] [-EnableSystemTypeConfigurationManager <bool>] [-EnableSystemTypeServer <bool>] [-EnableSystemTypeWorkstation <bool>] [-InstallationProperty <string>] [-InstallClientToDomainController <bool>] [-RemoveAccount <string[]>] [-SiteCode <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddAccount <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddAccounts
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllownNTLMFallback <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ChosenAccount <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ChosenAccounts
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearAccount
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ClearAccounts
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableAutomaticClientPushInstallation <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableSystemTypeConfigurationManager <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableSystemTypeServer <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableSystemTypeWorkstation <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SearchByComponentValueMandatory, SearchByValueMandatory
+        Aliases                      ClientPushComponent
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallClientToDomainController <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstallationProperty <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory
+        Aliases                      SiteName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveAccount <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveAccounts
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

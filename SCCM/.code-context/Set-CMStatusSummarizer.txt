@@ -1,0 +1,239 @@
+
+NAME
+    Set-CMStatusSummarizer
+    
+SYNTAX
+    Set-CMStatusSummarizer -ComponentStatusSummarizer [-EnableStatusSummarizer <bool>] [-PassThru] [-ReplicateToParentSite <bool>] [-ReplicationPriority {Low | Normal | High}] [-SiteCode <string>] [-TimeThreshold {Since 0:00:00 | Since 4:00:00 | Since 8:00:00 | Since 12:00:00 | Since 16:00:00 | Since 20:00:00 | Since Sunday | Since Monday | Since Tuesday | Since Wednesday | Since Thursday | Since Friday | Since Saturday | Since 15th of the Month | Since 1st of the Month | Since Site Installation}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMStatusSummarizer -ApplicationDeploymentSummarizer [-Days <int>] [-Hours <int>] [-Minutes <int>] [-PassThru] [-SiteCode <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMStatusSummarizer -ApplicationStatisticSummarizer [-Days <int>] [-Hours <int>] [-Minutes <int>] [-PassThru] [-SiteCode <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMStatusSummarizer -SiteSystemStatusSummarizer [-CriticalSizeKB <int>] [-EnableStatusSummarizer <bool>] [-PassThru] [-ReplicateToParentSite <bool>] [-ReplicationPriority {Low | Normal | High}] [-Schedule <IResultObject#SMS_ScheduleToken>] [-SiteCode <string>] [-WarningSizeKB <int>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -ApplicationDeploymentSummarizer
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetAppDeploymentSummarizer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplicationStatisticSummarizer
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetAppStatisticsSummarizer
+        Aliases                      ApplicationStatisticsSummarizer
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ComponentStatusSummarizer
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComponentStatusSummarizer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CriticalSizeKB <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSiteSystemStatusSummarizer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Days <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetAppDeploymentSummarizer, SetAppStatisticsSummarizer
+        Aliases                      DayInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableStatusSummarizer <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Hours <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetAppDeploymentSummarizer, SetAppStatisticsSummarizer
+        Aliases                      HourInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Minutes <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetAppDeploymentSummarizer, SetAppStatisticsSummarizer
+        Aliases                      MinuteInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ReplicateToParentSite <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ReplicationPriority <ReplicationPriorityType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Schedule <IResultObject#SMS_ScheduleToken>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSiteSystemStatusSummarizer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetAppDeploymentSummarizer, SetAppStatisticsSummarizer, SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteSystemStatusSummarizer
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSiteSystemStatusSummarizer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TimeThreshold <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetComponentStatusSummarizer
+        Aliases                      ThresholdPeriod
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WarningSizeKB <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetSiteSystemStatusSummarizer
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

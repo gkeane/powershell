@@ -1,0 +1,307 @@
+
+NAME
+    Set-CMMicrosoftEdgeBrowserProfiles
+    
+SYNTAX
+    Set-CMMicrosoftEdgeBrowserProfiles -Id <int> [-NewName <string>] [-PassThru] [-SupportedPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-AllowAddressBarDropDown {Allow | NotAllow | NotConfigured}] [-AllowAutoFill {Allow | NotAllow | NotConfigured}] [-AllowCookies {Allow | NotAllow | NotConfigured}] [-AllowDeveloperTools {Allow | NotAllow | NotConfigured}] [-AllowDoNotTrack {Allow | NotAllow | NotConfigured}] [-AllowExtensions {Allow | NotAllow | NotConfigured}] [-AllowPasswordManager {Allow | NotAllow | NotConfigured}] [-AllowPopups {Allow | NotAllow | NotConfigured}] [-AllowSearchSuggestions {Allow | NotAllow | NotConfigured}] [-AllowSmartScreen {Allow | NotAllow | NotConfigured}] [-ClearBrowsingDataOnExit {Allow | NotAllow | NotConfigured}] [-Description <string>] [-PreventOverrideFiles {Allow | NotAllow | NotConfigured}] [-PreventPromptOverride {Allow | NotAllow | NotConfigured}] [-SendIntranetTrafficToIE {Allow | NotAllow | NotConfigured}] [-SetEdgeBrowserAsDefault {Configured | NotConfigured}] [-SyncFavoritesIEAndEdge {Allow | NotAllow | NotConfigured}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMMicrosoftEdgeBrowserProfiles -InputObject <IResultObject#SMS_ConfigurationPolicy> [-NewName <string>] [-PassThru] [-SupportedPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-AllowAddressBarDropDown {Allow | NotAllow | NotConfigured}] [-AllowAutoFill {Allow | NotAllow | NotConfigured}] [-AllowCookies {Allow | NotAllow | NotConfigured}] [-AllowDeveloperTools {Allow | NotAllow | NotConfigured}] [-AllowDoNotTrack {Allow | NotAllow | NotConfigured}] [-AllowExtensions {Allow | NotAllow | NotConfigured}] [-AllowPasswordManager {Allow | NotAllow | NotConfigured}] [-AllowPopups {Allow | NotAllow | NotConfigured}] [-AllowSearchSuggestions {Allow | NotAllow | NotConfigured}] [-AllowSmartScreen {Allow | NotAllow | NotConfigured}] [-ClearBrowsingDataOnExit {Allow | NotAllow | NotConfigured}] [-Description <string>] [-PreventOverrideFiles {Allow | NotAllow | NotConfigured}] [-PreventPromptOverride {Allow | NotAllow | NotConfigured}] [-SendIntranetTrafficToIE {Allow | NotAllow | NotConfigured}] [-SetEdgeBrowserAsDefault {Configured | NotConfigured}] [-SyncFavoritesIEAndEdge {Allow | NotAllow | NotConfigured}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMMicrosoftEdgeBrowserProfiles -Name <string> [-NewName <string>] [-PassThru] [-SupportedPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-AllowAddressBarDropDown {Allow | NotAllow | NotConfigured}] [-AllowAutoFill {Allow | NotAllow | NotConfigured}] [-AllowCookies {Allow | NotAllow | NotConfigured}] [-AllowDeveloperTools {Allow | NotAllow | NotConfigured}] [-AllowDoNotTrack {Allow | NotAllow | NotConfigured}] [-AllowExtensions {Allow | NotAllow | NotConfigured}] [-AllowPasswordManager {Allow | NotAllow | NotConfigured}] [-AllowPopups {Allow | NotAllow | NotConfigured}] [-AllowSearchSuggestions {Allow | NotAllow | NotConfigured}] [-AllowSmartScreen {Allow | NotAllow | NotConfigured}] [-ClearBrowsingDataOnExit {Allow | NotAllow | NotConfigured}] [-Description <string>] [-PreventOverrideFiles {Allow | NotAllow | NotConfigured}] [-PreventPromptOverride {Allow | NotAllow | NotConfigured}] [-SendIntranetTrafficToIE {Allow | NotAllow | NotConfigured}] [-SetEdgeBrowserAsDefault {Configured | NotConfigured}] [-SyncFavoritesIEAndEdge {Allow | NotAllow | NotConfigured}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AllowAddressBarDropDown <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowAutoFill <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowCookies <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowDeveloperTools <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowDoNotTrack <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowExtensions <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowPasswordManager <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowPopups <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowSearchSuggestions <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AllowSearchSuggestionsinAddressBar
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowSmartScreen <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearBrowsingDataOnExit <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      LocalizedDescription
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <int>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById
+        Aliases                      CIId, CI_ID
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_ConfigurationPolicy>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           ByValue
+        Aliases                      MicrosoftEdgeBrowserPolicy
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName
+        Aliases                      LocalizedDisplayName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NewName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PreventOverrideFiles <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PreventSmartScreenPromptOverrideForFiles
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PreventPromptOverride <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      PreventSmartScreenPromptOverride
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SendIntranetTrafficToIE <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SendIntranetTrafficToInternetExplorer
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SetEdgeBrowserAsDefault <EdgeBrowserAsDefaultSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SupportedPlatform <IResultObject#SMS_SupportedPlatforms[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SupportedPlatforms
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SyncFavoritesIEAndEdge <EdgeBrowserSettingType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SyncFavoritesBetweenIEAndMicrosoftEdge
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    IResultObject#SMS_ConfigurationPolicy
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

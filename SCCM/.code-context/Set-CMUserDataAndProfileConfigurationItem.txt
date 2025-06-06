@@ -1,0 +1,767 @@
+
+NAME
+    Set-CMUserDataAndProfileConfigurationItem
+    
+SYNTAX
+    Set-CMUserDataAndProfileConfigurationItem [-InputObject] <IResultObject#SMS_ConfigurationPolicy;CategoryInstance_UniqueID=SettingsAndPolicy:SMS_UserStateManagementSettings> [-AccessPolicy <bool>] [-AddAdminGroupToRupEnabled <bool>] [-AllowAllDevice <bool>] [-AllowCrossForestUserPolicy <bool>] [-AppDataRoaming {RedirectToRemote | RedirectToLocal | DoNotManage}] [-BackgroundSynchronization {Enabled | Disabled | NotConfigured}] [-BackgroundUploadHour <int>] [-ConfigureFolderRedirection <bool>] [-ConfigureOfflineFile <bool>] [-ConfigureRoamingUserProfile <bool>] [-ConnectionTransferRate <int>] [-Contact {RedirectToRemote | RedirectToLocal | DoNotManage}] [-DeleteProfileOlderDays <int>] [-DeleteRoamingCacheEnabled <bool>] [-Desktop {RedirectToRemote | RedirectToLocal | DoNotManage}] [-DetectSlowLink <bool>] [-DeviceType {OnAnyDevice | OnlyOnPrimaryDevices | FolderRedirectionOnAnyDeviceCachingOnPrimaryDevicesOnly}] [-DisableMakeOffline <bool>] [-DisableWorkOffline <bool>] [-Document {RedirectToRemote | RedirectToLocal | DoNotManage}] [-Download {RedirectToRemote | RedirectToLocal | DoNotManage}] [-EnableOfflineFile <bool>] [-EnableSlowLink <bool>] [-ErrorDays <int>] [-ExcludeList <string[]>] [-Favorite {RedirectToRemote | RedirectToLocal | DoNotManage}] [-FileSynchronization {Enabled | Disabled | NotConfigured}] [-ForceUnloadDisabled <bool>] [-GrantExclusiveRight <bool>] [-LeaveFolderNewLocation <bool>] [-LimitDisk <int>] [-Link {RedirectToRemote | RedirectToLocal | DoNotManage}] [-ManageAdvancedSetting <bool>] [-ManageSlowLink <bool>] [-MoveCachedFolder <bool>] [-MoveContent <bool>] [-Music {RedirectToRemote | RedirectToLocal | DoNotManage}] [-OfflineFile <string[]>] [-OnlyAllowLocalProfile <bool>] [-OwnerCheckDisabled <bool>] [-Picture {RedirectToRemote | RedirectToLocal | DoNotManage}] [-ProfileUploadDisabled <bool>] [-SavedGame {RedirectToRemote | RedirectToLocal | DoNotManage}] [-Search {RedirectToRemote | RedirectToLocal | DoNotManage}] [-SlowLink <int>] [-SlowLinkUIEnabled <bool>] [-SpecifiedLocation <string>] [-SpecifyTime {12:00 AM | 1:00 PM | 2:00 PM | 3:00 PM | 4:00 PM | 5:00 PM | 6:00 PM | 7:00 PM | 8:00 PM | 9:00 PM | 10:00 PM | 11:00 PM | 12:00 PM}] [-SpecifyTimeMin <int>] [-StartMenu {RedirectToRemote | RedirectToLocal | DoNotManage}] [-SynchronizationList <string[]>] [-SynchronizationPolicy <bool>] [-SyncMins <int>] [-TempProfileLogonBlocked <bool>] [-TimeOut <int>] [-UseCommonAlert <bool>] [-UseSpecifiedLocation <bool>] [-Video {RedirectToRemote | RedirectToLocal | DoNotManage}] [-WaitForNetworkSec <int>] [-WarningDays <int>] [-Description <string>] [-Digest <ConfigurationItem>] [-DigestPath <string>] [-DigestXml <string>] [-NewName <string>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMUserDataAndProfileConfigurationItem [-Id] <int> [-AccessPolicy <bool>] [-AddAdminGroupToRupEnabled <bool>] [-AllowAllDevice <bool>] [-AllowCrossForestUserPolicy <bool>] [-AppDataRoaming {RedirectToRemote | RedirectToLocal | DoNotManage}] [-BackgroundSynchronization {Enabled | Disabled | NotConfigured}] [-BackgroundUploadHour <int>] [-ConfigureFolderRedirection <bool>] [-ConfigureOfflineFile <bool>] [-ConfigureRoamingUserProfile <bool>] [-ConnectionTransferRate <int>] [-Contact {RedirectToRemote | RedirectToLocal | DoNotManage}] [-DeleteProfileOlderDays <int>] [-DeleteRoamingCacheEnabled <bool>] [-Desktop {RedirectToRemote | RedirectToLocal | DoNotManage}] [-DetectSlowLink <bool>] [-DeviceType {OnAnyDevice | OnlyOnPrimaryDevices | FolderRedirectionOnAnyDeviceCachingOnPrimaryDevicesOnly}] [-DisableMakeOffline <bool>] [-DisableWorkOffline <bool>] [-Document {RedirectToRemote | RedirectToLocal | DoNotManage}] [-Download {RedirectToRemote | RedirectToLocal | DoNotManage}] [-EnableOfflineFile <bool>] [-EnableSlowLink <bool>] [-ErrorDays <int>] [-ExcludeList <string[]>] [-Favorite {RedirectToRemote | RedirectToLocal | DoNotManage}] [-FileSynchronization {Enabled | Disabled | NotConfigured}] [-ForceUnloadDisabled <bool>] [-GrantExclusiveRight <bool>] [-LeaveFolderNewLocation <bool>] [-LimitDisk <int>] [-Link {RedirectToRemote | RedirectToLocal | DoNotManage}] [-ManageAdvancedSetting <bool>] [-ManageSlowLink <bool>] [-MoveCachedFolder <bool>] [-MoveContent <bool>] [-Music {RedirectToRemote | RedirectToLocal | DoNotManage}] [-OfflineFile <string[]>] [-OnlyAllowLocalProfile <bool>] [-OwnerCheckDisabled <bool>] [-Picture {RedirectToRemote | RedirectToLocal | DoNotManage}] [-ProfileUploadDisabled <bool>] [-SavedGame {RedirectToRemote | RedirectToLocal | DoNotManage}] [-Search {RedirectToRemote | RedirectToLocal | DoNotManage}] [-SlowLink <int>] [-SlowLinkUIEnabled <bool>] [-SpecifiedLocation <string>] [-SpecifyTime {12:00 AM | 1:00 PM | 2:00 PM | 3:00 PM | 4:00 PM | 5:00 PM | 6:00 PM | 7:00 PM | 8:00 PM | 9:00 PM | 10:00 PM | 11:00 PM | 12:00 PM}] [-SpecifyTimeMin <int>] [-StartMenu {RedirectToRemote | RedirectToLocal | DoNotManage}] [-SynchronizationList <string[]>] [-SynchronizationPolicy <bool>] [-SyncMins <int>] [-TempProfileLogonBlocked <bool>] [-TimeOut <int>] [-UseCommonAlert <bool>] [-UseSpecifiedLocation <bool>] [-Video {RedirectToRemote | RedirectToLocal | DoNotManage}] [-WaitForNetworkSec <int>] [-WarningDays <int>] [-Description <string>] [-Digest <ConfigurationItem>] [-DigestPath <string>] [-DigestXml <string>] [-NewName <string>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMUserDataAndProfileConfigurationItem [-Name] <string> [-AccessPolicy <bool>] [-AddAdminGroupToRupEnabled <bool>] [-AllowAllDevice <bool>] [-AllowCrossForestUserPolicy <bool>] [-AppDataRoaming {RedirectToRemote | RedirectToLocal | DoNotManage}] [-BackgroundSynchronization {Enabled | Disabled | NotConfigured}] [-BackgroundUploadHour <int>] [-ConfigureFolderRedirection <bool>] [-ConfigureOfflineFile <bool>] [-ConfigureRoamingUserProfile <bool>] [-ConnectionTransferRate <int>] [-Contact {RedirectToRemote | RedirectToLocal | DoNotManage}] [-DeleteProfileOlderDays <int>] [-DeleteRoamingCacheEnabled <bool>] [-Desktop {RedirectToRemote | RedirectToLocal | DoNotManage}] [-DetectSlowLink <bool>] [-DeviceType {OnAnyDevice | OnlyOnPrimaryDevices | FolderRedirectionOnAnyDeviceCachingOnPrimaryDevicesOnly}] [-DisableMakeOffline <bool>] [-DisableWorkOffline <bool>] [-Document {RedirectToRemote | RedirectToLocal | DoNotManage}] [-Download {RedirectToRemote | RedirectToLocal | DoNotManage}] [-EnableOfflineFile <bool>] [-EnableSlowLink <bool>] [-ErrorDays <int>] [-ExcludeList <string[]>] [-Favorite {RedirectToRemote | RedirectToLocal | DoNotManage}] [-FileSynchronization {Enabled | Disabled | NotConfigured}] [-ForceUnloadDisabled <bool>] [-GrantExclusiveRight <bool>] [-LeaveFolderNewLocation <bool>] [-LimitDisk <int>] [-Link {RedirectToRemote | RedirectToLocal | DoNotManage}] [-ManageAdvancedSetting <bool>] [-ManageSlowLink <bool>] [-MoveCachedFolder <bool>] [-MoveContent <bool>] [-Music {RedirectToRemote | RedirectToLocal | DoNotManage}] [-OfflineFile <string[]>] [-OnlyAllowLocalProfile <bool>] [-OwnerCheckDisabled <bool>] [-Picture {RedirectToRemote | RedirectToLocal | DoNotManage}] [-ProfileUploadDisabled <bool>] [-SavedGame {RedirectToRemote | RedirectToLocal | DoNotManage}] [-Search {RedirectToRemote | RedirectToLocal | DoNotManage}] [-SlowLink <int>] [-SlowLinkUIEnabled <bool>] [-SpecifiedLocation <string>] [-SpecifyTime {12:00 AM | 1:00 PM | 2:00 PM | 3:00 PM | 4:00 PM | 5:00 PM | 6:00 PM | 7:00 PM | 8:00 PM | 9:00 PM | 10:00 PM | 11:00 PM | 12:00 PM}] [-SpecifyTimeMin <int>] [-StartMenu {RedirectToRemote | RedirectToLocal | DoNotManage}] [-SynchronizationList <string[]>] [-SynchronizationPolicy <bool>] [-SyncMins <int>] [-TempProfileLogonBlocked <bool>] [-TimeOut <int>] [-UseCommonAlert <bool>] [-UseSpecifiedLocation <bool>] [-Video {RedirectToRemote | RedirectToLocal | DoNotManage}] [-WaitForNetworkSec <int>] [-WarningDays <int>] [-Description <string>] [-Digest <ConfigurationItem>] [-DigestPath <string>] [-DigestXml <string>] [-NewName <string>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AccessPolicy <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddAdminGroupToRupEnabled <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowAllDevice <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowCrossForestUserPolicy <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AppDataRoaming <FolderRedirectionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FolderRedirectionUserConfigurationForApplicationData, FolderRedirectionUserConfigurationForAppDataRoaming
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BackgroundSynchronization <SynchronizationType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BackgroundUploadHour <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ConfigureFolderRedirection <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ConfigureOfflineFile <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ConfigureOffineFile
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ConfigureRoamingUserProfile <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ConnectionTransferRate <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Contact <FolderRedirectionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FolderRedirectionUserConfigurationForContacts, Contacts
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeleteProfileOlderDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeleteRoamingCacheEnabled <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      LocalizedDescription
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Desktop <FolderRedirectionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FolderRedirectionUserConfigurationForDesktop
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DetectSlowLink <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeviceType <DeviceType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Digest <ConfigurationItem>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DigestPath <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      DesiredConfigurationDigestPath
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DigestXml <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableMakeOffline <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWorkOffline <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Document <FolderRedirectionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FolderRedirectionUserConfigurationForDocuments, Documents
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Download <FolderRedirectionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FolderRedirectionUserConfigurationForDownloads, Downloads
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableOfflineFile <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableSlowLink <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ErrorDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ExcludeList <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Favorite <FolderRedirectionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FolderRedirectionUserConfigurationForFavorites, Favorites
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FileSynchronization <SynchronizationType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceUnloadDisabled <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -GrantExclusiveRight <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <int>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           SetById
+        Aliases                      CIId, CI_ID
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_ConfigurationPolicy;CategoryInstance_UniqueID=SettingsAndPolicy:SMS_UserStateManagementSettings>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LeaveFolderNewLocation <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LimitDisk <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Link <FolderRedirectionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FolderRedirectionUserConfigurationForLinks, Links
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ManageAdvancedSetting <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ManageSlowLink <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MoveCachedFolder <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MoveContent <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Music <FolderRedirectionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FolderRedirectionUserConfigurationForMusic
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           SetByName
+        Aliases                      LocalizedDisplayName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NewName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OfflineFile <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OnlyAllowLocalProfile <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      OnlyAllowLocalProfiles
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OwnerCheckDisabled <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Picture <FolderRedirectionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FolderRedirectionUserConfigurationForPictures, Pictures
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ProfileUploadDisabled <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SavedGame <FolderRedirectionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FolderRedirectionUserConfigurationForSavedGames, SavedGames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Search <FolderRedirectionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FolderRedirectionUserConfigurationForSearches, Searches
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SlowLink <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SlowLinkUIEnabled <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SpecifiedLocation <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SpecifyTime <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SpecifyTimeMin <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SpecifyTimeInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StartMenu <FolderRedirectionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FolderRedirectionUserConfigurationForStartMenu
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SyncMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SynchronizationInterval
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SynchronizationList <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SynchronizationPolicy <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TempProfileLogonBlocked <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TimeOut <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseCommonAlert <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseSpecifiedLocation <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Video <FolderRedirectionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      FolderRedirectionUserConfigurationForVideos, Videos
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WaitForNetworkSec <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      WaitForNetworkInSeconds
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WarningDays <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    Microsoft.ConfigurationManagement.DesiredConfigurationManagement.ConfigurationItem
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

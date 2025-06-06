@@ -1,0 +1,461 @@
+
+NAME
+    New-CMGlobalCondition
+    
+SYNTAX
+    New-CMGlobalCondition -DataType {String | DateTime | Integer | FloatingPoint | Version | Boolean | StringArray | IntegerArray | Base64 | Xml} -DeviceType {Windows | WindowsMobile} -DistinguishedName <string> -LdapFilter <string> -Name <string> -Property <string> -SearchScope {Base | OneLevel | Subtree} [-Description <string>] [-LdapPrefix <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMGlobalCondition -AllInstances -Column <string> -Database <string> -DataType {String | DateTime | Integer | FloatingPoint | Version | Boolean | StringArray | IntegerArray | Base64 | Xml} -DeviceType {Windows | WindowsMobile} -FilePath <string> -Name <string> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMGlobalCondition -AssemblyName <string> -DeviceType {Windows | WindowsMobile} -Name <string> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMGlobalCondition -Class <string> -DataType {String | DateTime | Integer | FloatingPoint | Version | Boolean | StringArray | IntegerArray | Base64 | Xml} -DeviceType {Windows | WindowsMobile} -Name <string> -Property <string> [-Description <string>] [-Namespace <string>] [-WhereClause <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMGlobalCondition -Column <string> -Database <string> -DataType {String | DateTime | Integer | FloatingPoint | Version | Boolean | StringArray | IntegerArray | Base64 | Xml} -DefaultInstance -DeviceType {Windows | WindowsMobile} -FilePath <string> -Name <string> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMGlobalCondition -Column <string> -Database <string> -DataType {String | DateTime | Integer | FloatingPoint | Version | Boolean | StringArray | IntegerArray | Base64 | Xml} -DeviceType {Windows | WindowsMobile} -FilePath <string> -InstanceName <string> -Name <string> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMGlobalCondition -DataType {String | DateTime | Integer | FloatingPoint | Version | Boolean | StringArray | IntegerArray | Base64 | Xml} -DeviceType {Windows | WindowsMobile} -Name <string> -PropertyId <string> [-Description <string>] [-MetabasePath <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMGlobalCondition -DataType {String | DateTime | Integer | FloatingPoint | Version | Boolean | StringArray | IntegerArray | Base64 | Xml} -DeviceType {Windows | WindowsMobile} -KeyName <string> -Name <string> -RegistryHive {ClassesRoot | CurrentConfig | CurrentUser | LocalMachine | Users} -ValueName <string> [-Description <string>] [-Is64Bit <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMGlobalCondition -DataType {String | DateTime | Integer | FloatingPoint | Version | Boolean | StringArray | IntegerArray | Base64 | Xml} -DeviceType {Windows | WindowsMobile} -FilePath <string> -Name <string> -ScriptLanguage {PowerShell | VBScript | JScript | ShellScript} [-Description <string>] [-Use32BitHost <bool>] [-UseLoggedOnUserCredential <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMGlobalCondition -DataType {String | DateTime | Integer | FloatingPoint | Version | Boolean | StringArray | IntegerArray | Base64 | Xml} -DeviceType {Windows | WindowsMobile} -FilePath <string> -Name <string> -XPathQuery <string> [-Description <string>] [-IncludeSubfolder <bool>] [-Is64Bit <bool>] [-XmlNamespace <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMGlobalCondition -DataType {String | DateTime | Integer | FloatingPoint | Version | Boolean | StringArray | IntegerArray | Base64 | Xml} -DeviceType {Windows | WindowsMobile} -FilePath <string> -Name <string> -XmlFilePath <string> [-Description <string>] [-IncludeSubfolder <bool>] [-Is64Bit <bool>] [-XmlNamespace <string[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMGlobalCondition -DataType {String | DateTime | Integer | FloatingPoint | Version | Boolean | StringArray | IntegerArray | Base64 | Xml} -DeviceType {Windows | WindowsMobile} -Name <string> -OmaUri <string> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMGlobalCondition -DeviceType {Windows | WindowsMobile} -FileOrFolderName <string> -Name <string> -Path <string> [-Description <string>] [-IncludeSubfolder <bool>] [-Is64Bit <bool>] [-IsFolder] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMGlobalCondition -DeviceType {Windows | WindowsMobile} -FilePath <string> -Name <string> [-Description <string>] [-IncludeSubfolder <bool>] [-Is64Bit <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMGlobalCondition -DeviceType {Windows | WindowsMobile} -KeyName <string> -Name <string> -RegistryHive {ClassesRoot | CurrentConfig | CurrentUser | LocalMachine | Users} [-Description <string>] [-Is64Bit <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AllInstances
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewSqlQueryAllInstances
+        Aliases                      UseAllInstances
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AssemblyName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewAssembly
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Class <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewWqlQuery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Column <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewSqlQueryDefaultInstance, NewSqlQueryAllInstances, NewSqlQuerySpecificInstance
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DataType <GlobalConditionDataType>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewADQuery, NewIisMetabase, NewRegistryValue, NewScript, NewSqlQueryDefaultInstance, NewSqlQueryAllInstances, NewSqlQuerySpecificInstance, NewWqlQuery, NewXPathQuery, NewXPathQueryFromFile, NewOmaUri
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Database <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewSqlQueryDefaultInstance, NewSqlQueryAllInstances, NewSqlQuerySpecificInstance
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DefaultInstance
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewSqlQueryDefaultInstance
+        Aliases                      UseDefaultInstance
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeviceType <GlobalConditionDeviceType>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistinguishedName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewADQuery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FileOrFolderName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewFileSystem
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FilePath <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewFileSystemFile, NewScript, NewSqlQueryDefaultInstance, NewSqlQueryAllInstances, NewSqlQuerySpecificInstance, NewXPathQueryFromFile, NewXPathQuery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IncludeSubfolder <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewFileSystem, NewFileSystemFile, NewXPathQuery, NewXPathQueryFromFile
+        Aliases                      IncludeSubfolders
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InstanceName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewSqlQuerySpecificInstance
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Is64Bit <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewFileSystem, NewFileSystemFile, NewRegistryKey, NewRegistryValue, NewXPathQuery, NewXPathQueryFromFile
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsFolder
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewFileSystem
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -KeyName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewRegistryKey, NewRegistryValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LdapFilter <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewADQuery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LdapPrefix <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewADQuery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MetabasePath <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewIisMetabase
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Namespace <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewWqlQuery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OmaUri <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewOmaUri
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Path <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewFileSystem
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Property <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewADQuery, NewWqlQuery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PropertyId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewIisMetabase
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RegistryHive <RegistryRootKey>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewRegistryKey, NewRegistryValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScriptLanguage <ScriptingLanguage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewScript
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SearchScope <SearchScope>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewADQuery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Use32BitHost <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewScript
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseLoggedOnUserCredential <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewScript
+        Aliases                      UseLoggedOnUserCredentials
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ValueName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewRegistryValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhereClause <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewWqlQuery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -XPathQuery <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewXPathQuery
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -XmlFilePath <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewXPathQueryFromFile
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -XmlNamespace <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewXPathQuery, NewXPathQueryFromFile
+        Aliases                      XmlNamespaces
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    IResultObject#SMS_GlobalCondition
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

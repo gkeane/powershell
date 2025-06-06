@@ -1,0 +1,108 @@
+
+NAME
+    Get-CMNotification
+    
+SYNTAX
+    Get-CMNotification [-Name <string>] [-IsBuiltIn <bool>] [-CanDismiss <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    Get-CMNotification -Id <string> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    Get-CMNotification -Type {SiteVersionOutOfSupport | ConsoleVersionMismatch | SiteReadonly | SiteVersionToBeExpired | EvalVersionExpired | EvalVersionApproachExpiration | UpdatePackageAvailable | SiteBusy | CloudConnectorMissing | PushNotificationsStayInformed | PushNotificationsPlanForChange | PushNotificationsFixIssue | OfficeAdrObsoleteChannelName | AzureTenantCertApproachExpiration | AzureTenantCertExpired | ManagementInsightsWin10OutOfSupport | ManagementInsightsWin7OutOfSupport | ConsoleCustomExtensionsFound | CloudConnectivityBroken | AzureTenantCertCloseToExpiration | ManagementInsightsGeneric | CloudAttachOnboard} [-IsBuiltIn <bool>] [-CanDismiss <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -CanDismiss <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName, ByType
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById
+        Aliases                      TaskId, Task_Id
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsBuiltIn <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName, ByType
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName
+        Aliases                      TaskName, Task_Name
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Type <NotificationType[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByType
+        Aliases                      Types
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    ConnectionManagerNotificationTaskBase
+    ConnectionManagerNotificationTaskBase[]
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

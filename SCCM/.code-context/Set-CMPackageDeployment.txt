@@ -1,0 +1,422 @@
+
+NAME
+    Set-CMPackageDeployment
+    
+SYNTAX
+    Set-CMPackageDeployment -InputObject <IResultObject> -StandardProgramName <string> [-AllowFallback <bool>] [-AllowSharedContent <bool>] [-Comment <string>] [-DeploymentAvailableDateTime <datetime>] [-DeploymentExpireDateTime <datetime>] [-EnableExpireSchedule <bool>] [-FastNetworkOption {RunProgramFromDistributionPoint | DownloadContentFromDistributionPointAndRunLocally}] [-PersistOnWriteFilterDevice <bool>] [-RerunBehavior {NeverRerunDeployedProgram | AlwaysRerunProgram | RerunIfFailedPreviousAttempt | RerunIfSucceededOnPreviousAttempt}] [-RunFromSoftwareCenter <bool>] [-Schedule <IResultObject[]>] [-ScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-SendWakeupPacket <bool>] [-SlowNetworkOption {DoNotRunProgram | DownloadContentFromDistributionPointAndLocally | RunProgramFromDistributionPoint}] [-SoftwareInstallation <bool>] [-SystemRestart <bool>] [-UseMeteredNetwork <bool>] [-UseUtcForAvailableSchedule <bool>] [-UseUtcForExpireSchedule <bool>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMPackageDeployment -PackageName <string> -StandardProgramName <string> [-AllowFallback <bool>] [-AllowSharedContent <bool>] [-Comment <string>] [-DeploymentAvailableDateTime <datetime>] [-DeploymentExpireDateTime <datetime>] [-EnableExpireSchedule <bool>] [-FastNetworkOption {RunProgramFromDistributionPoint | DownloadContentFromDistributionPointAndRunLocally}] [-PersistOnWriteFilterDevice <bool>] [-RerunBehavior {NeverRerunDeployedProgram | AlwaysRerunProgram | RerunIfFailedPreviousAttempt | RerunIfSucceededOnPreviousAttempt}] [-RunFromSoftwareCenter <bool>] [-Schedule <IResultObject[]>] [-ScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-SendWakeupPacket <bool>] [-SlowNetworkOption {DoNotRunProgram | DownloadContentFromDistributionPointAndLocally | RunProgramFromDistributionPoint}] [-SoftwareInstallation <bool>] [-SystemRestart <bool>] [-UseMeteredNetwork <bool>] [-UseUtcForAvailableSchedule <bool>] [-UseUtcForExpireSchedule <bool>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMPackageDeployment -PackageId <string> -StandardProgramName <string> [-AllowFallback <bool>] [-AllowSharedContent <bool>] [-Comment <string>] [-DeploymentAvailableDateTime <datetime>] [-DeploymentExpireDateTime <datetime>] [-EnableExpireSchedule <bool>] [-FastNetworkOption {RunProgramFromDistributionPoint | DownloadContentFromDistributionPointAndRunLocally}] [-PersistOnWriteFilterDevice <bool>] [-RerunBehavior {NeverRerunDeployedProgram | AlwaysRerunProgram | RerunIfFailedPreviousAttempt | RerunIfSucceededOnPreviousAttempt}] [-RunFromSoftwareCenter <bool>] [-Schedule <IResultObject[]>] [-ScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-SendWakeupPacket <bool>] [-SlowNetworkOption {DoNotRunProgram | DownloadContentFromDistributionPointAndLocally | RunProgramFromDistributionPoint}] [-SoftwareInstallation <bool>] [-SystemRestart <bool>] [-UseMeteredNetwork <bool>] [-UseUtcForAvailableSchedule <bool>] [-UseUtcForExpireSchedule <bool>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMPackageDeployment -DeviceProgramName <string> -PackageName <string> [-Comment <string>] [-DeploymentStartDateTime <datetime>] [-RecurUnit {Minutes | Hours | Days}] [-RecurValue <int>] [-Rerun <bool>] [-UseMeteredNetwork <bool>] [-UseRecurrencePattern <bool>] [-UseUtc <bool>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMPackageDeployment -DeviceProgramName <string> -PackageId <string> [-Comment <string>] [-DeploymentStartDateTime <datetime>] [-RecurUnit {Minutes | Hours | Days}] [-RecurValue <int>] [-Rerun <bool>] [-UseMeteredNetwork <bool>] [-UseRecurrencePattern <bool>] [-UseUtc <bool>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMPackageDeployment -DeviceProgramName <string> -InputObject <IResultObject> [-Comment <string>] [-DeploymentStartDateTime <datetime>] [-RecurUnit {Minutes | Hours | Days}] [-RecurValue <int>] [-Rerun <bool>] [-UseMeteredNetwork <bool>] [-UseRecurrencePattern <bool>] [-UseUtc <bool>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AllowFallback <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowSharedContent <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Collection <IResultObject#SMS_Collection>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  true
+        
+    -Comment <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentAvailableDateTime <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentExpireDateTime <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentStartDateTime <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDeviceProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeviceProgramName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDeviceProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableExpireSchedule <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FastNetworkOption <FastNetworkOptionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetStandardProgramDeploymentByPackageValue, SetDeviceProgramDeploymentByPackageValue
+        Aliases                      Package, DeploymentSummary, Advertisement
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PackageId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageId
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PackageName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PersistOnWriteFilterDevice <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RecurUnit <RecurUnitType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDeviceProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RecurValue <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDeviceProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Rerun <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDeviceProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RerunBehavior <RerunBehaviorType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RunFromSoftwareCenter <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      AllowUsersRunIndependently
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Schedule <IResultObject[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScheduleEvent <ScheduleEventType[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SendWakeupPacket <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SlowNetworkOption <SlowNetworkOptionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareInstallation <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StandardProgramName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SystemRestart <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseMeteredNetwork <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseRecurrencePattern <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDeviceProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseUtc <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDeviceProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseUtcForAvailableSchedule <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseUtcForExpireSchedule <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId, SetStandardProgramDeploymentByPackageValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

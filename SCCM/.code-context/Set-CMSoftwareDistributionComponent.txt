@@ -1,0 +1,195 @@
+
+NAME
+    Set-CMSoftwareDistributionComponent
+    
+SYNTAX
+    Set-CMSoftwareDistributionComponent [-AddNetworkAccessAccountName <string[]>] [-CleanNetworkAccessAccountName] [-DelayBeforeRetryingMins <int>] [-MaximumPackageCount <int>] [-MaximumThreadCountPerPackage <int>] [-MulticastDelayBeforeRetryingMins <int>] [-MulticastRetryCount <int>] [-NetworkAccessAccountName <string[]>] [-RemoveNetworkAccessAccountName <string[]>] [-RetryCount <int>] [-SiteCode <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMSoftwareDistributionComponent [-ClientComputerAccount] [-DelayBeforeRetryingMins <int>] [-MaximumPackageCount <int>] [-MaximumThreadCountPerPackage <int>] [-MulticastDelayBeforeRetryingMins <int>] [-MulticastRetryCount <int>] [-RetryCount <int>] [-SiteCode <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddNetworkAccessAccountName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory
+        Aliases                      AddNetworkAccessAccountNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CleanNetworkAccessAccountName
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory
+        Aliases                      CleanNetworkAccessAccountNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClientComputerAccount
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory_ClientComputerAccount
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DelayBeforeRetryingMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchBySiteCodeMandatory_ClientComputerAccount
+        Aliases                      DelayBeforeRetryingMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaximumPackageCount <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchBySiteCodeMandatory_ClientComputerAccount
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaximumThreadCountPerPackage <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchBySiteCodeMandatory_ClientComputerAccount
+        Aliases                      MaximumThreadsPerPackage
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MulticastDelayBeforeRetryingMins <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchBySiteCodeMandatory_ClientComputerAccount
+        Aliases                      MulticastDelayBeforeRetryingMinutes
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MulticastRetryCount <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchBySiteCodeMandatory_ClientComputerAccount
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NetworkAccessAccountName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory
+        Aliases                      NetworkAccessAccountNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveNetworkAccessAccountName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory
+        Aliases                      RemoveNetworkAccessAccountNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RetryCount <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchBySiteCodeMandatory_ClientComputerAccount
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SiteCode <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchBySiteCodeMandatory, SearchBySiteCodeMandatory_ClientComputerAccount
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

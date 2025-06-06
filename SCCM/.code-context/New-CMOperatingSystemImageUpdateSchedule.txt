@@ -1,0 +1,187 @@
+
+NAME
+    New-CMOperatingSystemImageUpdateSchedule
+    
+SYNTAX
+    New-CMOperatingSystemImageUpdateSchedule -InputObject <IResultObject#SMS_ImagePackage> -SoftwareUpdate <IResultObject#SMS_SoftwareUpdate[]> [-ContinueOnError <bool>] [-CustomSchedule <datetime>] [-RemoveSupersededUpdates <bool>] [-UpdateDistributionPoint <bool>] [-Utc <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMOperatingSystemImageUpdateSchedule -SoftwareUpdate <IResultObject#SMS_SoftwareUpdate[]> [-ContinueOnError <bool>] [-CustomSchedule <datetime>] [-RemoveSupersededUpdates <bool>] [-UpdateDistributionPoint <bool>] [-Utc <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMOperatingSystemImageUpdateSchedule -SoftwareUpdate <IResultObject#SMS_SoftwareUpdate[]> [-ContinueOnError <bool>] [-CustomSchedule <datetime>] [-RemoveSupersededUpdates <bool>] [-UpdateDistributionPoint <bool>] [-Utc <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMOperatingSystemImageUpdateSchedule -SoftwareUpdate <IResultObject#SMS_SoftwareUpdate[]> [-ContinueOnError <bool>] [-CustomSchedule <datetime>] [-RemoveSupersededUpdates <bool>] [-UpdateDistributionPoint <bool>] [-Utc <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMOperatingSystemImageUpdateSchedule -Id <string> -SoftwareUpdate <IResultObject#SMS_SoftwareUpdate[]> [-ContinueOnError <bool>] [-RemoveSupersededUpdates <bool>] [-RunNow] [-UpdateDistributionPoint <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMOperatingSystemImageUpdateSchedule -InputObject <IResultObject#SMS_ImagePackage> -SoftwareUpdate <IResultObject#SMS_SoftwareUpdate[]> [-ContinueOnError <bool>] [-RemoveSupersededUpdates <bool>] [-RunNow] [-UpdateDistributionPoint <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMOperatingSystemImageUpdateSchedule -Name <string> -SoftwareUpdate <IResultObject#SMS_SoftwareUpdate[]> [-ContinueOnError <bool>] [-RemoveSupersededUpdates <bool>] [-RunNow] [-UpdateDistributionPoint <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    New-CMOperatingSystemImageUpdateSchedule -SoftwareUpdate <IResultObject#SMS_SoftwareUpdate[]> [-ContinueOnError <bool>] [-RemoveSupersededUpdates <bool>] [-RunNow] [-UpdateDistributionPoint <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ContinueOnError <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CustomSchedule <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewScheduleByName, NewScheduleById, NewScheduleByInputObject, NewScheduleByScheduleInputObject
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Id <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewScheduleByIdRunNow
+        Aliases                      PackageId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_ImagePackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           NewScheduleByInputObject, NewScheduleByInputObjectRunNow
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewScheduleByNameRunNow
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveSupersededUpdates <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      CleanUp
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RunNow
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewScheduleByNameRunNow, NewScheduleByIdRunNow, NewScheduleByInputObjectRunNow, NewScheduleByScheduleInputObjectRunNow
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareUpdate <IResultObject#SMS_SoftwareUpdate[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UpdateDistributionPoint <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      UpdateDistributionPointsWithImage, UpdateDistributionPoints
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Utc <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           NewScheduleByName, NewScheduleById, NewScheduleByInputObject, NewScheduleByScheduleInputObject
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    IResultObject#SMS_ImageServicingSchedule
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

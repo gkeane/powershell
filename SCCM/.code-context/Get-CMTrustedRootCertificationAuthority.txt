@@ -1,0 +1,66 @@
+
+NAME
+    Get-CMTrustedRootCertificationAuthority
+    
+SYNTAX
+    Get-CMTrustedRootCertificationAuthority [-ViewDetail] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ViewDetail
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    System.Security.Cryptography.X509Certificates.X509Certificate2[]
+    System.Security.Cryptography.X509Certificates.X509Certificate2
+    Microsoft.ConfigurationManagement.PowerShell.Cmdlets.HS.GetTrustedRootCertificationAuthority+CertificateAuthorityInfo[]
+    Microsoft.ConfigurationManagement.PowerShell.Cmdlets.HS.GetTrustedRootCertificationAuthority+CertificateAuthorityInfo
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

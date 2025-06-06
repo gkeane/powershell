@@ -1,0 +1,192 @@
+
+NAME
+    Invoke-CMClientAction
+    
+SYNTAX
+    Invoke-CMClientAction -Collection <IResultObject#SMS_Collection;CollectionType=2> [-ActionType {None | EndpointProtectionFullScan | EndpointProtectionQuickScan | EndpointProtectionDownloadDefinition | EndpointProtectionEvaluateSoftwareUpdate | EndpointProtectionExcludeScanPaths | EndpointProtectionAllowThreat | EndpointProtectionRestoreQuarantinedItems | ClientNotificationRequestMachinePolicyNow | ClientNotificationRequestUsersPolicyNow | ClientNotificationRequestDDRNow | ClientNotificationRequestSWInvNow | ClientNotificationRequestHWInvNow | ClientNotificationAppDeplEvalNow | ClientNotificationSUMDeplEvalNow | ClientRequestSUPChangeNow | ClientRequestDHAChangeNow | ClientNotificationRebootMachine | DiagnosticsEnableVerboseLogging | DiagnosticsDisableVerboseLogging | DiagnosticsCollectFiles | EndpointProtectionRestoreWithDeps | ClientNotificationCheckComplianceNow | RequestScriptExecution | RequestCMPivotExecution | ClientNotificationWakeUpClientNow}] [-NotificationType {RequestMachinePolicyNow | RequestUsersPolicyNow}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Invoke-CMClientAction -DeviceName <string> [-ActionType {None | EndpointProtectionFullScan | EndpointProtectionQuickScan | EndpointProtectionDownloadDefinition | EndpointProtectionEvaluateSoftwareUpdate | EndpointProtectionExcludeScanPaths | EndpointProtectionAllowThreat | EndpointProtectionRestoreQuarantinedItems | ClientNotificationRequestMachinePolicyNow | ClientNotificationRequestUsersPolicyNow | ClientNotificationRequestDDRNow | ClientNotificationRequestSWInvNow | ClientNotificationRequestHWInvNow | ClientNotificationAppDeplEvalNow | ClientNotificationSUMDeplEvalNow | ClientRequestSUPChangeNow | ClientRequestDHAChangeNow | ClientNotificationRebootMachine | DiagnosticsEnableVerboseLogging | DiagnosticsDisableVerboseLogging | DiagnosticsCollectFiles | EndpointProtectionRestoreWithDeps | ClientNotificationCheckComplianceNow | RequestScriptExecution | RequestCMPivotExecution | ClientNotificationWakeUpClientNow}] [-NotificationType {RequestMachinePolicyNow | RequestUsersPolicyNow}] [-ParentCollection <IResultObject#SMS_Collection;CollectionType=2>] [-ParentCollectionId <string>] [-ParentCollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Invoke-CMClientAction -DeviceId <string> [-ActionType {None | EndpointProtectionFullScan | EndpointProtectionQuickScan | EndpointProtectionDownloadDefinition | EndpointProtectionEvaluateSoftwareUpdate | EndpointProtectionExcludeScanPaths | EndpointProtectionAllowThreat | EndpointProtectionRestoreQuarantinedItems | ClientNotificationRequestMachinePolicyNow | ClientNotificationRequestUsersPolicyNow | ClientNotificationRequestDDRNow | ClientNotificationRequestSWInvNow | ClientNotificationRequestHWInvNow | ClientNotificationAppDeplEvalNow | ClientNotificationSUMDeplEvalNow | ClientRequestSUPChangeNow | ClientRequestDHAChangeNow | ClientNotificationRebootMachine | DiagnosticsEnableVerboseLogging | DiagnosticsDisableVerboseLogging | DiagnosticsCollectFiles | EndpointProtectionRestoreWithDeps | ClientNotificationCheckComplianceNow | RequestScriptExecution | RequestCMPivotExecution | ClientNotificationWakeUpClientNow}] [-NotificationType {RequestMachinePolicyNow | RequestUsersPolicyNow}] [-ParentCollection <IResultObject#SMS_Collection;CollectionType=2>] [-ParentCollectionId <string>] [-ParentCollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Invoke-CMClientAction -Device <IResultObject> [-ActionType {None | EndpointProtectionFullScan | EndpointProtectionQuickScan | EndpointProtectionDownloadDefinition | EndpointProtectionEvaluateSoftwareUpdate | EndpointProtectionExcludeScanPaths | EndpointProtectionAllowThreat | EndpointProtectionRestoreQuarantinedItems | ClientNotificationRequestMachinePolicyNow | ClientNotificationRequestUsersPolicyNow | ClientNotificationRequestDDRNow | ClientNotificationRequestSWInvNow | ClientNotificationRequestHWInvNow | ClientNotificationAppDeplEvalNow | ClientNotificationSUMDeplEvalNow | ClientRequestSUPChangeNow | ClientRequestDHAChangeNow | ClientNotificationRebootMachine | DiagnosticsEnableVerboseLogging | DiagnosticsDisableVerboseLogging | DiagnosticsCollectFiles | EndpointProtectionRestoreWithDeps | ClientNotificationCheckComplianceNow | RequestScriptExecution | RequestCMPivotExecution | ClientNotificationWakeUpClientNow}] [-NotificationType {RequestMachinePolicyNow | RequestUsersPolicyNow}] [-ParentCollection <IResultObject#SMS_Collection;CollectionType=2>] [-ParentCollectionId <string>] [-ParentCollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Invoke-CMClientAction -CollectionName <string> [-ActionType {None | EndpointProtectionFullScan | EndpointProtectionQuickScan | EndpointProtectionDownloadDefinition | EndpointProtectionEvaluateSoftwareUpdate | EndpointProtectionExcludeScanPaths | EndpointProtectionAllowThreat | EndpointProtectionRestoreQuarantinedItems | ClientNotificationRequestMachinePolicyNow | ClientNotificationRequestUsersPolicyNow | ClientNotificationRequestDDRNow | ClientNotificationRequestSWInvNow | ClientNotificationRequestHWInvNow | ClientNotificationAppDeplEvalNow | ClientNotificationSUMDeplEvalNow | ClientRequestSUPChangeNow | ClientRequestDHAChangeNow | ClientNotificationRebootMachine | DiagnosticsEnableVerboseLogging | DiagnosticsDisableVerboseLogging | DiagnosticsCollectFiles | EndpointProtectionRestoreWithDeps | ClientNotificationCheckComplianceNow | RequestScriptExecution | RequestCMPivotExecution | ClientNotificationWakeUpClientNow}] [-NotificationType {RequestMachinePolicyNow | RequestUsersPolicyNow}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Invoke-CMClientAction -CollectionId <string> [-ActionType {None | EndpointProtectionFullScan | EndpointProtectionQuickScan | EndpointProtectionDownloadDefinition | EndpointProtectionEvaluateSoftwareUpdate | EndpointProtectionExcludeScanPaths | EndpointProtectionAllowThreat | EndpointProtectionRestoreQuarantinedItems | ClientNotificationRequestMachinePolicyNow | ClientNotificationRequestUsersPolicyNow | ClientNotificationRequestDDRNow | ClientNotificationRequestSWInvNow | ClientNotificationRequestHWInvNow | ClientNotificationAppDeplEvalNow | ClientNotificationSUMDeplEvalNow | ClientRequestSUPChangeNow | ClientRequestDHAChangeNow | ClientNotificationRebootMachine | DiagnosticsEnableVerboseLogging | DiagnosticsDisableVerboseLogging | DiagnosticsCollectFiles | EndpointProtectionRestoreWithDeps | ClientNotificationCheckComplianceNow | RequestScriptExecution | RequestCMPivotExecution | ClientNotificationWakeUpClientNow}] [-NotificationType {RequestMachinePolicyNow | RequestUsersPolicyNow}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -ActionType <ClientActionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByDeviceNameMandatory, SearchByDeviceIdMandatory, SearchByDeviceValueMandatory, SearchByNameMandatory, SearchByIdMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Collection <IResultObject#SMS_Collection;CollectionType=2>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SearchByValueMandatory
+        Aliases                      DeviceCollection
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory
+        Aliases                      DeviceCollectionId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory
+        Aliases                      DeviceCollectionName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Device <IResultObject>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SearchByDeviceValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeviceId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByDeviceIdMandatory
+        Aliases                      ResourceId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeviceName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByDeviceNameMandatory
+        Aliases                      Name
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NotificationType <ClientNotificationType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByDeviceNameMandatory, SearchByDeviceIdMandatory, SearchByDeviceValueMandatory, SearchByNameMandatory, SearchByIdMandatory, SearchByValueMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ParentCollection <IResultObject#SMS_Collection;CollectionType=2>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByDeviceIdMandatory, SearchByDeviceNameMandatory, SearchByDeviceValueMandatory
+        Aliases                      ParentDeviceCollection
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ParentCollectionId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByDeviceIdMandatory, SearchByDeviceNameMandatory, SearchByDeviceValueMandatory
+        Aliases                      ParentDeviceCollectionId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ParentCollectionName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByDeviceIdMandatory, SearchByDeviceNameMandatory, SearchByDeviceValueMandatory
+        Aliases                      ParentDeviceCollectionName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    Invoke-CMClientNotification
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

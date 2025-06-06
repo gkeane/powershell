@@ -1,0 +1,362 @@
+
+NAME
+    Publish-CMPrestageContent
+    
+SYNTAX
+    Publish-CMPrestageContent -DeploymentPackage <IResultObject#SMS_SoftwareUpdatesPackage> -DistributionPointName <string> -FileName <string> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -Application <IResultObject> -DistributionPointName <string> -FileName <string> [-Description <string>] [-DisableDependencyExport] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -ApplicationId <string[]> -DistributionPointName <string> -FileName <string> [-Description <string>] [-DisableDependencyExport] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -ApplicationName <string[]> -DistributionPointName <string> -FileName <string> [-Description <string>] [-DisableDependencyExport] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -BootImage <IResultObject#SMS_BootImagePackage> -DistributionPointName <string> -FileName <string> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -BootImageId <string[]> -DistributionPointName <string> -FileName <string> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -BootImageName <string[]> -DistributionPointName <string> -FileName <string> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -DeploymentPackageId <string[]> -DistributionPointName <string> -FileName <string> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -DeploymentPackageName <string[]> -DistributionPointName <string> -FileName <string> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -DistributionPointName <string> -DriverPackageId <string[]> -FileName <string> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -DistributionPointName <string> -DriverPackageName <string[]> -FileName <string> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -DistributionPointName <string> -DriverPackage <IResultObject#SMS_DriverPackage> -FileName <string> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -DistributionPointName <string> -FileName <string> -OperatingSystemImageId <string[]> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -DistributionPointName <string> -FileName <string> -OperatingSystemImageName <string[]> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -DistributionPointName <string> -FileName <string> -OperatingSystemImage <IResultObject#SMS_ImagePackage> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -DistributionPointName <string> -FileName <string> -OperatingSystemInstallerId <string[]> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -DistributionPointName <string> -FileName <string> -OperatingSystemInstallerName <string[]> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -DistributionPointName <string> -FileName <string> -OperatingSystemInstaller <IResultObject#SMS_OperatingSystemInstallPackage> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -DistributionPointName <string> -FileName <string> -PackageId <string[]> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -DistributionPointName <string> -FileName <string> -PackageName <string[]> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Publish-CMPrestageContent -DistributionPointName <string> -FileName <string> -Package <IResultObject#SMS_Package> [-Description <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -Application <IResultObject>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByValueMandatory_Application
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplicationId <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_Application
+        Aliases                      ApplicationIds
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ApplicationName <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory_Application
+        Aliases                      ApplicationNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BootImage <IResultObject#SMS_BootImagePackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByValueMandatory_BootImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BootImageId <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_BootImage
+        Aliases                      BootImageIds
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BootImageName <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory_BootImage
+        Aliases                      BootImageNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentPackage <IResultObject#SMS_SoftwareUpdatesPackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByValueMandatory_DeploymentPackage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentPackageId <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_DeploymentPackage
+        Aliases                      DeploymentPackageIds
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentPackageName <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory_DeploymentPackage
+        Aliases                      DeploymentPackageNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableDependencyExport
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_Application, SearchByNameMandatory_Application, SearchByValueMandatory_Application
+        Aliases                      DisableExportAllDependencies
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DistributionPointName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_DeploymentPackage, SearchByNameMandatory_DeploymentPackage, SearchByValueMandatory_DeploymentPackage, SearchByIdMandatory_BootImage, SearchByNameMandatory_BootImage, SearchByValueMandatory_BootImage, SearchByIdMandatory_DriverPackage, SearchByNameMandatory_DriverPackage, SearchByValueMandatory_DriverPackage, SearchByIdMandatory_OperatingSystemImage, SearchByNameMandatory_OperatingSystemImage, SearchByValueMandatory_OperatingSystemImage, SearchByIdMandatory_OperatingSystemInstaller, SearchByNameMandatory_OperatingSystemInstaller, SearchByValueMandatory_OperatingSystemInstaller, SearchByIdMandatory_Package, SearchByNameMandatory_Package, SearchByValueMandatory_Package, SearchByIdMandatory_Application, SearchByNameMandatory_Application, SearchByValueMandatory_Application
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriverPackage <IResultObject#SMS_DriverPackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByValueMandatory_DriverPackage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriverPackageId <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_DriverPackage
+        Aliases                      DriverPackageIds
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DriverPackageName <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory_DriverPackage
+        Aliases                      DriverPackageNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FileName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_DeploymentPackage, SearchByNameMandatory_DeploymentPackage, SearchByValueMandatory_DeploymentPackage, SearchByIdMandatory_BootImage, SearchByNameMandatory_BootImage, SearchByValueMandatory_BootImage, SearchByIdMandatory_DriverPackage, SearchByNameMandatory_DriverPackage, SearchByValueMandatory_DriverPackage, SearchByIdMandatory_OperatingSystemImage, SearchByNameMandatory_OperatingSystemImage, SearchByValueMandatory_OperatingSystemImage, SearchByIdMandatory_OperatingSystemInstaller, SearchByNameMandatory_OperatingSystemInstaller, SearchByValueMandatory_OperatingSystemInstaller, SearchByIdMandatory_Package, SearchByNameMandatory_Package, SearchByValueMandatory_Package, SearchByIdMandatory_Application, SearchByNameMandatory_Application, SearchByValueMandatory_Application
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemImage <IResultObject#SMS_ImagePackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByValueMandatory_OperatingSystemImage
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemImageId <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_OperatingSystemImage
+        Aliases                      OperatingSystemImageIds
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemImageName <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory_OperatingSystemImage
+        Aliases                      OperatingSystemImageNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemInstaller <IResultObject#SMS_OperatingSystemInstallPackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByValueMandatory_OperatingSystemInstaller
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemInstallerId <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_OperatingSystemInstaller
+        Aliases                      OperatingSystemInstallerIds
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatingSystemInstallerName <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory_OperatingSystemInstaller
+        Aliases                      OperatingSystemInstallerNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Package <IResultObject#SMS_Package>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByValueMandatory_Package
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PackageId <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByIdMandatory_Package
+        Aliases                      PackageIds
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PackageName <string[]>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SearchByNameMandatory_Package
+        Aliases                      PackageNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    None
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

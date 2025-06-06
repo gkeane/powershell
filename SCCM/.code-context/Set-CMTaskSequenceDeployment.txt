@@ -1,0 +1,469 @@
+
+NAME
+    Set-CMTaskSequenceDeployment
+    
+SYNTAX
+    Set-CMTaskSequenceDeployment -InputObject <IResultObject> [-AlertDateTime <datetime>] [-AllowFallback <bool>] [-AllowSharedContent <bool>] [-AllowUsersRunIndependently <bool>] [-Comment <string>] [-CreateAlertOnFailure <bool>] [-CreateAlertOnSuccess <bool>] [-DeploymentAvailableDateTime <datetime>] [-DeploymentExpireDateTime <datetime>] [-DeploymentOption {DownloadContentLocallyWhenNeededByRunningTaskSequence | DownloadAllContentLocallyBeforeStartingTaskSequence | RunFromDistributionPoint}] [-InternetOption <bool>] [-MakeAvailableTo {Clients | ClientsMediaAndPxe | MediaAndPxe | MediaAndPxeHidden}] [-PercentFailure <int>] [-PercentSuccess <int>] [-PersistOnWriteFilterDevice <bool>] [-RerunBehavior {NeverRerunDeployedProgram | AlwaysRerunProgram | RerunIfFailedPreviousAttempt | RerunIfSucceededOnPreviousAttempt}] [-ClearSchedule] [-RemoveSchedule <IResultObject#SMS_ScheduleToken[]>] [-AddSchedule <IResultObject#SMS_ScheduleToken[]>] [-Schedule <IResultObject#SMS_ScheduleToken[]>] [-ClearScheduleEvent] [-RemoveScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-AddScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-ScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-SendWakeupPacket <bool>] [-ShowTaskSequenceProgress <bool>] [-SoftwareInstallation <bool>] [-SystemRestart <bool>] [-UseMeteredNetwork <bool>] [-UseUtcForAvailableSchedule <bool>] [-UseUtcForExpireSchedule <bool>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTaskSequenceDeployment -TaskSequenceDeploymentId <string> [-AlertDateTime <datetime>] [-AllowFallback <bool>] [-AllowSharedContent <bool>] [-AllowUsersRunIndependently <bool>] [-Comment <string>] [-CreateAlertOnFailure <bool>] [-CreateAlertOnSuccess <bool>] [-DeploymentAvailableDateTime <datetime>] [-DeploymentExpireDateTime <datetime>] [-DeploymentOption {DownloadContentLocallyWhenNeededByRunningTaskSequence | DownloadAllContentLocallyBeforeStartingTaskSequence | RunFromDistributionPoint}] [-InternetOption <bool>] [-MakeAvailableTo {Clients | ClientsMediaAndPxe | MediaAndPxe | MediaAndPxeHidden}] [-PercentFailure <int>] [-PercentSuccess <int>] [-PersistOnWriteFilterDevice <bool>] [-RerunBehavior {NeverRerunDeployedProgram | AlwaysRerunProgram | RerunIfFailedPreviousAttempt | RerunIfSucceededOnPreviousAttempt}] [-ClearSchedule] [-RemoveSchedule <IResultObject#SMS_ScheduleToken[]>] [-AddSchedule <IResultObject#SMS_ScheduleToken[]>] [-Schedule <IResultObject#SMS_ScheduleToken[]>] [-ClearScheduleEvent] [-RemoveScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-AddScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-ScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-SendWakeupPacket <bool>] [-ShowTaskSequenceProgress <bool>] [-SoftwareInstallation <bool>] [-SystemRestart <bool>] [-UseMeteredNetwork <bool>] [-UseUtcForAvailableSchedule <bool>] [-UseUtcForExpireSchedule <bool>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTaskSequenceDeployment -TaskSequenceName <string> [-AlertDateTime <datetime>] [-AllowFallback <bool>] [-AllowSharedContent <bool>] [-AllowUsersRunIndependently <bool>] [-Comment <string>] [-CreateAlertOnFailure <bool>] [-CreateAlertOnSuccess <bool>] [-DeploymentAvailableDateTime <datetime>] [-DeploymentExpireDateTime <datetime>] [-DeploymentOption {DownloadContentLocallyWhenNeededByRunningTaskSequence | DownloadAllContentLocallyBeforeStartingTaskSequence | RunFromDistributionPoint}] [-InternetOption <bool>] [-MakeAvailableTo {Clients | ClientsMediaAndPxe | MediaAndPxe | MediaAndPxeHidden}] [-PercentFailure <int>] [-PercentSuccess <int>] [-PersistOnWriteFilterDevice <bool>] [-RerunBehavior {NeverRerunDeployedProgram | AlwaysRerunProgram | RerunIfFailedPreviousAttempt | RerunIfSucceededOnPreviousAttempt}] [-ClearSchedule] [-RemoveSchedule <IResultObject#SMS_ScheduleToken[]>] [-AddSchedule <IResultObject#SMS_ScheduleToken[]>] [-Schedule <IResultObject#SMS_ScheduleToken[]>] [-ClearScheduleEvent] [-RemoveScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-AddScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-ScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-SendWakeupPacket <bool>] [-ShowTaskSequenceProgress <bool>] [-SoftwareInstallation <bool>] [-SystemRestart <bool>] [-UseMeteredNetwork <bool>] [-UseUtcForAvailableSchedule <bool>] [-UseUtcForExpireSchedule <bool>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTaskSequenceDeployment -TaskSequencePackageId <string> [-AlertDateTime <datetime>] [-AllowFallback <bool>] [-AllowSharedContent <bool>] [-AllowUsersRunIndependently <bool>] [-Comment <string>] [-CreateAlertOnFailure <bool>] [-CreateAlertOnSuccess <bool>] [-DeploymentAvailableDateTime <datetime>] [-DeploymentExpireDateTime <datetime>] [-DeploymentOption {DownloadContentLocallyWhenNeededByRunningTaskSequence | DownloadAllContentLocallyBeforeStartingTaskSequence | RunFromDistributionPoint}] [-InternetOption <bool>] [-MakeAvailableTo {Clients | ClientsMediaAndPxe | MediaAndPxe | MediaAndPxeHidden}] [-PercentFailure <int>] [-PercentSuccess <int>] [-PersistOnWriteFilterDevice <bool>] [-RerunBehavior {NeverRerunDeployedProgram | AlwaysRerunProgram | RerunIfFailedPreviousAttempt | RerunIfSucceededOnPreviousAttempt}] [-ClearSchedule] [-RemoveSchedule <IResultObject#SMS_ScheduleToken[]>] [-AddSchedule <IResultObject#SMS_ScheduleToken[]>] [-Schedule <IResultObject#SMS_ScheduleToken[]>] [-ClearScheduleEvent] [-RemoveScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-AddScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-ScheduleEvent {AsSoonAsPossible | LogOn | LogOff}] [-SendWakeupPacket <bool>] [-ShowTaskSequenceProgress <bool>] [-SoftwareInstallation <bool>] [-SystemRestart <bool>] [-UseMeteredNetwork <bool>] [-UseUtcForAvailableSchedule <bool>] [-UseUtcForExpireSchedule <bool>] [-PassThru] [-Collection <IResultObject#SMS_Collection>] [-CollectionId <string>] [-CollectionName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddSchedule <IResultObject#SMS_ScheduleToken[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AddScheduleEvent <ScheduleEventType[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AlertDateTime <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowFallback <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowSharedContent <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AllowUseRemoteDistributionPoint
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -AllowUsersRunIndependently <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearSchedule
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearScheduleEvent
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Collection <IResultObject#SMS_Collection>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CollectionName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  true
+        
+    -Comment <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CreateAlertOnFailure <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      CreateAlertBaseOnPercentFailure
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CreateAlertOnSuccess <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      CreateAlertBaseOnPercentSuccess
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentAvailableDateTime <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentExpireDateTime <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentOption <DeploymentOptionType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetTaskSequenceDeploymentByValueMandatory
+        Aliases                      Deployment, DeploymentSummary, TaskSequence, Advertisement
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InternetOption <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MakeAvailableTo <MakeAvailableToType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PercentFailure <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PercentSuccess <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PersistOnWriteFilterDevice <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveSchedule <IResultObject#SMS_ScheduleToken[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveScheduleEvent <ScheduleEventType[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RerunBehavior <RerunBehaviorType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Schedule <IResultObject#SMS_ScheduleToken[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ScheduleEvent <ScheduleEventType[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SendWakeupPacket <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ShowTaskSequenceProgress <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SoftwareInstallation <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SystemRestart <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TaskSequenceDeploymentId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetTaskSequenceDeploymentByDeploymentIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TaskSequenceName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetTaskSequenceDeploymentByNameMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TaskSequencePackageId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetTaskSequenceDeploymentByIdMandatory
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseMeteredNetwork <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseUtcForAvailableSchedule <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseUtcForExpireSchedule <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    IResultObject#SMS_Advertisement
+    
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

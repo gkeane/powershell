@@ -1,0 +1,684 @@
+
+NAME
+    Set-CMTSStepConnectNetworkFolder
+    
+SYNTAX
+    Set-CMTSStepConnectNetworkFolder -InputObject <IResultObject#SMS_TaskSequencePackage> [-Drive <string>] [-Path <string>] [-UserName <string>] [-UserPassword <securestring>] [-AddCondition <IResultObject#SMS_TaskSequence_ConditionOperand[]>] [-ClearCondition] [-Description <string>] [-IsContinueOnError <bool>] [-IsEnabled <bool>] [-MoveToIndex <int>] [-NewStepName <string>] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <string>] [-StepOrder {MoveUp | MoveDown | MoveToIndex}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -TaskSequenceId <string> [-Drive <string>] [-Path <string>] [-UserName <string>] [-UserPassword <securestring>] [-AddCondition <IResultObject#SMS_TaskSequence_ConditionOperand[]>] [-ClearCondition] [-Description <string>] [-IsContinueOnError <bool>] [-IsEnabled <bool>] [-MoveToIndex <int>] [-NewStepName <string>] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <string>] [-StepOrder {MoveUp | MoveDown | MoveToIndex}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -TaskSequenceName <string> [-Drive <string>] [-Path <string>] [-UserName <string>] [-UserPassword <securestring>] [-AddCondition <IResultObject#SMS_TaskSequence_ConditionOperand[]>] [-ClearCondition] [-Description <string>] [-IsContinueOnError <bool>] [-IsEnabled <bool>] [-MoveToIndex <int>] [-NewStepName <string>] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <string>] [-StepOrder {MoveUp | MoveDown | MoveToIndex}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionIfStatement -TaskSequenceId <string> [-Condition <IResultObject#SMS_TaskSequence_ConditionOperand[]>] [-StatementType {All | Any | None}] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionIfStatement -TaskSequenceName <string> [-Condition <IResultObject#SMS_TaskSequence_ConditionOperand[]>] [-StatementType {All | Any | None}] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -InputObject <IResultObject#SMS_TaskSequencePackage> -SetConditionIfStatement [-Condition <IResultObject#SMS_TaskSequence_ConditionOperand[]>] [-StatementType {All | Any | None}] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionVariable -TaskSequenceId <string> [-ConditionVariableName <string>] [-ConditionVariableValue <string>] [-OperatorType {Exists | NotExists | Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual | Like | NotLike}] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionVariable -TaskSequenceName <string> [-ConditionVariableName <string>] [-ConditionVariableValue <string>] [-OperatorType {Exists | NotExists | Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual | Like | NotLike}] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -InputObject <IResultObject#SMS_TaskSequencePackage> -SetConditionVariable [-ConditionVariableName <string>] [-ConditionVariableValue <string>] [-OperatorType {Exists | NotExists | Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual | Like | NotLike}] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionFile -TaskSequenceId <string> [-FileDateTimeOperator {Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual}] [-FilePath <string>] [-FileTimestamp <datetime>] [-FileVersion <string>] [-StepName <string>] [-VersionOperator {Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionFile -TaskSequenceName <string> [-FileDateTimeOperator {Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual}] [-FilePath <string>] [-FileTimestamp <datetime>] [-FileVersion <string>] [-StepName <string>] [-VersionOperator {Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -InputObject <IResultObject#SMS_TaskSequencePackage> -SetConditionFile [-FileDateTimeOperator {Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual}] [-FilePath <string>] [-FileTimestamp <datetime>] [-FileVersion <string>] [-StepName <string>] [-VersionOperator {Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionFolder -TaskSequenceId <string> [-FolderDateTimeOperator {Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual}] [-FolderPath <string>] [-FolderTimestamp <datetime>] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionFolder -TaskSequenceName <string> [-FolderDateTimeOperator {Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual}] [-FolderPath <string>] [-FolderTimestamp <datetime>] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -InputObject <IResultObject#SMS_TaskSequencePackage> -SetConditionFolder [-FolderDateTimeOperator {Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual}] [-FolderPath <string>] [-FolderTimestamp <datetime>] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -InputObject <IResultObject#SMS_TaskSequencePackage> -SetConditionQueryWmi [-Namespace <string[]>] [-Query <string>] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -InputObject <IResultObject#SMS_TaskSequencePackage> -SetConditionOperatingSystem [-StepName <string>] [-SupportedPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -InputObject <IResultObject#SMS_TaskSequencePackage> -SetConditionRegistry [-RegistryKey <string>] [-RegistryOperator {Exists | NotExists | Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual}] [-RegistryValueData <string>] [-RegistryValueName <string>] [-RootKey {HKeyCurrentUser | HKeyLocalMachine | HKeyUsers | HKeyCurrentConfig}] [-StepName <string>] [-ValueType {RegistrySZ | RegistryExpandSZ | RegistryDWord}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -InputObject <IResultObject#SMS_TaskSequencePackage> -SetConditionSoftware [-IsAnyVersion <bool>] [-MsiFilePath <string>] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionSoftware -TaskSequenceId <string> [-IsAnyVersion <bool>] [-MsiFilePath <string>] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionSoftware -TaskSequenceName <string> [-IsAnyVersion <bool>] [-MsiFilePath <string>] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionQueryWmi -TaskSequenceId <string> [-Namespace <string[]>] [-Query <string>] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionQueryWmi -TaskSequenceName <string> [-Namespace <string[]>] [-Query <string>] [-StepName <string>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionRegistry -TaskSequenceId <string> [-RegistryKey <string>] [-RegistryOperator {Exists | NotExists | Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual}] [-RegistryValueData <string>] [-RegistryValueName <string>] [-RootKey {HKeyCurrentUser | HKeyLocalMachine | HKeyUsers | HKeyCurrentConfig}] [-StepName <string>] [-ValueType {RegistrySZ | RegistryExpandSZ | RegistryDWord}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionRegistry -TaskSequenceName <string> [-RegistryKey <string>] [-RegistryOperator {Exists | NotExists | Equals | NotEquals | Greater | GreaterEqual | Less | LessEqual}] [-RegistryValueData <string>] [-RegistryValueName <string>] [-RootKey {HKeyCurrentUser | HKeyLocalMachine | HKeyUsers | HKeyCurrentConfig}] [-StepName <string>] [-ValueType {RegistrySZ | RegistryExpandSZ | RegistryDWord}] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionOperatingSystem -TaskSequenceId <string> [-StepName <string>] [-SupportedPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTSStepConnectNetworkFolder -SetConditionOperatingSystem -TaskSequenceName <string> [-StepName <string>] [-SupportedPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddCondition <IResultObject#SMS_TaskSequence_ConditionOperand[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      AddConditions
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearCondition
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      ClearConditions
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Condition <IResultObject#SMS_TaskSequence_ConditionOperand[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionIfStatement, ByNameSetConditionIfStatement, ByValueSetConditionIfStatement
+        Aliases                      SubCondition, SubConditions
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ConditionVariableName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
+        Aliases                      Variable
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ConditionVariableValue <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
+        Aliases                      Value
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Drive <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      DriveLetter
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FileDateTimeOperator <VariableOperatorType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FilePath <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FileTimestamp <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FileVersion <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FolderDateTimeOperator <VariableOperatorType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FolderPath <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -FolderTimestamp <datetime>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_TaskSequencePackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           ByValue, ByValueSetConditionIfStatement, ByValueSetConditionQueryWmi, ByValueSetConditionVariable, ByValueSetConditionOperatingSystem, ByValueSetConditionFile, ByValueSetConditionFolder, ByValueSetConditionRegistry, ByValueSetConditionSoftware
+        Aliases                      TaskSequence
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsAnyVersion <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionSoftware, ByNameSetConditionSoftware, ByValueSetConditionSoftware
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsContinueOnError <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      IsThisStepContinueOnError
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IsEnabled <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      IsThisStepEnabled
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MoveToIndex <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MsiFilePath <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionSoftware, ByNameSetConditionSoftware, ByValueSetConditionSoftware
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Namespace <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi, ByValueSetConditionQueryWmi
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NewStepName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -OperatorType <VariableOperatorType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Path <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Query <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi, ByValueSetConditionQueryWmi
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RegistryKey <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RegistryOperator <VariableOperatorType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RegistryValueData <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RegistryValueName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveConditionFile
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveConditionFolder
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveConditionIfStatement
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveConditionOperatingSystem
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveConditionQueryWmi
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveConditionRegistry
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveConditionSoftware
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveConditionVariable
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RootKey <RegistryRootKeyType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SetConditionFile
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SetConditionFolder
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SetConditionIfStatement
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionIfStatement, ByNameSetConditionIfStatement, ByValueSetConditionIfStatement
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SetConditionOperatingSystem
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionOperatingSystem, ByNameSetConditionOperatingSystem, ByValueSetConditionOperatingSystem
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SetConditionQueryWmi
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi, ByValueSetConditionQueryWmi
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SetConditionRegistry
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SetConditionSoftware
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionSoftware, ByNameSetConditionSoftware, ByValueSetConditionSoftware
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SetConditionVariable
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StatementType <ConditionStatementType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionIfStatement, ByNameSetConditionIfStatement, ByValueSetConditionIfStatement
+        Aliases                      Operator
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StepName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -StepOrder <ReorderType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SupportedPlatform <IResultObject#SMS_SupportedPlatforms[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionOperatingSystem, ByNameSetConditionOperatingSystem, ByValueSetConditionOperatingSystem
+        Aliases                      SupportedPlatforms
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TaskSequenceId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByIdSetConditionIfStatement, ByIdSetConditionQueryWmi, ByIdSetConditionVariable, ByIdSetConditionOperatingSystem, ByIdSetConditionFile, ByIdSetConditionFolder, ByIdSetConditionRegistry, ByIdSetConditionSoftware
+        Aliases                      Id, TaskSequencePackageId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TaskSequenceName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByName, ByNameSetConditionIfStatement, ByNameSetConditionQueryWmi, ByNameSetConditionVariable, ByNameSetConditionOperatingSystem, ByNameSetConditionFile, ByNameSetConditionFolder, ByNameSetConditionRegistry, ByNameSetConditionSoftware
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UserPassword <securestring>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ById, ByName, ByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ValueType <RegistryValueType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -VersionOperator <VariableOperatorType>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    Set-CMTaskSequenceStepConnectNetworkFolder
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

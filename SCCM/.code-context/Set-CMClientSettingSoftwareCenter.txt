@@ -1,0 +1,376 @@
+
+NAME
+    Set-CMClientSettingSoftwareCenter
+    
+SYNTAX
+    Set-CMClientSettingSoftwareCenter -Name <string> [-AddCustomTab <SoftwareCenterTabItem[]>] [-ClearCustomTab] [-ColorScheme <Color>] [-CompanyName <string>] [-CustomTabName <string>] [-CustomTabUrl <uri>] [-EnableApplicationsTab <bool>] [-EnableComplianceTab <bool>] [-EnableCustomize <bool>] [-EnableOperatingSystemsTab <bool>] [-EnableOptionsTab <bool>] [-EnableStatusTab <bool>] [-EnableUpdatesTab <bool>] [-HideApplicationCatalogLink <bool>] [-HideInstalledApplication <bool>] [-HideUnapprovedApplication <bool>] [-LogoFilePath <string>] [-MoveSelectedTabToIndex <int>] [-RemoveCustomTabName <string[]>] [-SelectBuiltInTab {AvailableSoftware | Updates | Osd | InstallationStatus | Compliance | Options}] [-SelectCustomTabName <string>] [-SelectedTabNewName <string>] [-SelectedTabNewUrl <uri>] [-SelectTabIndex <int>] [-SetInvisibleTabName <string[]>] [-SetVisibleTabName <string[]>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSettingSoftwareCenter -DefaultSetting [-AddCustomTab <SoftwareCenterTabItem[]>] [-ClearCustomTab] [-ColorScheme <Color>] [-CompanyName <string>] [-CustomTabName <string>] [-CustomTabUrl <uri>] [-EnableApplicationsTab <bool>] [-EnableComplianceTab <bool>] [-EnableCustomize <bool>] [-EnableOperatingSystemsTab <bool>] [-EnableOptionsTab <bool>] [-EnableStatusTab <bool>] [-EnableUpdatesTab <bool>] [-HideApplicationCatalogLink <bool>] [-HideInstalledApplication <bool>] [-HideUnapprovedApplication <bool>] [-LogoFilePath <string>] [-MoveSelectedTabToIndex <int>] [-RemoveCustomTabName <string[]>] [-SelectBuiltInTab {AvailableSoftware | Updates | Osd | InstallationStatus | Compliance | Options}] [-SelectCustomTabName <string>] [-SelectedTabNewName <string>] [-SelectedTabNewUrl <uri>] [-SelectTabIndex <int>] [-SetInvisibleTabName <string[]>] [-SetVisibleTabName <string[]>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMClientSettingSoftwareCenter -InputObject <IResultObject#SMS_ClientSettings> [-AddCustomTab <SoftwareCenterTabItem[]>] [-ClearCustomTab] [-ColorScheme <Color>] [-CompanyName <string>] [-CustomTabName <string>] [-CustomTabUrl <uri>] [-EnableApplicationsTab <bool>] [-EnableComplianceTab <bool>] [-EnableCustomize <bool>] [-EnableOperatingSystemsTab <bool>] [-EnableOptionsTab <bool>] [-EnableStatusTab <bool>] [-EnableUpdatesTab <bool>] [-HideApplicationCatalogLink <bool>] [-HideInstalledApplication <bool>] [-HideUnapprovedApplication <bool>] [-LogoFilePath <string>] [-MoveSelectedTabToIndex <int>] [-RemoveCustomTabName <string[]>] [-SelectBuiltInTab {AvailableSoftware | Updates | Osd | InstallationStatus | Compliance | Options}] [-SelectCustomTabName <string>] [-SelectedTabNewName <string>] [-SelectedTabNewUrl <uri>] [-SelectTabIndex <int>] [-SetInvisibleTabName <string[]>] [-SetVisibleTabName <string[]>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddCustomTab <SoftwareCenterTabItem[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddCustomTabs
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ClearCustomTab
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ClearAllCustomTabs
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ColorScheme <Color>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CompanyName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CustomTabName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CustomTabUrl <uri>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DefaultSetting
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetDefaultSetting
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableApplicationsTab <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableComplianceTab <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableCustomize <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableOperatingSystemsTab <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableOptionsTab <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableStatusTab <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableUpdatesTab <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HideApplicationCatalogLink <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HideInstalledApplication <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HideUnapprovedApplication <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_ClientSettings>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetCustomSettingByValue
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -LogoFilePath <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MoveSelectedTabToIndex <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Name <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetCustomSettingByName
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveCustomTabName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveCustomTabNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SelectBuiltInTab <BuiltInTab>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SelectCustomTabName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SelectTabIndex <int>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SelectedTabNewName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SelectedCustomTabNewName
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SelectedTabNewUrl <uri>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SelectedCustomTabNewUrl
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SetInvisibleTabName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SetInvisibleCustomTabNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SetVisibleTabName <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      SetVisibleCustomTabNames
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+

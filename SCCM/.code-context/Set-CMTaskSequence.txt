@@ -1,0 +1,326 @@
+
+NAME
+    Set-CMTaskSequence
+    
+SYNTAX
+    Set-CMTaskSequence -InputObject <IResultObject#SMS_TaskSequencePackage> [-AddSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-IconLocationFile <string>] [-BootImageId <string>] [-Category <string>] [-CustomText <string>] [-DeploymentPackageId <string>] [-Description <string>] [-DisableTaskSequence <bool>] [-EnableNotification <bool>] [-EnableTaskSequence <bool>] [-HighPerformance <bool>] [-MaxRunTimeMins <long>] [-NewName <string>] [-PassThru] [-ProgramName <string>] [-RemoveSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-RunAnotherProgram <bool>] [-RunEveryTime <bool>] [-RunOnAnyPlatform] [-SuppressNotification <bool>] [-UseBootImage <bool>] [-UseDefaultText <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTaskSequence -TaskSequenceId <string> [-AddSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-IconLocationFile <string>] [-BootImageId <string>] [-Category <string>] [-CustomText <string>] [-DeploymentPackageId <string>] [-Description <string>] [-DisableTaskSequence <bool>] [-EnableNotification <bool>] [-EnableTaskSequence <bool>] [-HighPerformance <bool>] [-MaxRunTimeMins <long>] [-NewName <string>] [-PassThru] [-ProgramName <string>] [-RemoveSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-RunAnotherProgram <bool>] [-RunEveryTime <bool>] [-RunOnAnyPlatform] [-SuppressNotification <bool>] [-UseBootImage <bool>] [-UseDefaultText <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    Set-CMTaskSequence -TaskSequenceName <string> [-AddSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-IconLocationFile <string>] [-BootImageId <string>] [-Category <string>] [-CustomText <string>] [-DeploymentPackageId <string>] [-Description <string>] [-DisableTaskSequence <bool>] [-EnableNotification <bool>] [-EnableTaskSequence <bool>] [-HighPerformance <bool>] [-MaxRunTimeMins <long>] [-NewName <string>] [-PassThru] [-ProgramName <string>] [-RemoveSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>] [-RunAnotherProgram <bool>] [-RunEveryTime <bool>] [-RunOnAnyPlatform] [-SuppressNotification <bool>] [-UseBootImage <bool>] [-UseDefaultText <bool>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+    
+    
+PARAMETERS
+    -AddSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      AddSupportedOperatingSystemPlatforms
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -BootImageId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Category <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Confirm
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -CustomText <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DeploymentPackageId <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -Description <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableTaskSequence <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -DisableWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableNotification <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      EnableNotifications
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -EnableTaskSequence <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ForceWildcardHandling
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -HighPerformance <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -IconLocationFile <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -InputObject <IResultObject#SMS_TaskSequencePackage>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           SetByValue
+        Aliases                      TaskSequence
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -MaxRunTimeMins <long>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      Duration
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -NewName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -PassThru
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -ProgramName <string>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RemoveSupportedOperatingSystemPlatform <IResultObject#SMS_SupportedPlatforms[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      RemoveSupportedOperatingSystemPlatforms
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RunAnotherProgram <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RunEveryTime <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -RunOnAnyPlatform
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      ClearSupportedOperatingSystemPlatforms
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -SuppressNotification <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TaskSequenceId <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetById
+        Aliases                      Id, TaskSequencePackageId
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TaskSequenceName <string>
+        
+        Required?                    true
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           SetByName
+        Aliases                      Name
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseBootImage <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -UseDefaultText <bool>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -WhatIf
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    
+INPUTS
+    Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+    
+    
+OUTPUTS
+    System.Object
+    
+ALIASES
+    None
+    
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+
