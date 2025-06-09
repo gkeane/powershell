@@ -34,17 +34,26 @@ The query specifically looks for:
 - Systems running Windows 10
 - Systems NOT marked as "Capable" in the OSUPGRADE_READINESS table
 
-### PowerShell Scripts
+### Batch Scripts
 
-#### sfc_scannow.ps1
-This script performs a System File Checker (SFC) scan on Windows systems and logs the results. Key features:
+#### sfc_scannow.bat
+This batch script performs a System File Checker (SFC) scan on Windows systems and logs the results. Key features:
 - Automatically detects system architecture (32-bit vs 64-bit)
 - Runs SFC scan using the appropriate method for the system
-- Logs results to both local and network locations
 - Implements a 30-day cooldown period between scans
-- Logs are stored in:
-  - Local: `C:\ProgramData\Quest\KACE\user\sfcscan.log`
-  - Network: `\\chs-deploy\kacereport\sfc\[COMPUTERNAME]_sfc_[TIMESTAMP].log`
+- Logs results to both local and network locations
+- Uses PowerShell for timestamp generation and file age checking
+
+Log locations:
+- Local: `C:\ProgramData\Quest\KACE\user\sfcscan.log`
+- Network: `\\chs-deploy\kacereport\sfc\[COMPUTERNAME]_sfc_[TIMESTAMP].log`
+
+The script includes:
+- Timestamp generation for unique log files
+- Automatic bitness detection and appropriate SFC execution
+- Error handling for network share access
+- Detailed logging of all operations
+- 30-day cooldown period to prevent excessive scanning
 
 ## Usage
 
@@ -54,11 +63,11 @@ This script performs a System File Checker (SFC) scan on Windows systems and log
 3. Copy and paste the desired script
 4. Execute the query to get the results
 
-### PowerShell Scripts
+### Batch Scripts
 1. Deploy the script through KACE SMA or run manually
 2. Script will automatically:
    - Check if a scan was performed in the last 30 days
-   - Run SFC scan if needed
+   - Run SFC scan using the appropriate method for the system architecture
    - Log results locally and to network share
    - Handle both 32-bit and 64-bit systems appropriately
 
@@ -68,7 +77,8 @@ This script performs a System File Checker (SFC) scan on Windows systems and log
 - Appropriate permissions to run SQL queries
 - Access to the MACHINE and OSUPGRADE_READINESS tables
 - Network access to `\\chs-deploy\kacereport\sfc` for log storage
-- PowerShell execution policy allowing script execution
+- Windows system with PowerShell available
+- Write access to `C:\ProgramData\Quest\KACE\user`
 
 ## Contributing
 
