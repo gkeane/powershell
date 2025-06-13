@@ -1,0 +1,31 @@
+#pragma namespace("\\\\.\\ROOT\\CANRspace")
+
+[Version("1.0"), Dynamic, Provider("MS_VIEW_INSTANCE_PROVIDER")]
+class OneDrive
+{
+    [key] string folder_path;
+    string last_odsync;
+    string current_state;
+    string used_quota;
+    string total_quota;
+    string sync_history;
+    string last_ran;
+    string configuration_status;
+    sint32 known_folders_configured;
+    string error_message;
+};
+
+[DYNPROPS]
+instance of OneDrive as $OneDrive
+{
+    folder_path = "";
+    last_odsync = "";
+    current_state = "";
+    used_quota = "";
+    total_quota = "";
+    sync_history = "";
+    last_ran = "";
+    configuration_status = "";
+    known_folders_configured = 0;
+    error_message = "";
+};
